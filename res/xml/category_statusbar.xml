@@ -31,6 +31,14 @@
          android:title="@string/status_bar_icons_title"
          android:summary="@string/status_bar_icons_summary">
         <intent android:action="com.android.settings.action.STATUS_BAR_TUNER" />
+
+        <!--Network traffic -->
+        <Preference 
+            android:key="network_traffic"
+            android:fragment="com.afterlife.afterlab.fragments.NetworkTraffic"
+            android:title="@string/traffic_title"
+            android:summary="@string/traffic_summary" />
+
      </Preference>
 
      </PreferenceCategory>

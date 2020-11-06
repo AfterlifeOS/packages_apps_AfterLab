@@ -598,4 +598,11 @@ s that internet users can use wisely.</string>
     <string name="volume_style_title">Volume panel styles</string>
     <string name="two_tone_style">Two tone style</string>
     <string name="two_tone_thin_style">Two tone thin style</string>
+
+    <!-- Statusbar net monitor -->
+    <string name="traffic_title">Traffic indicators</string>
+    <string name="traffic_summary">Show current network traffic levels in the status bar</string>
+    <string name="network_traffic_state_title">Network traffic</string>
+    <string name="network_traffic_state_summary">Show net activity in statusbar</string>
+    <string name="network_traffic_autohide_threshold_title">Net activity autohide threshold (KB/s)</string>
 </resources>
