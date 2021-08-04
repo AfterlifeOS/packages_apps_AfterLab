@@ -1,9 +1,6 @@
-
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2020 Project-Awaken
-     Copyright (C) 2023 DroidX
-     Copyright (C) 2023 AfterLife Project
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
      You may obtain a copy of the License at
@@ -16,9 +13,6 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <!-- AfterLife Customize -->
-    <string name="customize_dashboard_title">Welcome To AfterLife Laboratory</string>
+    <style name="TextAppearance.TileTitle" parent="@*android:style/TextAppearance.DeviceDefault.Subhead"/>
 
-    <string name="category_statusbar_title">Statusbar</string>
-
-</resources> 
+</resources>

@@ -18,4 +18,12 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/customize_dashboard_title" >
 
+     <!-- Statusbar -->
+     <Preference
+          android:id="@+id/statusbar"
+          android:title="@string/category_statusbar_title"
+          android:fragment="com.afterlife.afterlab.StatusBar"
+          android:layout="@layout/preference_category_statusbar"
+          />
+
 </PreferenceScreen>
