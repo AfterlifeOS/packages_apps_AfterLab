@@ -26,4 +26,12 @@
           android:layout="@layout/preference_category_statusbar"
           />
 
+     <!-- Quick Settings -->
+     <Preference
+          android:id="@+id/quick_settings"
+          android:title="@string/category_quicksettings_title"
+          android:fragment="com.afterlife.afterlab.QuickSettings"
+          android:layout="@layout/preference_category_quicksettings"
+          />
+
 </PreferenceScreen>
