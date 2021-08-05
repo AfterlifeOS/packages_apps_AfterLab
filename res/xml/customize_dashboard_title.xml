@@ -34,4 +34,12 @@
           android:layout="@layout/preference_category_quicksettings"
           />
 
+     <!-- Buttons -->
+     <Preference
+          android:key="button_settings"
+          android:title="@string/category_buttons_title"
+          android:fragment="com.afterlife.afterlab.Buttons"
+          android:layout="@layout/preference_category_buttons"
+          />
+
 </PreferenceScreen>

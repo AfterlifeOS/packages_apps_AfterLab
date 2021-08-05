@@ -21,7 +21,22 @@
 
     <!-- Category: Statusbar -->
     <string name="category_statusbar_title">Statusbar</string>
+    
+    <!-- General -->
+    <string name="ok">Okay</string>
+    <string name="default_string">Default</string>
+    <string name="add">Add</string>
+    <string name="enabled">Enabled</string>
+    <string name="choose_app">Choose application</string>
+    <string name="help">Help</string>
+    <string name="reset_message">Reset all entries to default?</string>
+    <string name="attention">Attention</string>
+    <string name="reset">Reset</string>
 
     <!-- Category: QuickSettings-->
     <string name="category_quicksettings_title">Quick Settings</string>
+
+    <!-- Category: Buttons-->
+    <string name="category_buttons_title">Buttons</string>
+
 </resources> 
