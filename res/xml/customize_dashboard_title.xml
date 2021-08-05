@@ -42,4 +42,12 @@
           android:layout="@layout/preference_category_buttons"
           />
 
+     <!-- Lockscreen -->
+     <Preference
+          android:key="lockscreen_settings"
+          android:title="@string/category_lockscreen_title"
+          android:fragment="com.afterlife.afterlab.LockScreen"
+          android:layout="@layout/preference_category_lockscreen"
+          />
+
 </PreferenceScreen>
