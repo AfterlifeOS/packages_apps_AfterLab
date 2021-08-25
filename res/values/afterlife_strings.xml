@@ -19,9 +19,6 @@
     <!-- AfterLife Customize -->
     <string name="customize_dashboard_title">Welcome To AfterLife Laboratory</string>
 
-    <!-- Category: Statusbar -->
-    <string name="category_statusbar_title">Statusbar</string>
-    
     <!-- General -->
     <string name="ok">Okay</string>
     <string name="default_string">Default</string>
@@ -32,14 +29,15 @@
     <string name="reset_message">Reset all entries to default?</string>
     <string name="attention">Attention</string>
     <string name="reset">Reset</string>
-
-    <!-- Category: QuickSettings-->
-    <string name="category_quicksettings_title">Quick Settings</string>
-
-    <!-- Category: Buttons-->
-    <string name="category_buttons_title">Buttons</string>
     
-    <!-- Category: Lockscreen-->
+    <string name="category_animations_title">Animations</string>
+    <string name="category_buttons_title">Buttons</string>
     <string name="category_lockscreen_title">Lockscreen</string>
+    <string name="category_gestures_title">Gestures</string>
+    <string name="category_navigation_title">Navigation</string>
+    <string name="category_notifications_title">Notifications</string>
+    <string name="category_powermenu_title">Power Menu</string>
+    <string name="category_quicksettings_title">Quick Settings</string>
+    <string name="category_statusbar_title">Statusbar</string>
 
 </resources> 

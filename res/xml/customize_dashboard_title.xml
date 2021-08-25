@@ -17,13 +17,61 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/customize_dashboard_title" >
-
-     <!-- Statusbar -->
+         
+     <!-- Animations -->
      <Preference
-          android:id="@+id/statusbar"
-          android:title="@string/category_statusbar_title"
-          android:fragment="com.afterlife.afterlab.StatusBar"
-          android:layout="@layout/preference_category_statusbar"
+          android:id="@+id/animations"
+          android:title="@string/category_animations_title"
+          android:fragment="com.afterlife.afterlab.Animations"
+          android:layout="@layout/preference_category_animations"
+          />
+
+     <!-- Buttons -->
+     <Preference
+          android:id="@+id/buttons"
+          android:title="@string/category_buttons_title"
+          android:fragment="com.afterlife.afterlab.Buttons"
+          android:layout="@layout/preference_category_buttons"
+          />
+
+     <!-- Gestures -->
+     <Preference
+          android:id="@+id/gestures"
+          android:title="@string/category_gestures_title"
+          android:fragment="com.afterlife.afterlab.Gestures"
+          android:layout="@layout/preference_category_gestures"
+          />
+
+     <!-- Lockscreen -->
+     <Preference
+          android:id="@+id/lockscreen"
+          android:title="@string/category_lockscreen_title"
+          android:fragment="com.afterlife.afterlab.LockScreen"
+          android:layout="@layout/preference_category_lockscreen"
+          />
+
+     <!-- Navigation -->
+     <Preference
+          android:id="@+id/navigation"
+          android:title="@string/category_navigation_title"
+          android:fragment="com.afterlife.afterlab.Navigation"
+          android:layout="@layout/preference_category_navigation"
+          />
+
+     <!-- Notifications -->
+     <Preference
+          android:id="@+id/notifications"
+          android:title="@string/category_notifications_title"
+          android:fragment="com.afterlife.afterlab.Notifications"
+          android:layout="@layout/preference_category_notifications"
+          />
+
+     <!-- Power Menu -->
+     <Preference
+          android:id="@+id/powermenu"
+          android:title="@string/category_powermenu_title"
+          android:fragment="com.afterlife.afterlab.PowerMenu"
+          android:layout="@layout/preference_category_powermenu"
           />
 
      <!-- Quick Settings -->
@@ -34,20 +82,12 @@
           android:layout="@layout/preference_category_quicksettings"
           />
 
-     <!-- Buttons -->
+     <!-- Statusbar -->
      <Preference
-          android:key="button_settings"
-          android:title="@string/category_buttons_title"
-          android:fragment="com.afterlife.afterlab.Buttons"
-          android:layout="@layout/preference_category_buttons"
-          />
-
-     <!-- Lockscreen -->
-     <Preference
-          android:key="lockscreen_settings"
-          android:title="@string/category_lockscreen_title"
-          android:fragment="com.afterlife.afterlab.LockScreen"
-          android:layout="@layout/preference_category_lockscreen"
+          android:id="@+id/statusbar"
+          android:title="@string/category_statusbar_title"
+          android:fragment="com.afterlife.afterlab.StatusBar"
+          android:layout="@layout/preference_category_statusbar"
           />
 
 </PreferenceScreen>
