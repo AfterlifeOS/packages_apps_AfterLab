@@ -7,7 +7,7 @@
 	<path
 		android:fillColor="@android:color/system_accent1_200"
 		android:strokeLineJoin="miter"
-		<!-- android:fillType="nonZero" -->
+		android:fillType="nonZero"
 		android:strokeLineCap="square"
 		android:pathData="M309.73,148.24Q181.53,158.45,86.22,145.39L210.35,176.17L309.73,148.24z"/>
     <path
