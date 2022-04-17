@@ -519,6 +519,7 @@ s that internet users can use wisely</string>
     <!-- QS battery -->
     <string name="qs_use_status_bar_battery_style">Follow status bar style</string>
     <string name="status_bar_qs_category_title">QS customizations</string>
+    <string name="unit_seconds">Second(s)</string>
 
      <!-- Notification guts kill app button -->
     <string name="notification_guts_kill_app_button_title">Kill app button</string>
@@ -527,4 +528,10 @@ s that internet users can use wisely</string>
     <!-- QS Transparency -->
     <string name="qs_transparency_title">Background transparency</string>
     <string name="qs_transparency_summary">Set transparency level for QS background</string>
+
+    <!-- Material dismiss all button for notifications -->
+    <string name="notification_material_dismiss_title">Clear all notification button</string>
+    <string name="notification_material_dismiss_summary">Replace clear all notification text with material style floating button</string>
+    <string name="notification_material_dismiss_style_title">Button style</string>
+    <string name="notification_material_dismiss_bgstyle_title">Button background</string>
 </resources>
