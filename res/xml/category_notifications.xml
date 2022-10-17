@@ -16,5 +16,16 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/category_notifications_title" >
+    
+     <PreferenceCategory
+          android:title="@string/less_boring_headsup_category_title">
+          
+          <com.afterlife.support.preferences.SystemSettingSwitchPreference
+               android:key="less_boring_heads_up"
+               android:title="@string/less_boring_heads_up_title"
+               android:summary="@string/less_boring_heads_up_summary"
+               android:defaultValue="false" />
+     
+     </PreferenceCategory>
 
 </PreferenceScreen>
