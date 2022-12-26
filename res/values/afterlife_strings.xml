@@ -579,7 +579,14 @@ s that internet users can use wisely</string>
     <string name="theme_customization_lock_clock_title">Clock font style</string>
     <string name="theme_customization_lock_clock_summary">Set lockscreen clock font style</string>
 
+    <!-- Volume Category -->
+    <string name="volume_cat">Volume</string>
+
     <!-- Volume panel to left -->
     <string name="volume_panel_on_left_title">Show volume panel on left</string>
     <string name="volume_panel_on_left_summary">Display volume panel on the left side of the screen</string>
+
+    <!-- Volume Media Output Toggle -->
+    <string name="volume_media_output_toggle_title">Volume media output</string>
+    <string name="volume_media_output_toggle_summary">Show media output toggle when there is an active stream</string>
 </resources>
