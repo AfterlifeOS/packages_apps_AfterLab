@@ -78,6 +78,12 @@
             android:summary="@string/theme_customization_wifi_icon_summary"
             android:fragment="com.afterlife.afterlab.fragments.WifiIcons"/>
 
+      <Preference
+            android:key="android.theme.customization.lockscreen_clock_font"
+            android:title="@string/theme_customization_lock_clock_title"
+            android:summary="@string/theme_customization_lock_clock_summary"
+            android:fragment="com.afterlife.afterlab.fragments.LockClockFonts"/>
+
      <!-- Adaptive icon shape -->
      <Preference
           android:key="android.theme.customization.adaptive_icon_shape"
