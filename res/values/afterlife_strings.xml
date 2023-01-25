@@ -588,4 +588,9 @@ s that internet users can use wisely.</string>
 
     <!-- Quad9 DNS Option -->
     <string name="private_dns_mode_quad9" translatable="false">Quad9 DNS</string>
+
+    <!-- Lockscreen clock format -->
+    <string name="clock_use_single_line_title">Lockscreen clock Format</string>
+    <string name="single_line">Single-line</string>
+    <string name="double_line">Double-line</string>
 </resources>
