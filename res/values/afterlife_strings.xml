@@ -566,4 +566,9 @@ s that internet users can use wisely.</string>
     <!-- QS Dual Tone Colors -->
     <string name="qs_dual_tone_title">QS dual-tone</string>
     <string name="qs_dual_tone_summary">Use dual tone background colors</string>
+
+    <!-- Max visible notification icons -->
+    <string name="max_visible_notification_icons_title">Notification icons</string>
+    <string name="max_visible_notification_icons_summary">Max. notification icons visible on statusbar</string>
+
 </resources>
