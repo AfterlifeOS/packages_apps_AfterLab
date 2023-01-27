@@ -64,6 +64,7 @@ import com.android.settingslib.development.SystemPropPoker;
 import android.os.SystemProperties;
 import com.afterlife.support.preference.SystemSettingSwitchPreference;
 import com.afterlife.support.preference.SystemSettingMainSwitchPreference;
+import com.afterlife.support.preference.CustomSeekBarPreference;
 import android.os.Process;
 
 import com.android.settingslib.development.SystemPropPoker;
@@ -79,6 +80,9 @@ public class StatusBar extends SettingsPreferenceFragment
     private static final String KEY_STATUS_BAR_AM_PM = "status_bar_am_pm";
     private SecureSettingListPreference mStatusBarAmPm;
     private Preference mCombinedSignalIcons;
+    private static final String KEY_STATUSBAR_TOP_PADDING = "statusbar_top_padding";
+    private static final String KEY_STATUSBAR_LEFT_PADDING = "statusbar_left_padding";
+    private static final String KEY_STATUSBAR_RIGHT_PADDING = "statusbar_right_padding";
     
     @Override
     public void onCreate(Bundle icicle) {
@@ -105,6 +109,18 @@ public class StatusBar extends SettingsPreferenceFragment
         
         mCombinedSignalIcons = findPreference("persist.sys.flags.combined_signal_icons");
         mCombinedSignalIcons.setOnPreferenceChangeListener(this);
+
+        ((CustomSeekBarPreference) findPreference(KEY_STATUSBAR_LEFT_PADDING)).setDefaultValue(
+                getResources().getDimensionPixelSize(com.android.internal.R.dimen.status_bar_padding_start),
+                true);
+
+        ((CustomSeekBarPreference) findPreference(KEY_STATUSBAR_RIGHT_PADDING)).setDefaultValue(
+                getResources().getDimensionPixelSize(com.android.internal.R.dimen.status_bar_padding_end),
+                true);
+
+        ((CustomSeekBarPreference) findPreference(KEY_STATUSBAR_TOP_PADDING)).setDefaultValue(
+                getResources().getDimensionPixelSize(com.android.internal.R.dimen.status_bar_padding_top),
+                true);
     }
     
     @Override
