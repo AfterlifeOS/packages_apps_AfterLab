@@ -17,7 +17,15 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/customize_dashboard_title" >
-         
+     
+     <!-- Battery -->
+     <Preference
+          android:id="@+id/battery"
+          android:title="@string/category_battery_title"
+          android:fragment="com.afterlife.afterlab.Battery"
+          android:layout="@layout/preference_category_battery"
+          />
+          
      <!-- Buttons -->
      <Preference
           android:id="@+id/buttons"
@@ -41,15 +49,15 @@
           android:fragment="com.afterlife.afterlab.LockScreen"
           android:layout="@layout/preference_category_lockscreen"
           />
-
-     <!-- Navigation -->
+     
+     <!-- Misc -->
      <Preference
-          android:id="@+id/navigation"
-          android:title="@string/category_navigation_title"
-          android:fragment="com.afterlife.afterlab.Navigation"
-          android:layout="@layout/preference_category_navigation"
+          android:id="@+id/misc"
+          android:title="@string/category_misc_title"
+          android:fragment="com.afterlife.afterlab.Misc"
+          android:layout="@layout/preference_category_misc"
           />
-
+          
      <!-- Notifications -->
      <Preference
           android:id="@+id/notifications"

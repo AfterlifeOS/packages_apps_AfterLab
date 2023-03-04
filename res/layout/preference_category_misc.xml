@@ -24,7 +24,7 @@
     android:focusable="true">
 
     <ImageView
-        android:src="@drawable/ic_category_navigation"
+        android:src="@drawable/ic_category_misc"
         android:layout_width="@dimen/dashboard_tile_image_size"
         android:layout_height="@dimen/dashboard_tile_image_size"
         android:scaleType="centerInside"

@@ -15,36 +15,38 @@
  */
 package com.afterlife.afterlab;
 
-import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.res.Resources;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.UserHandle;
-import android.provider.Settings;
 import android.provider.SearchIndexableResource;
+import android.provider.Settings;
 
-import androidx.preference.PreferenceCategory;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
-import androidx.preference.PreferenceScreen;
 import androidx.preference.Preference.OnPreferenceChangeListener;
+import androidx.preference.PreferenceScreen;
 import androidx.preference.SwitchPreference;
 
-import com.android.settings.R;
-import com.android.settings.search.BaseSearchIndexProvider;
-import com.android.settings.SettingsPreferenceFragment;
-import com.android.settingslib.search.SearchIndexable;
-
 import com.android.internal.logging.nano.MetricsProto;
+
+import com.android.settings.R;
+import com.android.settings.SettingsPreferenceFragment;
+import com.android.settings.search.BaseSearchIndexProvider;
+import com.android.settingslib.search.Indexable;
+import com.android.settingslib.search.SearchIndexable;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 @SearchIndexable
-public class LockScreen extends SettingsPreferenceFragment {
-
+public class LockScreen extends SettingsPreferenceFragment 
+            implements Preference.OnPreferenceChangeListener {
+    
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
@@ -53,6 +55,11 @@ public class LockScreen extends SettingsPreferenceFragment {
         final Resources res = getResources();
         final PreferenceScreen prefScreen = getPreferenceScreen();
     }
+    
+    @Override
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        return false;
+    }  
 
     @Override
     public int getMetricsCategory() {

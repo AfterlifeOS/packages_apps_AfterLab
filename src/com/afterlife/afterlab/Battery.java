@@ -45,13 +45,13 @@ import java.util.Arrays;
 import java.util.List;
 
 @SearchIndexable
-public class Notifications extends SettingsPreferenceFragment 
+public class Battery extends SettingsPreferenceFragment 
             implements Preference.OnPreferenceChangeListener {
-            
+    
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
-        addPreferencesFromResource(R.xml.category_notifications);
+        addPreferencesFromResource(R.xml.category_battery);
         PreferenceScreen prefSet = getPreferenceScreen();
         final Resources res = getResources();
         final PreferenceScreen prefScreen = getPreferenceScreen();
@@ -59,7 +59,7 @@ public class Notifications extends SettingsPreferenceFragment
     
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        return false;
+            return false;
     }  
 
     @Override
@@ -73,7 +73,7 @@ public class Notifications extends SettingsPreferenceFragment
                 public List<SearchIndexableResource> getXmlResourcesToIndex(
                         Context context, boolean enabled) {
                     final SearchIndexableResource sir = new SearchIndexableResource(context);
-                    sir.xmlResId = R.xml.category_notifications;
+                    sir.xmlResId = R.xml.category_battery;
                     return Arrays.asList(sir);
                 }
 

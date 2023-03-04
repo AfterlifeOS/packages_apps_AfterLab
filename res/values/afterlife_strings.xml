@@ -34,11 +34,12 @@
     <string name="category_buttons_title">Buttons</string>
     <string name="category_lockscreen_title">Lockscreen</string>
     <string name="category_gestures_title">Gestures</string>
-    <string name="category_navigation_title">Navigation</string>
+    <string name="category_battery_title">Battery</string>
     <string name="category_notifications_title">Notifications</string>
     <string name="category_powermenu_title">Power Menu</string>
     <string name="category_quicksettings_title">Quick Settings</string>
     <string name="category_statusbar_title">Statusbar</string>
+    <string name="category_misc_title">Miscellaneous</string>
     
     <!-- [CHAR_LIMIT=NONE] Developer Settings: Title of the setting which enables overlays to customize the adaptive icon shape (e.g. launcher and quick settings icons). -->
     <string name="theme_customization_icon_shape_title">Icon shape</string>
