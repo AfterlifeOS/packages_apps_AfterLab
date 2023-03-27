@@ -63,6 +63,12 @@
         android:defaultValue="0"
         android:max="4"
         android:min="0" />
+
+   <Preference
+        android:key="edge_light_settings"
+        android:title="@string/edge_light_title"
+        android:summary="@string/edge_light_summary"
+        android:fragment="com.afterlife.afterlab.fragments.EdgeLightSettings" />
     
      <PreferenceCategory
           android:title="@string/less_boring_headsup_category_title">
