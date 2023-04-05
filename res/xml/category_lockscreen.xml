@@ -15,5 +15,11 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/category_lockscreen_title" >
+    
+     <com.afterlife.support.preferences.SystemSettingSwitchPreference
+        android:key="ambient_wake_gestures"
+        android:title="@string/ambient_wake_gestures_title"
+        android:summary="@string/ambient_wake_gestures_summary"
+        android:defaultValue="false" />
 
 </PreferenceScreen>
