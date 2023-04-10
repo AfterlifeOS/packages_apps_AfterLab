@@ -60,6 +60,7 @@ public class LockScreen extends SettingsPreferenceFragment
     private SwitchPreference mFingerprintSuccessVib;
     private SwitchPreference mFingerprintErrorVib;
     private SecureSettingSwitchPreference mDoubleLineClock;
+    private SecureSettingSwitchPreference mClockColorEnabled;
     private Preference mAODPref;
     
 	public static final int MODE_DISABLED = 0;
@@ -81,6 +82,12 @@ public class LockScreen extends SettingsPreferenceFragment
         mDoubleLineClock.setChecked((Settings.Secure.getInt(getContentResolver(),
              Settings.Secure.LOCKSCREEN_USE_DOUBLE_LINE_CLOCK, 1) != 0));
         mDoubleLineClock.setOnPreferenceChangeListener(this);
+
+        mClockColorEnabled = (SecureSettingSwitchPreference ) findPreference(KG_CUSTOM_CLOCK_COLOR_ENABLED);
+        mClockColorEnabled.setChecked((Settings.Secure.getInt(getContentResolver(),
+             Settings.Secure.KG_CUSTOM_CLOCK_COLOR_ENABLED, 1) != 0));
+        mClockColorEnabled.setOnPreferenceChangeListener(this);
+
         mFingerprintManager = (FingerprintManager) getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
         mFingerprintSuccessVib = (SwitchPreference) findPreference(FINGERPRINT_SUCCESS_VIB);
         mFingerprintErrorVib = (SwitchPreference) findPreference(FINGERPRINT_ERROR_VIB);
@@ -155,6 +162,11 @@ public class LockScreen extends SettingsPreferenceFragment
           boolean value = (Boolean) newValue;
             Settings.Secure.putInt(getActivity().getContentResolver(),
                     Settings.Secure.LOCKSCREEN_USE_DOUBLE_LINE_CLOCK, value ? 1 : 0);
+            return true;
+        } else if (preference == mClockColorEnabled) {
+          boolean value = (Boolean) newValue;
+            Settings.Secure.putInt(getActivity().getContentResolver(),
+                    Settings.Secure.KG_CUSTOM_CLOCK_COLOR_ENABLED, value ? 1 : 0);
             return true;
         }
         return false;
