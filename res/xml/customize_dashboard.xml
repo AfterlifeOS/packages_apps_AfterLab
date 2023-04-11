@@ -34,14 +34,6 @@
           android:layout="@layout/preference_category_buttons"
           />
 
-     <!-- Gestures -->
-     <Preference
-          android:id="@+id/gestures"
-          android:title="@string/category_gestures_title"
-          android:fragment="com.afterlife.afterlab.Gestures"
-          android:layout="@layout/preference_category_gestures"
-          />
-
      <!-- Lockscreen -->
      <Preference
           android:id="@+id/lockscreen"
