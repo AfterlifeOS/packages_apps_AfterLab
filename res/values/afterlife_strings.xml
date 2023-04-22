@@ -589,4 +589,7 @@ s that internet users can use wisely.</string>
     <string name="notification_clear_all_cat">Clear All Buttons</string>
     <string name="misc_cat">Misc</string>
     <string name="weather_cat">Weather</string>
+    
+    <string name="qs_ui_title">Quick Settings UI</string>
+    <string name="android_eleven">Android 11</string>
 </resources>

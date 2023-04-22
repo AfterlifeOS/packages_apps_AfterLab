@@ -34,7 +34,16 @@
 
     <PreferenceCategory
         android:title="Quick Settings Style">
-
+        	
+        <!-- QS UI -->
+    	<com.afterlife.support.preference.SystemSettingListPreference
+        	android:key="qs_ui_style"
+        	android:title="@string/qs_ui_title"
+        	android:entries="@array/qs_ui_entries"
+        	android:entryValues="@array/qs_ui_values"
+        	android:summary="%s"
+        	android:defaultValue="0" />
+        
         <Preference
             android:key="qs_tile_layout"
             android:title="@string/qs_tile_layout_title"
