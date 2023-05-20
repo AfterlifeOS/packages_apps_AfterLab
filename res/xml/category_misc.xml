@@ -17,4 +17,15 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/category_misc_title" >
 
+    <PreferenceCategory
+          android:title="@string/Spoof_Area_category_title">
+
+          <SwitchPreference
+            android:key="use_photos_spoof"
+            android:title="@string/use_photos_spoof_title"
+            android:summary="@string/use_photos_spoof_summary"
+            android:defaultValue="true" />
+
+     </PreferenceCategory>
+
 </PreferenceScreen>

@@ -20,6 +20,7 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.SystemProperties;
 import android.os.Handler;
 import android.os.UserHandle;
 import android.provider.SearchIndexableResource;
@@ -47,17 +48,29 @@ import java.util.List;
 public class Misc extends SettingsPreferenceFragment 
             implements Preference.OnPreferenceChangeListener {
     
+    private static final String KEY_PHOTOS_SPOOF = "use_photos_spoof";
+    private static final String SYS_PHOTOS_SPOOF = "persist.sys.pixelprops.gphotos";
+    private SwitchPreference mPhotosSpoof;
+
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         addPreferencesFromResource(R.xml.category_misc);
-        PreferenceScreen prefSet = getPreferenceScreen();
-        final Resources res = getResources();
         final PreferenceScreen prefScreen = getPreferenceScreen();
+        final Resources res = getResources();
+
+        mPhotosSpoof = (SwitchPreference) prefScreen.findPreference(KEY_PHOTOS_SPOOF);
+        mPhotosSpoof.setChecked(SystemProperties.getBoolean(SYS_PHOTOS_SPOOF, true));
+        mPhotosSpoof.setOnPreferenceChangeListener(this);
     }
     
     @Override
-    public boolean onPreferenceChange(Preference preference, Object newValue) {
+    public boolean onPreferenceChange(Preference preference, Object objValue) {
+        if (preference == mPhotosSpoof) {
+            boolean value = (Boolean) objValue;
+            SystemProperties.set(SYS_PHOTOS_SPOOF, value ? "true" : "false");
+            return true;
+        }
         return false;
     }  
 
