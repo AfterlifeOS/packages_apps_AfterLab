@@ -20,40 +20,49 @@
         android:key="volume"
         android:title="@string/volume_cat" >
 
-    <com.afterlife.support.preference.SystemSettingSwitchPreference
-        android:key="volume_rocker_wake"
-        android:title="@string/volume_rocker_wake_title"
-        android:summary="@string/volume_rocker_wake_summary"
-        android:defaultValue="false" />
+    <!-- Volume Styles -->      
+     <com.afterlife.support.preference.SystemSettingListPreference
+         android:key="custom_volume_styles"
+         android:title="@string/volume_style_title"
+         android:entries="@array/volume_styles_entries"
+         android:entryValues="@array/volume_styles_values"
+         android:summary="%s"
+         android:defaultValue="0" />
+
+     <com.afterlife.support.preference.SystemSettingSwitchPreference
+         android:key="volume_rocker_wake"
+         android:title="@string/volume_rocker_wake_title"
+         android:summary="@string/volume_rocker_wake_summary"
+         android:defaultValue="false" />
 
      <com.afterlife.support.preference.SecureSettingSwitchPreference
-        android:key="volume_panel_on_left"
-        android:title="@string/volume_panel_on_left_title"
-        android:summary="@string/volume_panel_on_left_summary"
-        android:defaultValue="false" />
+         android:key="volume_panel_on_left"
+         android:title="@string/volume_panel_on_left_title"
+         android:summary="@string/volume_panel_on_left_summary"
+         android:defaultValue="false" />
     
      <com.afterlife.support.preference.SystemSettingSwitchPreference
-        android:key="volume_media_output_toggle"
-        android:icon="@drawable/ic_settings_sound"
-        android:title="@string/volume_media_output_toggle_title"
-        android:summary="@string/volume_media_output_toggle_summary"
-        android:defaultValue="false" />
+         android:key="volume_media_output_toggle"
+         android:icon="@drawable/ic_settings_sound"
+         android:title="@string/volume_media_output_toggle_title"
+         android:summary="@string/volume_media_output_toggle_summary"
+         android:defaultValue="false" />
 
      <com.afterlife.support.preference.SystemSettingListPreference
-        android:key="volume_key_cursor_control"
-        android:summary="%s"
-        android:title="@string/volume_key_cursor_control_title"
-        android:dialogTitle="@string/volume_key_cursor_control_title"
-        android:entries="@array/volume_key_cursor_control_entries"
-        android:entryValues="@array/volume_key_cursor_control_values"
-        android:defaultValue="0" />
+         android:key="volume_key_cursor_control"
+         android:summary="%s"
+         android:title="@string/volume_key_cursor_control_title"
+         android:dialogTitle="@string/volume_key_cursor_control_title"
+         android:entries="@array/volume_key_cursor_control_entries"
+         android:entryValues="@array/volume_key_cursor_control_values"
+         android:defaultValue="0" />
     
     <!-- </PreferenceCategory> -->
 
      <com.afterlife.support.preference.SystemSettingSwitchPreference
-        android:key="click_partial_screenshot"
-        android:title="@string/click_partial_screenshot_title"
-        android:summary="@string/click_partial_screenshot_summary"
-        android:defaultValue="false" />
+         android:key="click_partial_screenshot"
+         android:title="@string/click_partial_screenshot_title"
+         android:summary="@string/click_partial_screenshot_summary"
+         android:defaultValue="false" />
         
 </PreferenceScreen>
