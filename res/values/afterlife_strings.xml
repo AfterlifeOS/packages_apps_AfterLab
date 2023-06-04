@@ -562,4 +562,8 @@ s that internet users can use wisely.</string>
     <string name="edge_light_repeat_animation_summary_off">Show only once</string>
     <string name="edge_light_color_mode_title">Edge light color mode</string>
     <string name="enable">Enable</string>
+    
+    <!-- QS Dual Tone Colors -->
+    <string name="qs_dual_tone_title">QS dual-tone</string>
+    <string name="qs_dual_tone_summary">Use dual tone background colors</string>
 </resources>
