@@ -169,4 +169,8 @@
     <!-- Double tap lockscreen to sleep -->
     <string name="double_tap_to_sleep_lockscreen_title">Lockscreen</string>
     <string name="double_tap_to_sleep_lockscreen_summary">Double-tap anywhere on the lockscreen to put the device to sleep</string>
+
+    <!-- Wake on plug -->
+    <string name="wake_when_plugged_or_unplugged_title">Wake on plug</string>
+    <string name="wake_when_plugged_or_unplugged_summary">Turn the screen on when connecting or disconnecting a power source</string>
 </resources>
