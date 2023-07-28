@@ -16,7 +16,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- AfterLife Customize -->
-    <string name="customize_dashboard_title">AfterLife Laboratory</string>
+    <string name="customize_dashboard_title">AfterLab</string>
     <string name="build_tweaks_summary_title">Customize your own version of AfterLife</string>
 
     <!-- General -->
