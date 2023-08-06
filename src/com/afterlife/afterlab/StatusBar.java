@@ -44,6 +44,8 @@ import androidx.preference.SwitchPreference;
 import com.android.internal.logging.nano.MetricsProto;
 
 import com.android.settings.R;
+import android.text.format.DateFormat;
+import com.afterlife.support.preferences.SecureSettingListPreference;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.Indexable;
@@ -73,12 +75,16 @@ public class StatusBar extends SettingsPreferenceFragment
             
     private SystemSettingSwitchPreference mThreshold;
     private SystemSettingMainSwitchPreference mNetMonitor;
+
+    private static final String KEY_STATUS_BAR_AM_PM = "status_bar_am_pm";
+    private SecureSettingListPreference mStatusBarAmPm;
     
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         addPreferencesFromResource(R.xml.category_statusbar);
         final ContentResolver resolver = getActivity().getContentResolver();
+        mStatusBarAmPm = findPreference(KEY_STATUS_BAR_AM_PM);
         PreferenceScreen prefSet = getPreferenceScreen();
         final Resources res = getResources();
         final PreferenceScreen prefScreen = getPreferenceScreen();
@@ -121,6 +127,20 @@ public class StatusBar extends SettingsPreferenceFragment
     @Override
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.AFTERLIFE;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+	if (DateFormat.is24HourFormat(requireContext())) {
+            mStatusBarAmPm.setEnabled(false);
+            mStatusBarAmPm.setSummary(R.string.status_bar_am_pm_unavailable);
+            }
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
     }
 
     public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
