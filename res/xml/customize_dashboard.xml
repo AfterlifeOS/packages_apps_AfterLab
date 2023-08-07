@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2020 Project-Awaken
-     Copyright (C) 2023 DroidX
      Copyright (C) 2023 AfterLife Project
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -14,80 +12,93 @@
      limitations under the License.
 -->
 <PreferenceScreen
+    android:title=" "
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-    android:title="@string/customize_dashboard_title" >
-     
-     <!-- Battery -->
-     <Preference
-          android:id="@+id/battery"
-          android:title="@string/category_battery_title"
-          android:fragment="com.afterlife.afterlab.Battery"
-          android:layout="@layout/preference_category_battery"
-          />
-          
-     <!-- Buttons -->
-     <Preference
-          android:id="@+id/buttons"
-          android:title="@string/category_buttons_title"
-          android:fragment="com.afterlife.afterlab.Buttons"
-          android:layout="@layout/preference_category_buttons"
-          />
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-     <!-- Lockscreen -->
-     <Preference
-          android:id="@+id/lockscreen"
-          android:title="@string/category_lockscreen_title"
-          android:fragment="com.afterlife.afterlab.LockScreen"
-          android:layout="@layout/preference_category_lockscreen"
-          />
-     
+    <!-- Banner -->
+    <Preference
+        android:id="@+id/banner"
+        android:title="AfterLabs"
+        settings:layout="@layout/afterlab_dashboard_header" />
+
+     <!-- About Team -->
+    <Preference
+        android:icon="@drawable/ic_interface_about"
+        android:id="@+id/about"
+        android:title="About"
+        android:summary="Let you know about AfterLife"
+        settings:layout="@layout/afterlab_interface_single" />
+
+     <!-- Battery -->
+    <Preference
+        android:icon="@drawable/ic_interface_battery"
+        android:id="@+id/battery"
+        android:title="@string/category_battery_title"
+        android:fragment="com.afterlife.afterlab.Battery"
+        settings:layout="@layout/afterlab_interface_single_left" />
+
+     <!-- Button -->
+    <Preference
+        android:icon="@drawable/ic_interface_buttons"
+        android:id="@+id/buttons"
+        android:title="@string/category_buttons_title"
+        android:fragment="com.afterlife.afterlab.Buttons"
+        settings:layout="@layout/afterlab_interface_single_right" />
+
+     <!-- LockScreen -->
+    <Preference
+        android:icon="@drawable/ic_interface_ls"
+        android:id="@+id/lockscreen"
+        android:title="@string/category_lockscreen_title"
+        android:fragment="com.afterlife.afterlab.LockScreen"
+        settings:layout="@layout/afterlab_interface_single_left" />
+
      <!-- Misc -->
-     <Preference
-          android:id="@+id/misc"
-          android:title="@string/category_misc_title"
-          android:fragment="com.afterlife.afterlab.Misc"
-          android:layout="@layout/preference_category_misc"
-          />
-          
-     <!-- Notifications -->
-     <Preference
-          android:id="@+id/notifications"
-          android:title="@string/category_notifications_title"
-          android:fragment="com.afterlife.afterlab.Notifications"
-          android:layout="@layout/preference_category_notifications"
-          />
+    <Preference
+        android:icon="@drawable/ic_interface_misc"
+        android:id="@+id/misc"
+        android:title="@string/category_misc_title"
+        android:fragment="com.afterlife.afterlab.Misc"
+        settings:layout="@layout/afterlab_interface_single_right" />
+
+     <!-- Notification -->
+    <Preference
+        android:icon="@drawable/ic_interface_notif"
+        android:id="@+id/notifications"
+        android:title="@string/category_notifications_title"
+        android:fragment="com.afterlife.afterlab.Notifications"
+        settings:layout="@layout/afterlab_interface_single_left" />
 
      <!-- Power Menu -->
-     <Preference
-          android:id="@+id/powermenu"
-          android:title="@string/category_powermenu_title"
-          android:fragment="com.afterlife.afterlab.PowerMenu"
-          android:layout="@layout/preference_category_powermenu"
-          />
+    <Preference
+        android:icon="@drawable/ic_interface_power"
+        android:id="@+id/powermenu"
+        android:title="@string/category_powermenu_title"
+        android:fragment="com.afterlife.afterlab.PowerMenu"
+        settings:layout="@layout/afterlab_interface_single_right" />
 
      <!-- Quick Settings -->
-     <Preference
-          android:id="@+id/quick_settings"
-          android:title="@string/category_quicksettings_title"
-          android:fragment="com.afterlife.afterlab.QuickSettings"
-          android:layout="@layout/preference_category_quicksettings"
-          />
+    <Preference
+        android:icon="@drawable/ic_interface_qs"
+        android:id="@+id/quick_settings"
+        android:title="@string/category_quicksettings_title"
+        android:fragment="com.afterlife.afterlab.QuickSettings"
+        settings:layout="@layout/afterlab_interface_single_left" />
 
-     <!-- Statusbar -->
-     <Preference
-          android:id="@+id/statusbar"
-          android:title="@string/category_statusbar_title"
-          android:fragment="com.afterlife.afterlab.StatusBar"
-          android:layout="@layout/preference_category_statusbar"
-          />
+     <!-- StatusBar -->
+    <Preference
+        android:icon="@drawable/ic_interface_sb"
+        android:id="@+id/statusbar"
+        android:title="@string/category_statusbar_title"
+        android:fragment="com.afterlife.afterlab.StatusBar"
+        settings:layout="@layout/afterlab_interface_single_right" />
 
      <!-- System -->
-     <Preference
-          android:id="@+id/system"
-          android:title="@string/category_system_title"
-          android:fragment="com.afterlife.afterlab.System"
-          android:layout="@layout/preference_category_system"
-          />
-
+    <Preference
+        android:icon="@drawable/ic_interface_system"
+        android:id="@+id/system"
+        android:title="@string/category_system_title"
+        android:fragment="com.afterlife.afterlab.System"
+        settings:layout="@layout/afterlab_interface_single_left" />
 </PreferenceScreen>

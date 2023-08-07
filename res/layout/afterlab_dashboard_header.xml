@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2023 AfterLife Project
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<LinearLayout 
+	android:clipToPadding="false" 
+	android:layout_width="fill_parent" 
+	android:layout_height="wrap_content" 
+	android:layout_marginHorizontal="16.0dip" 
+	android:layout_marginBottom="5.0dip"
+	xmlns:android="http://schemas.android.com/apk/res/android" 
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+	
+    <com.google.android.material.card.MaterialCardView
+		android:gravity="center_vertical" 
+		android:layout_width="fill_parent" 
+		android:layout_height="140.0dip" 
+		android:paddingStart="4.0dip" 
+		android:paddingEnd="4.0dip" 
+		app:cardBackgroundColor="@color/card_bg" 
+		app:cardCornerRadius="26.0dip" 
+		app:cardElevation="0.0dip">
+		
+    <com.google.android.material.card.MaterialCardView
+		android:layout_width="fill_parent" 
+		android:layout_height="fill_parent" 
+		android:layout_marginTop="11.0dip" 
+		android:layout_marginBottom="11.0dip" android:layout_marginHorizontal="11.0dip" app:cardBackgroundColor="@android:color/transparent" app:cardCornerRadius="26.0dip" 
+		app:cardElevation="0.0dip">
+		
+    <com.afterlife.preferences.WallpaperBlurView 
+		android:gravity="center"
+		android:orientation="vertical" 
+		android:layout_width="fill_parent" 
+		android:layout_height="fill_parent" 
+		android:scaleType="centerCrop" 
+		android:elevation="0.0dip" />
+			
+        <TextView 
+            android:textSize="40.0sp" android:textStyle="normal"
+		    android:fontFamily="@font/Abeganshi" 
+            android:textColor="@android:color/system_accent1_50" 
+            android:gravity="center" 
+		    android:layout_gravity="center" 
+		    android:id="@android:id/title" 
+		    android:layout_width="wrap_content" 
+		    android:layout_height="wrap_content" 
+		    android:layout_marginTop="0.0dip" 
+		    android:maxLines="2" 
+		    android:singleLine="false" 
+		    android:textAllCaps="true" 
+		    android:textAlignment="center" 
+            app:layout_constraintBottom_toBottomOf="parent" 
+            app:layout_constraintTop_toTopOf="parent" />
+		
+        </com.google.android.material.card.MaterialCardView>
+			
+    </com.google.android.material.card.MaterialCardView>
+	
+</LinearLayout>
