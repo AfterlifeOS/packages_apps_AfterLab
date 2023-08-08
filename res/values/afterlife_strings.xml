@@ -209,6 +209,32 @@
     <string name="qs_show_auto_brightness_title">Auto brightness icon</string>
     <string name="qs_show_auto_brightness_summary">Show toggle for adaptive brightness near the slider</string>
 
+    <!-- About Project -->
+    <string name="abouttitl">AfterLife Prjkt</string>
+    <string name="aboutsumm">AfterLifePrjkt is an operating system that runs on the Android system with the current API level at 13.0 - 14.0 (beta). This OS provides a comfortable experience to users both in terms of performance and appearance and also has open source propertie
+s that internet users can use wisely</string>
+    <string name="github">Github</string>
+    <string name="github_description">View our source code</string>
+    <string name="telegram">Telegram</string>
+    <string name="telegram_description">Subscribe to our Telegram channel</string>
+    <string name="leads">The Leads</string>
+    <string name="designers">Man Of UI/UX</string>
+    <string name="contributor">Contributor</string>
+    <string name="afl_team_1">Romeo Delta Whiskey</string>
+    <string name="afl_team1_description">Lead,founder and source manager</string>
+    <string name="afl_team_2">Ari Lesmana</string>
+    <string name="afl_team2_description">Co-Lead and Designer</string>
+    <string name="afl_designer1_description">Core, Designer UI/UX</string>
+    <string name="afl_designer_1">indra sfyn</string>
+    <string name="afl_designer_2">nssʇıǝɹ #AFK</string>
+    <string name="afl_designer_3">Iverz</string>
+    <string name="afl_designer_4">Declanヅ</string>
+    <string name="afl_designer2_description">Core, Designer UI/UX</string>
+    <string name="afl_designer3_description">Core, Designer UI/UX</string>
+    <string name="afl_designer4_description">Core, Designer UI/UX</string>
+    <string name="afl_contri_1">∂σткιт</string>
+    <string name="afl_contri1_description">Contributor</string>
+
     <!-- Monet Engine -->
     <string name="monet_engine_title">Monet engine</string>
     <string name="monet_engine_summary">Customize monet parameters</string>

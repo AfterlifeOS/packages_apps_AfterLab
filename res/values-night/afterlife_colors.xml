@@ -13,12 +13,7 @@
  -->
 
 <resources>
-    <color name="google_grey700">#5f6368</color>
-    <color name="edit_background_base">@color/google_grey700</color>
-    <color name="option_border_default">@color/edit_background_base</color>
-
-    <color name="testclrbg0">@android:color/system_accent1_50</color>
-    <color name="testclrbg1">@android:color/system_accent1_100</color>
-    <color name="testclrcrcl1">@color/settingslib_dialog_accent</color>
+    <color name="testclrbg0">@android:color/system_accent2_900</color>
+    <color name="testclrbg1">@android:color/system_accent2_800</color>
 
 </resources>
