@@ -1,5 +1,5 @@
 <PreferenceScreen
-    android:title=""
+    android:title="About Project"
     android:key="afterlife_about"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto">
@@ -85,7 +85,7 @@
         <Preference
             android:icon="@drawable/ic_devs"
             android:title="@string/afl_designer_4"
-            android:summary="@string/afl_designer_4_description">
+            android:summary="@string/afl_designer4_description">
             <intent
                 android:action="android.intent.action.VIEW"
                 android:data="https://t.me/seklek" />
