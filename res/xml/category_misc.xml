@@ -28,13 +28,13 @@
 
      </PreferenceCategory>
 
-     <com.afterlife.support.preferences.SystemSettingSwitchPreference
+     <com.afterlife.support.preference.SystemSettingSwitchPreference
         android:key="click_partial_screenshot"
         android:title="@string/click_partial_screenshot_title"
         android:summary="@string/click_partial_screenshot_summary"
         android:defaultValue="false" />
         
-     <com.afterlife.support.preferences.SecureSettingSwitchPreference
+     <com.afterlife.support.preference.SecureSettingSwitchPreference
         android:key="window_ignore_secure"
         android:title="@string/laboratory_ignore_window_secure_title"
         android:summary="@string/laboratory_ignore_window_secure_summary"

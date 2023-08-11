@@ -45,7 +45,7 @@ import com.android.internal.logging.nano.MetricsProto;
 
 import com.android.settings.R;
 import android.text.format.DateFormat;
-import com.afterlife.support.preferences.SecureSettingListPreference;
+import com.afterlife.support.preference.SecureSettingListPreference;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.Indexable;
@@ -62,8 +62,8 @@ import java.util.Collections;
 
 import com.android.settingslib.development.SystemPropPoker;
 import android.os.SystemProperties;
-import com.afterlife.support.preferences.SystemSettingSwitchPreference;
-import com.afterlife.support.preferences.SystemSettingMainSwitchPreference;
+import com.afterlife.support.preference.SystemSettingSwitchPreference;
+import com.afterlife.support.preference.SystemSettingMainSwitchPreference;
 import android.os.Process;
 
 import com.android.settingslib.development.SystemPropPoker;

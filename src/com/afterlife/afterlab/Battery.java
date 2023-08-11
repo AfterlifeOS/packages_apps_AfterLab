@@ -44,12 +44,12 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import com.afterlife.support.preferences.SystemSettingSwitchPreference;
-import com.afterlife.support.preferences.SystemSettingSeekBarPreference;
-import com.afterlife.support.preferences.SecureSettingSwitchPreference;
-import com.afterlife.support.preferences.SystemSettingListPreference;
+import com.afterlife.support.preference.SystemSettingSwitchPreference;
+import com.afterlife.support.preference.SystemSettingSeekBarPreference;
+import com.afterlife.support.preference.SecureSettingSwitchPreference;
+import com.afterlife.support.preference.SystemSettingListPreference;
 import com.android.settings.SettingsPreferenceFragment;
-import com.afterlife.support.preferences.SystemSettingSeekBarPreference;
+import com.afterlife.support.preference.SystemSettingSeekBarPreference;
 
 @SearchIndexable
 public class Battery extends SettingsPreferenceFragment 

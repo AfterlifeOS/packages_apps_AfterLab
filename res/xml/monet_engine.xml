@@ -17,13 +17,13 @@
     android:key="monet_settings"
     android:title="@string/monet_engine_title">
 
-    <com.afterlife.support.preferences.SecureSettingSwitchPreference
+    <com.afterlife.support.preference.SecureSettingSwitchPreference
         android:key="system_black_theme"
-        android:title="Enable Black Theme"
-        android:summary="Darken Your Android"
+        android:title="@string/system_black_theme_title"
+        android:summary="@string/system_black_theme_summary"
         android:defaultValue="false" />
 
-    <com.afterlife.support.preferences.SecureSettingSwitchPreference
+    <com.afterlife.support.preference.SecureSettingSwitchPreference
         android:key="monet_engine_custom_color"
         android:title="@string/monet_engine_custom_color_title"
         android:summary="@string/monet_engine_custom_color_summary"
@@ -35,7 +35,7 @@
         android:dependency="monet_engine_custom_color"
         android:defaultValue="0xFF1b6ef3" />
 
-    <com.afterlife.support.preferences.SecureSettingSwitchPreference
+    <com.afterlife.support.preference.SecureSettingSwitchPreference
         android:key="monet_engine_custom_bgcolor"
         android:title="@string/monet_engine_custom_bgcolor_title"
         android:summary="@string/monet_engine_custom_bgcolor_summary"
@@ -47,7 +47,7 @@
         android:dependency="monet_engine_custom_bgcolor"
         android:defaultValue="0xFF1b6ef3" />
 
-    <com.afterlife.support.preferences.SecureSettingSeekBarPreference
+    <com.afterlife.support.preference.SecureSettingSeekBarPreference
         android:key="monet_engine_luminance_factor"
         android:title="@string/monet_engine_luminance_factor_title"
         android:summary="@string/monet_engine_luminance_factor_summary"
@@ -56,7 +56,7 @@
         settings:min="25"
         settings:interval="5"/>
 
-    <com.afterlife.support.preferences.SecureSettingSeekBarPreference
+    <com.afterlife.support.preference.SecureSettingSeekBarPreference
         android:key="monet_engine_chroma_factor"
         android:title="@string/monet_engine_chroma_factor_title"
         android:summary="@string/monet_engine_chroma_factor_summary"
@@ -65,7 +65,7 @@
         settings:min="25"
         settings:interval="5"/>
 
-    <com.afterlife.support.preferences.SecureSettingSwitchPreference
+    <com.afterlife.support.preference.SecureSettingSwitchPreference
         android:key="monet_engine_tint_background"
         android:title="@string/monet_engine_tint_background_title"
         android:summary="@string/monet_engine_tint_background_summary"
