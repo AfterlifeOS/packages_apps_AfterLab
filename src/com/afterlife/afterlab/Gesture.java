@@ -44,7 +44,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @SearchIndexable
-public class Gestures extends SettingsPreferenceFragment {
+public class Gesture extends SettingsPreferenceFragment {
 
     @Override
     public void onCreate(Bundle icicle) {

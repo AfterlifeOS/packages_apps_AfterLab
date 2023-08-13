@@ -51,7 +51,7 @@
     <Preference
         android:icon="@drawable/ic_interface_gesture"
         android:id="@+id/gesture"
-        android:title="@string/category_gesture_title"
+        android:title="@string/category_gestures_title"
         android:fragment="com.afterlife.afterlab.Gesture"
         settings:layout="@layout/afterlab_interface_single_left" />
 
