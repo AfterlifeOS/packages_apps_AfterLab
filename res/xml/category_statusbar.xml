@@ -71,6 +71,12 @@
         android:title="@string/show_fourg_icon_title"
         android:summary="@string/show_fourg_icon_summary"
         android:defaultValue="false"/>
+
+     <com.afterlife.support.preference.SystemSettingSwitchPreference 
+        android:key="use_old_mobiletype" 
+        android:title="@string/use_old_mobiletype_title" 
+        android:summary="@string/use_old_mobiletype_summary" 
+        android:defaultValue="false"/>
     
     <com.afterlife.support.preference.SystemSettingSwitchPreference
         android:key="data_disabled_icon"
