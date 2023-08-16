@@ -61,7 +61,7 @@
     <string name="theme_customization_wifi_icon_summary">Set custom wifi icon style</string>
 
     <!-- Status bar - Battery -->
-    <string name="status_bar_battery_category_title">StatusBar Battery customizations (SystemUI restart needed)</string>
+    <string name="status_bar_battery_category_title">StatusBar Battery customizations</string>
     <string name="status_bar_battery_style_title">Battery style</string>
     <string name="status_bar_battery_style_icon_portrait">Icon portrait</string>
     <string name="status_bar_battery_style_icon_rlandscape">Icon landscape (Right)</string>
@@ -78,10 +78,6 @@
     <string name="status_bar_battery_percent_text_next_left">Next to the icon (left)</string> 
     <string name="status_bar_battery_text_charging_title">Battery percentage when charging</string>
     <string name="status_bar_battery_text_charging_summary">Always display battery percentage when charging</string>
-
-    <!-- QS battery -->
-    <string name="qs_battery_category_title">Qs Battery customizations (SystemUI restart needed)</string>
-    <string name="qs_use_status_bar_battery_style">Follow status bar style</string>
 
     <!-- Battery estimate -->
     <string name="battery_estimate_title">Battery estimate</string>
