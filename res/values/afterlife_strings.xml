@@ -300,4 +300,43 @@ s that internet users can use wisely</string>
     <string name="battery_bar_blend_color_reverse_summary_off">Full &#8594; empty: red &#8592; green &#8592; blue &#8592; red</string>
     <string name="battery_bar_blend_color_reverse_summary_on">Full &#8594; empty: red &#8594; green &#8594; blue &#8594; red</string>
     <string name="unit_pixels">dp</string>
+
+     <!-- Custom logo -->
+    <string name="status_bar_logo_title">Logo</string>
+    <string name="status_bar_logo_summary">Display a custom logo on left or right of the status bar</string>
+    <string name="status_bar_logo_position_title">Logo position</string>
+    <string name="status_bar_logo_style_title">Logo style</string>
+    <string name="status_bar_logo_style_afterlife">AFTERLIFE SWAG</string>
+    <string name="status_bar_logo_style_android">Android</string>
+    <string name="status_bar_logo_style_adidas">Adidas</string>
+    <string name="status_bar_logo_style_alien">Alien</string>
+    <string name="status_bar_logo_style_apple">Apple</string>
+    <string name="status_bar_logo_style_avengers">Avengers</string>
+    <string name="status_bar_logo_style_batman">Batman</string>
+    <string name="status_bar_logo_style_batman_tdk">Batman The Dark Knight</string>
+    <string name="status_bar_logo_style_beats">Beats</string>
+    <string name="status_bar_logo_style_biohazard">Biohazard</string>
+    <string name="status_bar_logo_style_blackberry">BlackBerry</string>
+    <string name="status_bar_logo_style_cannabis">Cannabis</string>
+    <string name="status_bar_logo_style_emoticon_cool">Emoticon cool</string>
+    <string name="status_bar_logo_style_emoticon_devil">Emoticon devil</string>
+    <string name="status_bar_logo_style_fire">Fire</string>
+    <string name="status_bar_logo_style_heart">Heart</string>
+    <string name="status_bar_logo_style_nike">Nike</string>
+    <string name="status_bar_logo_style_pacman">Pac-man</string>
+    <string name="status_bar_logo_style_puma">Puma</string>
+    <string name="status_bar_logo_style_rog">ROG</string>
+    <string name="status_bar_logo_style_spiderman">Spider-Man</string>
+    <string name="status_bar_logo_style_superman">Superman</string>
+    <string name="status_bar_logo_style_windows">Windows</string>
+    <string name="status_bar_logo_style_xbox">Xbox</string>
+    <string name="status_bar_logo_style_ghost">Ghost</string>
+    <string name="status_bar_logo_style_ninja">Ninja</string>
+    <string name="status_bar_logo_style_robot">Robot</string>
+    <string name="status_bar_logo_style_ironman">Iron Man</string>
+    <string name="status_bar_logo_style_captain_america">Captain America</string>
+    <string name="status_bar_logo_style_flash">Flash</string>
+    <string name="status_bar_logo_style_tux">Tux</string>
+    <string name="status_bar_logo_style_ubuntu">Ubuntu</string>
+    <string name="status_bar_logo_style_mint">Linux Mint</string>
 </resources>
