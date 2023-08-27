@@ -46,6 +46,13 @@
             android:key="qs_show_battery_estimate"
             android:title="@string/battery_estimate_title"
             android:summary="@string/battery_estimate_summary" />
+
+        <!-- Battery Bar View -->
+        <Preference
+            android:key="batterybar"
+            android:title="@string/battery_bar_title"
+            android:summary="@string/battery_bar_summary"
+            android:fragment="com.afterlife.afterlab.fragments.BatteryBar" />
     
     </PreferenceCategory>
     
