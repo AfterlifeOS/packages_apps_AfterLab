@@ -290,4 +290,9 @@ s that internet users can use wisely</string>
     <!-- Data usage info in QS footer -->
     <string name="qs_footer_datausage_title">Data usage</string>
     <string name="qs_footer_datausage_summary">Display data usage summary in quick settings footer</string>
+
+    <!-- Screen off animation -->
+    <string name="screen_off_animation_title">Screen off animation</string>
+    <string name="screen_off_animation_crt" translatable="false">CRT</string>
+    <string name="screen_off_animation_scale">Scale</string>
 </resources>
