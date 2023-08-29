@@ -224,18 +224,22 @@ s that internet users can use wisely</string>
     <string name="designers">Man Of UI/UX</string>
     <string name="contributor">Contributor</string>
     <string name="afl_team_1">Romeo Delta Whiskey</string>
-    <string name="afl_team1_description">Lead, founder and source manager</string>
+    <string name="afl_team1_description">Lead, Founder and Source manager</string>
     <string name="afl_team_2">Ari Lesmana</string>
     <string name="afl_team2_description">Co-Lead and Designer</string>
-    <string name="afl_designer1_description">Core, Designer UI/UX</string>
+    <string name="afl_team_3">∂σткιт</string>
+    <string name="afl_team3_description">Source manager</string>
+    <string name="afl_designer1_description">Core, Lead Designer UI/UX</string>
     <string name="afl_designer_1">indra sfyn</string>
     <string name="afl_designer_2">nssʇıǝɹ #AFK</string>
     <string name="afl_designer_3">Iverz</string>
     <string name="afl_designer_4">Declanヅ</string>
+    <string name="afl_designer_5">Mlkyjuicee</string>
+    <string name="afl_designer5_description">Core, Designer UI/UX</string>
     <string name="afl_designer2_description">Core, Designer UI/UX</string>
     <string name="afl_designer3_description">Core, Designer UI/UX</string>
     <string name="afl_designer4_description">Core, Designer UI/UX</string>
-    <string name="afl_contri_1">∂σткιт</string>
+    <string name="afl_contri_1">Aepranata</string>
     <string name="afl_contri1_description">Contributor</string>
 
     <!-- Monet Engine -->

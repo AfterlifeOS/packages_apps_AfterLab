@@ -38,6 +38,14 @@
                 android:action="android.intent.action.VIEW"
                 android:data="https://t.me/Romeo_Delta_Whiskey" />
         </Preference>
+
+        <Preference
+            android:icon="@drawable/ic_devs"
+            android:title="@string/afl_team_3"
+            android:summary="@string/afl_team3_description">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/fakedotkit" />
         
         <Preference
             android:icon="@drawable/ic_devs"
@@ -90,6 +98,15 @@
                 android:action="android.intent.action.VIEW"
                 android:data="https://t.me/seklek" />
         </Preference>
+
+        <Preference
+            android:icon="@drawable/ic_devs"
+            android:title="@string/afl_designer_5"
+            android:summary="@string/afl_designer5_description">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/affandilham" />
+        </Preference>
         
     </PreferenceCategory>
 
@@ -103,7 +120,7 @@
             android:summary="@string/afl_contri1_description">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://t.me/fakedotkit" />
+                android:data="https://t.me/aepranata" />
         </Preference>
         
     </PreferenceCategory>
