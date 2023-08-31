@@ -335,4 +335,24 @@ s that internet users can use wisely</string>
     <!-- Status bar - icon blocklist -->
     <string name="status_bar_icons_title">Status bar icons</string>
     <string name="status_bar_icons_summary">Choose which status bar icons can be shown</string>
+
+    <!-- Power menu Animations  -->
+    <string name="power_menu_style">Power Menu Style Option</string>
+    <string name="power_menu_animation_title">Power menu animation</string>
+    <string name="power_menu_animation_dialog_title">Select power menu animation</string>
+    <string name="power_menu_animation_aosp">AOSP (default)</string>
+    <string name="power_menu_animation_bottom">Bottom</string>
+    <string name="power_menu_animation_top">Top</string>
+    <string name="power_menu_animation_xylon">Fly</string>
+    <string name="power_menu_animation_slide">Slide</string>
+    <string name="power_menu_animation_turn">Turn</string>
+    <string name="power_menu_animation_fly">Glow</string>
+    <string name="power_menu_animation_card">3D</string>
+    <string name="power_menu_animation_translucent_top">Translucent (top)</string>
+    <string name="power_menu_animation_translucent_bottom">Translucent (bottom)</string>
+    <string name="power_menu_animation_rotate">Rotate</string>
+
+    <!-- Power menu and dialogs opacity -->
+    <string name="power_menu_transparency">Power Menu Opacity</string>
+    <string name="power_menu_dialog_dim">Power Menu dialog dim background amount</string>
 </resources>
