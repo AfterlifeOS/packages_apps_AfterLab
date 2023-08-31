@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2022 crDroid Android Project
+ * Copyright (C) 2021 AospExtended ROM Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -69,7 +69,7 @@ import java.util.Arrays;
 import org.json.JSONObject;
 import org.json.JSONException;
 
-public class WifiIcons extends SettingsPreferenceFragment {
+public class WifiIcon extends SettingsPreferenceFragment {
 
     private RecyclerView mRecyclerView;
     private ThemeUtils mThemeUtils;

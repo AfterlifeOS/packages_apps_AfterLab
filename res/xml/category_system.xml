@@ -38,16 +38,16 @@
           android:fragment="com.afterlife.afterlab.fragments.StatusbarIcons"/>
 
      <Preference
+            android:key="android.theme.customization.wifi_icon"
+            android:title="@string/theme_customization_wifi_icon_title"
+            android:summary="@string/theme_customization_wifi_icon_summary"
+            android:fragment="com.afterlife.afterlab.fragments.WifiIcon"/>
+
+     <Preference
             android:key="android.theme.customization.signal_icon"
             android:title="@string/theme_customization_signal_icon_title"
             android:summary="@string/theme_customization_signal_icon_summary"
             android:fragment="com.afterlife.afterlab.fragments.SignalIcons"/>
-
-      <Preference
-            android:key="android.theme.customization.wifi_icon"
-            android:title="@string/theme_customization_wifi_icon_title"
-            android:summary="@string/theme_customization_wifi_icon_summary"
-            android:fragment="com.afterlife.afterlab.fragments.WifiIcons"/>
 
      <!-- Adaptive icon shape -->
      <Preference
