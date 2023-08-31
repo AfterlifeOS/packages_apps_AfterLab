@@ -17,6 +17,20 @@
      android:title="@string/category_statusbar_title" >
 
      <PreferenceCategory
+        android:title="@string/general_category">
+
+      <Preference
+         android:key="status_bar_icons"
+         android:title="@string/status_bar_icons_title"
+         android:summary="@string/status_bar_icons_summary">
+        <intent android:action="android.intent.action.MAIN"
+             android:targetPackage="com.android.systemui"
+             android:targetClass="com.android.systemui.tuner.StatusbarItemsActivity" />
+     </Preference>
+
+     </PreferenceCategory>
+
+     <PreferenceCategory
         android:key="clock_style_category"
         android:title="@string/clock_style_category_title" >
 
