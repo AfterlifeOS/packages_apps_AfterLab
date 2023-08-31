@@ -23,8 +23,6 @@ import android.content.pm.PackageManager;
 import android.graphics.drawable.AnimationDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
 import android.provider.SearchIndexableResource;
 import android.provider.Settings;
 import android.view.LayoutInflater;
@@ -62,10 +60,6 @@ import com.bumptech.glide.Glide;
 import com.android.internal.util.afterlife.ThemeUtils;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.concurrent.atomic.AtomicBoolean;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -82,10 +76,6 @@ public class SignalIcons extends SettingsPreferenceFragment {
 
     private List<String> mPkgs;
 
-    private ExecutorService mExecutor = Executors.newSingleThreadExecutor();
-    private Handler mHandler = new Handler();
-    private final AtomicBoolean mApplyingOverlays = new AtomicBoolean(false);
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -93,7 +83,6 @@ public class SignalIcons extends SettingsPreferenceFragment {
 
         mThemeUtils = new ThemeUtils(getActivity());
         mPkgs = mThemeUtils.getOverlayPackagesForCategory(mCategory, "android");
-        Collections.sort(mPkgs);
     }
 
     @Override
@@ -165,7 +154,6 @@ public class SignalIcons extends SettingsPreferenceFragment {
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if (mApplyingOverlays.get()) return;
                     updateActivatedStatus(mSelectedPkg, false);
                     updateActivatedStatus(iconPkg, true);
                     mSelectedPkg = iconPkg;
@@ -213,10 +201,6 @@ public class SignalIcons extends SettingsPreferenceFragment {
             Resources res = pkg.equals("android") ? Resources.getSystem()
                     : pm.getResourcesForApplication(pkg);
             int resId = res.getIdentifier(drawableName, "drawable", pkg);
-            if (resId == 0) {
-                return Resources.getSystem().getDrawable(
-                        Resources.getSystem().getIdentifier(drawableName, "drawable", "android"));
-            }
             return res.getDrawable(resId);
         }
         catch (PackageManager.NameNotFoundException e) {
@@ -237,10 +221,6 @@ public class SignalIcons extends SettingsPreferenceFragment {
     }
 
     public void enableOverlays(int position) {
-        mApplyingOverlays.set(true);
-        mExecutor.execute(() -> {
-            mThemeUtils.setOverlayEnabled(mCategory, mPkgs.get(position));
-            mHandler.post(() -> mApplyingOverlays.set(false));
-        });
+        mThemeUtils.setOverlayEnabled(mCategory, mPkgs.get(position), "android");
     }
 }
