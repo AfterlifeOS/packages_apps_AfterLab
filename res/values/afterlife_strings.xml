@@ -355,4 +355,8 @@ s that internet users can use wisely</string>
     <!-- Power menu and dialogs opacity -->
     <string name="power_menu_transparency">Power Menu Opacity</string>
     <string name="power_menu_dialog_dim">Power Menu dialog dim background amount</string>
+
+    <!-- Android P animation style -->
+    <string name="pie_animation_style_title">Android P animation style</string>
+    <string name="pie_animation_style_summary">Enable Android P \"Default\" animations</string>
 </resources>
