@@ -28,6 +28,12 @@
 
      </PreferenceCategory>
 
+     <com.afterlife.support.preference.GlobalSettingSwitchPreference
+        android:key="pie_animation_style"
+        android:title="@string/pie_animation_style_title"
+        android:summary="@string/pie_animation_style_summary"
+        android:defaultValue="false" />
+
      <com.afterlife.support.preference.SystemSettingSwitchPreference
         android:key="click_partial_screenshot"
         android:title="@string/click_partial_screenshot_title"
