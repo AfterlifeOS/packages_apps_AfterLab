@@ -55,5 +55,16 @@
             android:fragment="com.afterlife.afterlab.fragments.BatteryBar" />
     
     </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="bekron_cas_su"
+        android:title="@string/system_charging">
+
+     <com.afterlife.support.preference.SystemSettingSwitchPreference
+            android:key="charging_animation_bg"
+            android:title="@string/charging_animation_bg_title"
+            android:summary="@string/charging_animation_bg_summary"
+            android:defaultValue="false" />
     
+    </PreferenceCategory>
 </PreferenceScreen>
