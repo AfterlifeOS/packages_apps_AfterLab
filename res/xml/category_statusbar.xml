@@ -97,6 +97,12 @@
         android:title="@string/use_old_mobiletype_title" 
         android:summary="@string/use_old_mobiletype_summary" 
         android:defaultValue="false"/>
+
+     <com.afterlife.support.preference.SecureSettingSwitchPreference
+        android:key="show_wifi_standard_icon"
+        android:title="@string/show_wifi_standard_icon_title"
+        android:summary="@string/show_wifi_standard_icon_summary"
+        android:defaultValue="false" />
     
     <com.afterlife.support.preference.SystemSettingSwitchPreference
         android:key="data_disabled_icon"
