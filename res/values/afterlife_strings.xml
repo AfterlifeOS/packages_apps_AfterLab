@@ -41,6 +41,18 @@
     <string name="category_statusbar_title">Statusbar</string>
     <string name="category_misc_title">Miscellaneous</string>
 
+    <!-- Summary category-->
+    <string name="battery_summary">Battery customization options</string>
+    <string name="button_summary">Buttons customization options</string>
+    <string name="gestures_summary">Gesture customization options</string>
+    <string name="lockscreen_summary">Lockscreen customization options</string>
+    <string name="misc_summary">Misc customization options</string>
+    <string name="notification_summary">Notification customization options</string>
+    <string name="power_summary">PowerMenu customization options</string>
+    <string name="quicksetting_summary">Quick Settings customization options</string>
+    <string name="statusbar_summary">Statusbar customization options</string>
+    <string name="system_summary">System and Theme customization options</string>
+
     <!-- Sub category -->
     <string name="general_category">General</string>
     
