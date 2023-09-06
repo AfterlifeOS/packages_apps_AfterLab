@@ -22,7 +22,7 @@
     <com.google.android.material.card.MaterialCardView
 		android:gravity="center_vertical" 
 		android:layout_width="fill_parent" 
-		android:layout_height="140.0dip" 
+		android:layout_height="150.0dip" 
 		android:paddingStart="4.0dip" 
 		android:paddingEnd="4.0dip" 
 		app:cardBackgroundColor="@color/card_bg" 
@@ -45,7 +45,7 @@
 		android:elevation="0.0dip" />
 			
         <TextView 
-            android:textSize="40.0sp" android:textStyle="normal"
+            android:textSize="45.0sp" android:textStyle="normal"
 		    android:fontFamily="@font/Abeganshi" 
             android:textColor="@android:color/system_accent1_50" 
             android:gravity="center" 
