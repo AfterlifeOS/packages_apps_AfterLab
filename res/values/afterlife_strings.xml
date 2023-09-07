@@ -214,6 +214,10 @@
     <!-- 5G icon -->
     <string name="show_fiveg_icon_summary">Show 5G instead of LTE &amp; 4G</string>
     <string name="show_fiveg_icon_title">Display 5G Indicator</string>
+
+    <!-- 6G icon -->
+    <string name="show_sixg_icon_summary">Show 6G instead of LTE &amp; 4G &amp; 5G</string>
+    <string name="show_sixg_icon_title">Display 6G Indicator</string>
     
     <!-- Data disabled icon -->
     <string name="data_disabled_icon_title">Show data disabled icon</string>
