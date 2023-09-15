@@ -78,6 +78,7 @@ public class StatusBar extends SettingsPreferenceFragment
 
     private static final String KEY_STATUS_BAR_AM_PM = "status_bar_am_pm";
     private SecureSettingListPreference mStatusBarAmPm;
+    private Preference mCombinedSignalIcons;
     
     @Override
     public void onCreate(Bundle icicle) {
@@ -102,6 +103,8 @@ public class StatusBar extends SettingsPreferenceFragment
         mThreshold.setChecked(isThresholdEnabled);
         mThreshold.setOnPreferenceChangeListener(this);
         
+        mCombinedSignalIcons = findPreference("persist.sys.flags.combined_signal_icons");
+        mCombinedSignalIcons.setOnPreferenceChangeListener(this);
     }
     
     @Override
@@ -119,6 +122,11 @@ public class StatusBar extends SettingsPreferenceFragment
             Settings.System.putIntForUser(getContentResolver(),
                     Settings.System.NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD, value ? 1 : 0,
                     UserHandle.USER_CURRENT);
+            return true;
+        } else if (preference == mCombinedSignalIcons) {
+            boolean value = (Boolean) objValue;
+            Settings.Secure.putIntForUser(getContentResolver(),
+                Settings.Secure.ENABLE_COMBINED_SIGNAL_ICONS, value ? 1 : 0, UserHandle.USER_CURRENT);
             return true;
         } 
         return false;
