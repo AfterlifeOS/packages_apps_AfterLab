@@ -33,18 +33,18 @@
         android:title="@string/pie_animation_style_title"
         android:summary="@string/pie_animation_style_summary"
         android:defaultValue="false" />
-
-     <com.afterlife.support.preference.SystemSettingSwitchPreference
-        android:key="click_partial_screenshot"
-        android:title="@string/click_partial_screenshot_title"
-        android:summary="@string/click_partial_screenshot_summary"
-        android:defaultValue="false" />
         
      <com.afterlife.support.preference.SecureSettingSwitchPreference
         android:key="window_ignore_secure"
         android:title="@string/laboratory_ignore_window_secure_title"
         android:summary="@string/laboratory_ignore_window_secure_summary"
         android:defaultValue="false"/>
+
+      <Preference
+            android:key="omnijaws_settings"
+            android:title="@string/qs_weather_settings_title"
+            android:summary="@string/qs_weather_settings_summary"
+            android:fragment="com.afterlife.afterlab.fragments.OmniJawsSettings" />
 
    <PreferenceCategory
         android:key="incall_vib_options"
