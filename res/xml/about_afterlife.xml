@@ -66,7 +66,7 @@
         <Preference
             android:icon="@drawable/ic_design"
             android:title="@string/afl_designer_1"
-            android:summary="@string/afl_designer1_description">
+            android:summary="@string/afl_designer_description">
             <intent
                 android:action="android.intent.action.VIEW"
                 android:data="https://t.me/Corex1402" />
@@ -75,7 +75,7 @@
         <Preference
             android:icon="@drawable/ic_design"
             android:title="@string/afl_designer_2"
-            android:summary="@string/afl_designer2_description">
+            android:summary="@string/afl_designer_description">
             <intent
                 android:action="android.intent.action.VIEW"
                 android:data="https://t.me/reitssu" />
@@ -84,7 +84,7 @@
         <Preference
             android:icon="@drawable/ic_design"
             android:title="@string/afl_designer_3"
-            android:summary="@string/afl_designer3_description">
+            android:summary="@string/afl_designer_description">
             <intent
                 android:action="android.intent.action.VIEW"
                 android:data="https://t.me/iverzasterix" />
@@ -94,7 +94,7 @@
         <Preference
             android:icon="@drawable/ic_devs"
             android:title="@string/afl_designer_4"
-            android:summary="@string/afl_designer4_description">
+            android:summary="@string/afl_designer_description">
             <intent
                 android:action="android.intent.action.VIEW"
                 android:data="https://t.me/seklek" />
@@ -103,10 +103,28 @@
         <Preference
             android:icon="@drawable/ic_devs"
             android:title="@string/afl_designer_5"
-            android:summary="@string/afl_designer5_description">
+            android:summary="@string/afl_designer_description">
             <intent
                 android:action="android.intent.action.VIEW"
                 android:data="https://t.me/affandilham" />
+        </Preference>
+
+        <Preference
+            android:icon="@drawable/ic_devs"
+            android:title="@string/afl_designer_6"
+            android:summary="@string/afl_designer_description">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/jrinfected" />
+        </Preference>
+
+        <Preference
+            android:icon="@drawable/ic_devs"
+            android:title="@string/afl_designer_7"
+            android:summary="@string/afl_designer_description">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/aavadaakedavra" />
         </Preference>
         
     </PreferenceCategory>
@@ -118,7 +136,7 @@
         <Preference
             android:icon="@drawable/ic_contributor"
             android:title="@string/afl_contri_1"
-            android:summary="@string/afl_contri1_description">
+            android:summary="@string/afl_contri_description">
             <intent
                 android:action="android.intent.action.VIEW"
                 android:data="https://t.me/aepranata" />

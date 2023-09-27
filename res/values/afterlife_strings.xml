@@ -263,13 +263,12 @@ s that internet users can use wisely</string>
     <string name="afl_designer_2">nssʇıǝɹ #AFK</string>
     <string name="afl_designer_3">Iverz</string>
     <string name="afl_designer_4">Declanヅ</string>
-    <string name="afl_designer_5">Mlkyjuicee</string>
-    <string name="afl_designer5_description">Core, Designer UI/UX</string>
-    <string name="afl_designer2_description">Core, Designer UI/UX</string>
-    <string name="afl_designer3_description">Core, Designer UI/UX</string>
-    <string name="afl_designer4_description">Core, Designer UI/UX</string>
+    <string name="afl_designer_5">Affandi Ilham</string>
+    <string name="afl_designer_6">Joko</string>
+    <string name="afl_designer_7">Ade Rian Maulana</string>
+    <string name="afl_designer_description">Core, Designer UI/UX</string>
     <string name="afl_contri_1">Aepranata</string>
-    <string name="afl_contri1_description">Contributor</string>
+    <string name="afl_contri_description">Contributor</string>
 
     <!-- Monet Engine -->
     <string name="monet_engine_title">Monet engine</string>
