@@ -242,6 +242,8 @@
     <string name="qs_show_auto_brightness_summary">Show toggle for adaptive brightness near the slider</string>
 
     <!-- About Project -->
+    <string name="about_afterlife_title">About Afterlife</string>
+    
     <string name="abouttitl">AfterLife Prjkt</string>
     <string name="aboutsumm">AfterLifePrjkt is an operating system that runs on the Android system with the current API level at 13.0 - 14.0 (beta). This OS provides a comfortable experience to users both in terms of performance and appearance and also has open source propertie
 s that internet users can use wisely</string>
@@ -252,24 +254,67 @@ s that internet users can use wisely</string>
     <string name="leads">The Leads</string>
     <string name="designers">Man Of UI/UX</string>
     <string name="contributor">Contributor</string>
+
     <string name="afl_team_1">Romeo Delta Whiskey</string>
-    <string name="afl_team1_description">Lead, Founder and Source manager</string>
+    <string name="founder">Founder</string>
+    <string name="afl_team1_description">Lead and Source manager</string>
+    <string name="afl_team1_no_wa">RdW-afk</string>
+    <string name="afl_team1_tele">Romeo_Delta_Whiskey</string>
+    <string name="afl_team1_ig">rdw_inst</string>
+    <string name="afl_team1_fb">RIefhan Xanderzz</string>
+
     <string name="afl_team_2">Ari Lesmana</string>
-    <string name="afl_team2_description">Co-Lead and Designer</string>
+    <string name="coli">Co-Lead</string>
+    <string name="afl_team2_description">Designer and Source manager</string>
+    <string name="afl_team2_no_wa">arilsmn</string>
+    <string name="afl_team2_tele">xarilsmn</string>
+    <string name="afl_team2_ig">xarilsmn</string>
+    <string name="afl_team2_fb">muhammad.saidillah.14</string>
+
     <string name="afl_team_3">∂σткιт</string>
+    <string name="coli_design">Co-Lead</string>
     <string name="afl_team3_description">Source manager</string>
-    <string name="afl_designer1_description">Core, Lead Designer UI/UX</string>
-    <string name="afl_designer_1">indra sfyn</string>
-    <string name="afl_designer_2">nssʇıǝɹ #AFK</string>
-    <string name="afl_designer_3">Iverz</string>
+    <string name="afl_team3_no_wa">Tiktodz</string>
+    <string name="afl_team3_tele">fakedotkit</string>
+    <string name="afl_team3_ig">null</string>
+    <string name="afl_team3_fb">null</string>
+
+    <string name="afl_designer_1">ᄅ0ㄣ⇂XᴚƆ</string>
+    <string name="afl_github1">Indra1402-sfyn</string>
+    <string name="afl_tele1">Corex1402</string>
+
+    <string name="afl_designer_2">nssʇıǝɹ</string>
+    <string name="afl_github2">itssu4012650-sfyn</string>
+    <string name="afl_tele2">reitssu</string>
+
+    <string name="afl_designer_3">IverzAsterix</string>
+    <string name="afl_github3">asterixiverz</string>
+    <string name="afl_tele3">iverzasterix</string>
+
     <string name="afl_designer_4">Declanヅ</string>
+    <string name="afl_github4">DeclanG9</string>
+    <string name="afl_tele4">seklek</string>
+
     <string name="afl_designer_5">Mlkyjuicee</string>
-    <string name="afl_designer5_description">Core, Designer UI/UX</string>
-    <string name="afl_designer2_description">Core, Designer UI/UX</string>
-    <string name="afl_designer3_description">Core, Designer UI/UX</string>
-    <string name="afl_designer4_description">Core, Designer UI/UX</string>
+    <string name="afl_github5">affandilham</string>
+    <string name="afl_tele5">affandilham</string>
+
+    <string name="afl_designer_6">Joko Jr😎</string>
+    <string name="afl_github6">703joko</string>
+    <string name="afl_tele6">jrinfected</string>
+
+    <string name="afl_designer_7">Aernma</string>
+    <string name="afl_github7">aaernma</string>
+    <string name="afl_tele7">aavadaakedavra</string>
+
+    <string name="afl_designer_description">Core, Designer UI/UX</string>
+
     <string name="afl_contri_1">Aepranata</string>
-    <string name="afl_contri1_description">Contributor</string>
+    <string name="afl_contri_description">Contributor</string>
+    <string name="afl_contri_github">aepranata</string>
+    <string name="afl_contri_tele">aepranata</string>
+    <string name="more">View more..</string>
+
 
     <!-- Monet Engine -->
     <string name="monet_engine_title">Monet engine</string>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView 
+        android:gravity="center" 
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:id="@+id/hub_name" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:weightSum="4"
+        android:orientation="horizontal">
+        <LinearLayout 
+            android:id="@+id/leads_wa" 
+            android:orientation="vertical" 
+            android:layout_weight="1"
+            android:layout_width="0dp" 
+            android:layout_height="wrap_content" 
+            android:padding="10dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/cardview_single"
+            android:backgroundTint="@color/bg_card"  >
+            <ImageView android:layout_gravity="center"
+                android:layout_width="24.0dip" 
+                android:layout_height="24.0dip"
+                android:src="@drawable/github"
+                android:tint="#ff3b5998" />
+        </LinearLayout>
+        <LinearLayout 
+            android:id="@+id/leads_tele" 
+            android:orientation="vertical" 
+            android:layout_weight="1"
+            android:layout_width="0dp" 
+            android:layout_height="wrap_content" 
+            android:padding="10dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/cardview_single"
+            android:backgroundTint="@color/bg_card"  >
+            <ImageView android:layout_gravity="center"
+                android:layout_width="24.0dip" 
+                android:layout_height="24.0dip" 
+                android:src="@drawable/telegram"
+                android:tint="#ff0088cc" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/leads_fb"
+            android:orientation="vertical" 
+            android:layout_weight="1"
+            android:layout_width="0dp" 
+            android:layout_height="wrap_content" 
+            android:padding="10dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/cardview_single"
+            android:backgroundTint="@color/bg_card"  >
+            <ImageView android:layout_gravity="center"  
+                android:layout_width="24.0dip" 
+                android:layout_height="24.0dip"
+                android:src="@drawable/facebook"
+                android:tint="#ff3b5998" />
+        </LinearLayout>
+        <LinearLayout 
+            android:id="@+id/leads_ig"
+            android:orientation="vertical" 
+            android:layout_weight="1"
+            android:layout_width="0dp" 
+            android:layout_height="wrap_content" 
+            android:padding="10dp"
+            android:background="@drawable/cardview_single"
+            android:backgroundTint="@color/bg_card"  >
+            <ImageView android:layout_gravity="center"  
+                android:layout_width="24.0dip"
+                android:layout_height="24.0dip" 
+                android:src="@drawable/instagram"
+                android:tint="#ff3b5998" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

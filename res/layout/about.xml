@@ -1,80 +1,168 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-android:orientation="vertical"
-android:background="@drawable/testbg0"
-android:layout_marginHorizontal="16.0dip"
-android:layout_width="fill_parent"
-android:layout_height="wrap_content"
-xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto">
-<LinearLayout
-android:gravity="start|center"
-android:paddingHorizontal="16.0dip"
-android:paddingVertical="6.0dip"
-android:layout_width="fill_parent"
-android:layout_height="wrap_content">
-<View
-android:background="@drawable/bunderan1"
-android:layout_width="18.0dip"
-android:layout_height="18.0dip"/>
-<View
-android:background="@drawable/bunderan1"
-android:layout_marginHorizontal="8.0dip"
-android:layout_width="18.0dip"
-android:layout_height="18.0dip"/>
-<View
-android:background="@drawable/bunderan1"
-android:layout_width="18.0dip"
-android:layout_height="18.0dip"/>
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:background="@drawable/testbg0"
+	android:layout_marginHorizontal="16.0dip"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+
+	<LinearLayout
+		android:gravity="start|center"
+		android:paddingHorizontal="16.0dip"
+		android:paddingVertical="6.0dip"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+
+		<View
+			android:background="@drawable/bunderan1"
+			android:layout_width="18.0dip"
+			android:layout_height="18.0dip"/>
+
+		<View
+			android:background="@drawable/bunderan1"
+			android:layout_marginHorizontal="8.0dip"
+			android:layout_width="18.0dip"
+			android:layout_height="18.0dip"/>
+
+		<View
+			android:background="@drawable/bunderan1"
+			android:layout_width="18.0dip"
+			android:layout_height="18.0dip"/>
+
+	</LinearLayout>
+
+	<androidx.cardview.widget.CardView
+		android:orientation="vertical"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		style="@style/cardviewconf">
+
+		<FrameLayout
+			android:background="@drawable/testbg1"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content">
+
+			<LinearLayout
+				android:gravity="top|end"
+				android:layout_gravity="center_vertical"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_weight="1.0">
+
+				<ImageView
+					android:gravity="end"
+					android:layout_gravity="end"
+					android:layout_width="wrap_content"
+					android:layout_height="200dp"
+					android:alpha="0.4"
+					android:src="@drawable/afterimage"
+					android:scaleType="centerCrop"/>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:orientation="vertical"
+				android:paddingHorizontal="16.0dip"
+				android:paddingBottom="16.0dip"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content">
+
+				<com.afterlife.afterlab.fragments.team.RainbowTextView
+					android:layout_gravity="start|center"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginVertical="10.0dip"
+					android:singleLine="true"
+					android:textStyle="bold|italic"
+					android:textSize="50.0dip"
+					android:textColor="?android:textColorPrimary"
+					android:text="@string/abouttitl"/>
+
+				<TextView
+					android:layout_gravity="start|center"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textSize="16.0dip"
+					android:textColor="?android:textColorSecondary"
+					android:text="@string/aboutsumm"/>
+
+			</LinearLayout>
+
+			<TextView
+				android:layout_gravity="bottom|end"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textSize="16.0dip"
+				android:gravity="center"
+				android:id="@+id/text_more"
+				android:background="@drawable/icon_bg"
+                android:backgroundTint="@color/bg_card"
+				android:textColor="?android:textColorSecondary"
+				android:layout_weight="1.0"
+				android:layout_marginEnd="15dp"
+				android:layout_marginBottom="15dp"
+				android:text="@string/more"
+				android:padding="5dp"/>
+
+			<LinearLayout
+				android:id="@+id/supportLayout"
+				android:gravity="bottom|center"
+				android:orientation="horizontal"
+				android:layout_gravity="bottom|center"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginEnd="5dp"
+				android:layout_marginBottom="5dp"
+				android:layout_weight="1.0">
+
+				<LinearLayout
+					android:id="@+id/al_github"
+					android:orientation="vertical"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="5dp"
+					android:visibility="gone"
+					android:background="@android:color/transparent">
+
+					<ImageView
+						android:layout_width="40dp"
+						android:layout_height="40dp"
+						android:tint="@android:color/system_accent1_200"
+						android:backgroundTint="@android:color/system_neutral1_700"
+						android:background="@drawable/icon_bg"
+						android:padding="10dp"
+						android:src="@drawable/github"/>
+
+				</LinearLayout>
+
+				<LinearLayout
+					android:id="@+id/al_telegram"
+					android:orientation="vertical"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginEnd="5dp"
+					android:layout_marginStart="5dp"
+					android:visibility="gone"
+					android:background="@android:color/transparent">
+
+					<ImageView
+						android:layout_width="40dp"
+						android:layout_height="40dp"
+						android:tint="@android:color/system_accent1_200"
+						android:backgroundTint="@android:color/system_neutral1_700"
+						android:background="@drawable/icon_bg"
+						android:padding="10dp"
+						android:src="@drawable/telegram"/>
+
+				</LinearLayout>
+
+			</LinearLayout>
+
+		</FrameLayout>
+
+	</androidx.cardview.widget.CardView>
+
 </LinearLayout>
-<androidx.cardview.widget.CardView
-android:orientation="vertical"
-android:layout_width="fill_parent"
-android:layout_height="wrap_content"
-style="@style/cardviewconf">
-<FrameLayout
-android:background="@drawable/testbg1"
-android:layout_width="fill_parent"
-android:layout_height="wrap_content">
-<LinearLayout
-android:gravity="top|end"
-android:layout_gravity="center_vertical"
-android:layout_width="fill_parent"
-android:layout_height="0.0dip"
-android:layout_weight="1.0">
-<ImageView
-android:gravity="end"
-android:layout_gravity="end"
-android:layout_width="wrap_content"
-android:layout_height="fill_parent"
-android:alpha="0.4"
-android:src="@drawable/afterimage"
-android:scaleType="centerCrop"/>
-</LinearLayout>
-<LinearLayout
-android:orientation="vertical"
-android:paddingHorizontal="16.0dip"
-android:paddingBottom="16.0dip"
-android:layout_width="fill_parent"
-android:layout_height="wrap_content">
-<TextView
-android:layout_gravity="start|center"
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:layout_marginVertical="10.0dip"
-android:singleLine="true"
-android:textStyle="bold|italic"
-android:textSize="50.0dip"
-android:textColor="?android:textColorPrimary"
-android:text="@string/abouttitl"/>
-<TextView
-android:layout_gravity="start|center"
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:textSize="16.0dip"
-android:textColor="?android:textColorSecondary"
-android:text="@string/aboutsumm"/>
-</LinearLayout>
-</FrameLayout>
-</androidx.cardview.widget.CardView>
-</LinearLayout>
+

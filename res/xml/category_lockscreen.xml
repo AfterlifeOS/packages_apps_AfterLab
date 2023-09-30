@@ -52,13 +52,13 @@
             android:summary="@string/media_art_summary"
             android:defaultValue="false" />
 
-         <com.afterlife..support.preference.SystemSettingSwitchPreference
+         <com.afterlife.support.preference.SystemSettingSwitchPreference
             android:key="lockscreen_power_menu_disabled"
             android:title="@string/lockscreen_power_menu_disabled_title"
             android:summary="@string/lockscreen_power_menu_disabled_summary"
             android:defaultValue="true" /> 
 
-         <com.afterlife..support.preference.SystemSettingSwitchPreference
+         <com.afterlife.support.preference.SystemSettingSwitchPreference
             android:key="enable_ripple_effect"
             android:title="@string/enable_fingerprint_ripple_effect_title"
             android:summary="@string/enable_fingerprint_ripple_effect_summary"

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2020 The Dirty Unicorns Project
+Copyright (C) 2021 Nusantara Android Development
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_sheet_background"
+    android:layout_marginBottom="-28dp"
+    app:cardCornerRadius="28dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15.0dp">
+
+            <include layout="@layout/about"/>
+
+            <LinearLayout 
+                android:paddingTop="8.0dip" 
+                android:paddingBottom="8.0dip" 
+                android:orientation="horizontal" 
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout 
+                    android:paddingTop="8.0dip" 
+                    android:paddingBottom="8.0dip" 
+                    android:orientation="horizontal" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content">
+
+                    <ImageView 
+                        android:src="@drawable/kotak" 
+                        android:layout_width="10.0dip" 
+                        android:layout_height="10.0dip" 
+                        android:tint="@android:color/system_accent1_300" />
+
+                    <ImageView 
+                        android:layout_marginHorizontal="8.0dip" 
+                        android:src="@drawable/segitiga" 
+                        android:layout_width="10.0dip" 
+                        android:layout_height="10.0dip" 
+                        android:tint="@android:color/system_accent3_100" />
+
+                    <ImageView 
+                        android:src="@drawable/bulat" 
+                        android:layout_width="10.0dip" 
+                        android:layout_height="10.0dip" 
+                        android:tint="@android:color/system_accent2_100" />
+
+                </LinearLayout>
+
+                <TextView 
+                    android:id="@+id/title_dev"
+                    android:textSize="18.0sp" 
+                    android:textStyle="bold" 
+                    android:layout_width="fill_parent" 
+                    android:layout_height="wrap_content" 
+                    android:textAllCaps="true" 
+                    android:textAlignment="viewStart" 
+                    android:text="@string/leads"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10.0dip" 
+                    android:textAppearance="@style/CollapsingToolbarTitle.Expanded" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/listView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <LinearLayout 
+                android:paddingTop="8.0dip" 
+                android:paddingBottom="8.0dip" 
+                android:orientation="horizontal" 
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout 
+                    android:paddingTop="8.0dip" 
+                    android:paddingBottom="8.0dip" 
+                    android:orientation="horizontal" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content">
+
+                    <ImageView 
+                        android:src="@drawable/kotak" 
+                        android:layout_width="10.0dip" 
+                        android:layout_height="10.0dip" 
+                        android:tint="@android:color/system_accent1_300" />
+
+                    <ImageView 
+                        android:layout_marginHorizontal="8.0dip" 
+                        android:src="@drawable/segitiga" 
+                        android:layout_width="10.0dip" 
+                        android:layout_height="10.0dip" 
+                        android:tint="@android:color/system_accent3_100" />
+
+                    <ImageView 
+                        android:src="@drawable/bulat" 
+                        android:layout_width="10.0dip" 
+                        android:layout_height="10.0dip" 
+                        android:tint="@android:color/system_accent2_100" />
+
+                </LinearLayout>
+
+                <TextView 
+                    android:textSize="18.0sp" 
+                    android:textStyle="bold" 
+                    android:layout_width="fill_parent" 
+                    android:layout_height="wrap_content" 
+                    android:textAllCaps="true" 
+                    android:textAlignment="viewStart" 
+                    android:layout_marginStart="10.0dip" 
+                    android:text="@string/designers"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center_vertical"
+                    android:textAppearance="@style/CollapsingToolbarTitle.Expanded" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/listView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <LinearLayout 
+                android:paddingTop="8.0dip" 
+                android:paddingBottom="8.0dip" 
+                android:orientation="horizontal" 
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout 
+                    android:paddingTop="8.0dip" 
+                    android:paddingBottom="8.0dip" 
+                    android:orientation="horizontal" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content">
+
+                    <ImageView 
+                        android:src="@drawable/kotak" 
+                        android:layout_width="10.0dip" 
+                        android:layout_height="10.0dip" 
+                        android:tint="@android:color/system_accent1_300" />
+
+                    <ImageView 
+                        android:layout_marginHorizontal="8.0dip" 
+                        android:src="@drawable/segitiga" 
+                        android:layout_width="10.0dip" 
+                        android:layout_height="10.0dip" 
+                        android:tint="@android:color/system_accent3_100" />
+
+                    <ImageView 
+                        android:src="@drawable/bulat" 
+                        android:layout_width="10.0dip" 
+                        android:layout_height="10.0dip" 
+                        android:tint="@android:color/system_accent2_100" />
+
+                </LinearLayout>
+
+                <TextView 
+                    android:textSize="18.0sp" 
+                    android:textStyle="bold" 
+                    android:layout_width="fill_parent" 
+                    android:layout_height="wrap_content" 
+                    android:textAllCaps="true" 
+                    android:textAlignment="viewStart" 
+                    android:text="@string/contributor"
+                    android:layout_marginStart="10.0dip" 
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center_vertical"
+                    android:textAppearance="@style/CollapsingToolbarTitle.Expanded" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/listView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" 
+                android:layout_marginBottom="15dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.cardview.widget.CardView>

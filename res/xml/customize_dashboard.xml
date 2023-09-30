@@ -28,8 +28,9 @@
         android:id="@+id/about"
         android:title="About AfterLife"
         android:summary="Let you know about This Project"
-        android:fragment="com.afterlife.afterlab.fragments.AboutAfterLife"
-        settings:layout="@layout/afterlab_interface_single" />
+        settings:layout="@layout/afterlab_interface_single" >
+        <intent android:action="com.afterlife.afterlab.fragments.team.AboutAfterLife"/>
+       </Preference>
 
      <!-- Battery -->
     <Preference
