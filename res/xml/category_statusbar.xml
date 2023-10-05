@@ -19,6 +19,13 @@
      <PreferenceCategory
         android:title="@string/general_category">
 
+      <!-- Show logo on Statusbar -->
+        <Preference
+            android:key="status_bar_logo"
+            android:title="@string/status_bar_logo_title"
+            android:summary="@string/status_bar_logo_summary"
+            android:fragment="com.afterlife.afterlab.fragments.StatusBarLogo" />
+
       <Preference
          android:key="status_bar_icons"
          android:title="@string/status_bar_icons_title"
