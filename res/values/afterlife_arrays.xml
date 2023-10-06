@@ -288,4 +288,25 @@
         <item>24</item>
         <item>25</item>
     </string-array>
+
+    <!-- Custom category -->
+    <string-array name="declan_icon_category_entries">
+        <item>Style 1</item>
+        <item>Style 2</item>
+    </string-array>
+
+    <string-array name="declan_icon_category_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+    <string-array name="declan_stroke_category_entries">
+        <item>Accent</item>
+        <item>Custom color</item>
+    </string-array>
+    
+    <string-array name="declan_stroke_category_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
 </resources>

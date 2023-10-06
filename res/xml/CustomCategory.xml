@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (C) 2023 AfterLife Project
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    android:title="@string/cust_category_title">
+
+        <PreferenceCategory
+            android:title="Customize Category Preference"
+            android:key="declan_pref_category">
+
+            <com.afterlife.support.preference.SystemSettingSwitchPreference
+                android:title="Start Icons"
+                android:key="declan_category_icon_enabled"
+                android:summary="Show left icons on category preference"
+                android:defaultValue="false" />
+
+            <com.afterlife.support.preference.SystemSettingListPreference
+                android:entries="@array/declan_icon_category_entries"
+                android:title="Icons style"
+                android:key="declan_category_icon_style"
+                android:summary="%s"
+                android:dependency="declan_category_icon_enabled"
+                android:defaultValue="0"
+                android:entryValues="@array/declan_icon_category_values" />
+
+            <com.afterlife.support.preference.SystemSettingSwitchPreference
+                android:title="Title AllCaps"
+                android:key="declan_category_allcaps_enabled"
+                android:summary="Use text allcaps on category preference"
+                android:defaultValue="false" />
+
+            <com.afterlife.support.preference.SystemSettingSwitchPreference
+                android:title="Title Bold"
+                android:key="declan_category_bold_enabled"
+                android:summary="Use bold text on category preference"
+                android:defaultValue="false" />
+
+            <com.afterlife.support.preference.SystemSettingSwitchPreference
+                android:title="Divider View"
+                android:key="declan_category_divider_enabled"
+                android:summary="Show divider right in category preference"
+                android:defaultValue="false" />
+
+            <com.afterlife.support.preference.SystemSettingSwitchPreference
+                android:title="Title Background Stroke"
+                android:key="declan_category_stroke_enabled"
+                android:summary="Show stroke background title on category preference"
+                android:defaultValue="false" />
+
+            <com.afterlife.support.preference.SystemSettingListPreference
+                android:entries="@array/declan_stroke_category_entries"
+                android:title="Stroke color style"
+                android:key="declan_category_stroke_style"
+                android:summary="%s"
+                android:dependency="declan_category_stroke_enabled"
+                android:defaultValue="0"
+                android:entryValues="@array/declan_stroke_category_values" />
+
+            <com.afterlife.support.colorpicker.SystemSettingColorPickerPreference
+                android:title="Stroke Custom Color"
+                android:key="declan_category_stroke_color"
+                android:dependency="declan_category_stroke_enabled"
+                android:defaultValue="0xffffffff" />
+
+        <com.afterlife.support.preference.SystemSettingSeekBarPreference
+            android:max="10"
+            android:title="Stroke Width"
+            android:key="declan_category_stroke_width"
+            android:dependency="declan_category_stroke_enabled"
+            android:defaultValue="2"
+            settings:units="dp" />
+
+        <com.afterlife.support.preference.SystemSettingSeekBarPreference
+            android:max="20"
+            android:title="TopLeft Corner"
+            android:key="declan_category_corner_topL"
+            android:dependency="declan_category_stroke_enabled"
+            android:defaultValue="8"
+            settings:units="dp" />
+
+        <com.afterlife.support.preference.SystemSettingSeekBarPreference
+            android:max="20"
+            android:title="TopRight Corner"
+            android:key="declan_category_corner_topR"
+            android:dependency="declan_category_stroke_enabled"
+            android:defaultValue="8"
+            settings:units="dp" />
+
+        <com.afterlife.support.preference.SystemSettingSeekBarPreference
+            android:max="20"
+            android:title="BottomLeft Corner"
+            android:key="declan_category_corner_botL"
+            android:dependency="declan_category_stroke_enabled"
+            android:defaultValue="8"
+            settings:units="dp" />
+
+        <com.afterlife.support.preference.SystemSettingSeekBarPreference
+            android:max="20"
+            android:title="BottomRight Corner"
+            android:key="declan_category_corner_botR"
+            android:dependency="declan_category_stroke_enabled"
+            android:defaultValue="8"
+            settings:units="dp" />
+
+        <com.afterlife.support.preference.SystemSettingSeekBarPreference
+            android:max="15"
+            android:title="Padding Left"
+            android:key="declan_category_padding_left"
+            android:dependency="declan_category_stroke_enabled"
+            android:defaultValue="4"
+            settings:units="dp" />
+
+        <com.afterlife.support.preference.SystemSettingSeekBarPreference
+            android:max="15"
+            android:title="Padding Right"
+            android:key="declan_category_padding_right"
+            android:dependency="declan_category_stroke_enabled"
+            android:defaultValue="4"
+            settings:units="dp" />
+
+        <com.afterlife.support.preference.SystemSettingSeekBarPreference
+            android:max="15"
+            android:title="Padding Top"
+            android:key="declan_category_padding_top"
+            android:dependency="declan_category_stroke_enabled"
+            android:defaultValue="4"
+            settings:units="dp" />
+
+        <com.afterlife.support.preference.SystemSettingSeekBarPreference
+            android:max="15"
+            android:title="Padding Bottom"
+            android:key="declan_category_padding_bot"
+            android:dependency="declan_category_stroke_enabled"
+            android:defaultValue="4"
+            settings:units="dp" />
+        </PreferenceCategory>
+    </PreferenceScreen>

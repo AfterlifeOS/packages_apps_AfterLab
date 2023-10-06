@@ -22,6 +22,13 @@
             android:title="@string/monet_engine_title"
             android:summary="@string/monet_engine_summary"
             android:fragment="com.afterlife.afterlab.fragments.MonetEngine" />
+
+     <!-- Custom Category preference -->
+     <Preference
+            android:key="custom_pref"
+            android:title="@string/cust_category_title"
+            android:summary="@string/cust_category_summary"
+            android:fragment="com.afterlife.afterlab.fragments.CustomCategory" />
        
      <!-- Font style -->
      <Preference
