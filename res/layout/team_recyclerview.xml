@@ -13,197 +13,167 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
+<androidx.cardview.widget.CardView
+    android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/bottom_sheet_background"
-    android:layout_marginBottom="-28dp"
-    app:cardCornerRadius="28dp">
-
+    android:layout_marginBottom="-28.0dip"
+    app:cardBackgroundColor="?android:colorBackground"
+    app:cardCornerRadius="28.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fillViewport="true" >
-
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true">
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="15.0dp">
-
+            android:padding="15.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
             <include layout="@layout/about"/>
-
-            <LinearLayout 
-                android:paddingTop="8.0dip" 
-                android:paddingBottom="8.0dip" 
-                android:orientation="horizontal" 
-                android:layout_width="wrap_content" 
+            <LinearLayout
+                android:orientation="horizontal"
+                android:paddingTop="8.0dip"
+                android:paddingBottom="8.0dip"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
-
-
-                <LinearLayout 
-                    android:paddingTop="8.0dip" 
-                    android:paddingBottom="8.0dip" 
-                    android:orientation="horizontal" 
-                    android:layout_width="wrap_content" 
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:paddingTop="8.0dip"
+                    android:paddingBottom="8.0dip"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
-
-                    <ImageView 
-                        android:src="@drawable/kotak" 
-                        android:layout_width="10.0dip" 
-                        android:layout_height="10.0dip" 
-                        android:tint="@android:color/system_accent1_300" />
-
-                    <ImageView 
-                        android:layout_marginHorizontal="8.0dip" 
-                        android:src="@drawable/segitiga" 
-                        android:layout_width="10.0dip" 
-                        android:layout_height="10.0dip" 
-                        android:tint="@android:color/system_accent3_100" />
-
-                    <ImageView 
-                        android:src="@drawable/bulat" 
-                        android:layout_width="10.0dip" 
-                        android:layout_height="10.0dip" 
-                        android:tint="@android:color/system_accent2_100" />
-
+                    <ImageView
+                        android:layout_width="10.0dip"
+                        android:layout_height="10.0dip"
+                        android:src="@drawable/kotak"
+                        android:tint="@android:color/system_accent1_300"/>
+                    <ImageView
+                        android:layout_width="10.0dip"
+                        android:layout_height="10.0dip"
+                        android:src="@drawable/segitiga"
+                        android:tint="@android:color/system_accent3_100"
+                        android:layout_marginHorizontal="8.0dip"/>
+                    <ImageView
+                        android:layout_width="10.0dip"
+                        android:layout_height="10.0dip"
+                        android:src="@drawable/bulat"
+                        android:tint="@android:color/system_accent2_100"/>
                 </LinearLayout>
-
-                <TextView 
-                    android:id="@+id/title_dev"
-                    android:textSize="18.0sp" 
-                    android:textStyle="bold" 
-                    android:layout_width="fill_parent" 
-                    android:layout_height="wrap_content" 
-                    android:textAllCaps="true" 
-                    android:textAlignment="viewStart" 
-                    android:text="@string/leads"
+                <TextView
+                    android:textAppearance="@style/CollapsingToolbarTitle.Expanded"
+                    android:textSize="14.0sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_accent1"
                     android:gravity="center_vertical"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginStart="10.0dip" 
-                    android:textAppearance="@style/CollapsingToolbarTitle.Expanded" />
+                    android:id="@+id/title_dev"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/leads"
+                    android:textAllCaps="true"
+                    android:textAlignment="viewStart"
+                    android:layout_marginStart="10.0dip"/>
             </LinearLayout>
-
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/listView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-
-            <LinearLayout 
-                android:paddingTop="8.0dip" 
-                android:paddingBottom="8.0dip" 
-                android:orientation="horizontal" 
-                android:layout_width="wrap_content" 
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:paddingTop="8.0dip"
+                android:paddingBottom="8.0dip"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
-
-
-                <LinearLayout 
-                    android:paddingTop="8.0dip" 
-                    android:paddingBottom="8.0dip" 
-                    android:orientation="horizontal" 
-                    android:layout_width="wrap_content" 
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:paddingTop="8.0dip"
+                    android:paddingBottom="8.0dip"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
-
-                    <ImageView 
-                        android:src="@drawable/kotak" 
-                        android:layout_width="10.0dip" 
-                        android:layout_height="10.0dip" 
-                        android:tint="@android:color/system_accent1_300" />
-
-                    <ImageView 
-                        android:layout_marginHorizontal="8.0dip" 
-                        android:src="@drawable/segitiga" 
-                        android:layout_width="10.0dip" 
-                        android:layout_height="10.0dip" 
-                        android:tint="@android:color/system_accent3_100" />
-
-                    <ImageView 
-                        android:src="@drawable/bulat" 
-                        android:layout_width="10.0dip" 
-                        android:layout_height="10.0dip" 
-                        android:tint="@android:color/system_accent2_100" />
-
+                    <ImageView
+                        android:layout_width="10.0dip"
+                        android:layout_height="10.0dip"
+                        android:src="@drawable/kotak"
+                        android:tint="@android:color/system_accent1_300"/>
+                    <ImageView
+                        android:layout_width="10.0dip"
+                        android:layout_height="10.0dip"
+                        android:src="@drawable/segitiga"
+                        android:tint="@android:color/system_accent3_100"
+                        android:layout_marginHorizontal="8.0dip"/>
+                    <ImageView
+                        android:layout_width="10.0dip"
+                        android:layout_height="10.0dip"
+                        android:src="@drawable/bulat"
+                        android:tint="@android:color/system_accent2_100"/>
                 </LinearLayout>
-
-                <TextView 
-                    android:textSize="18.0sp" 
-                    android:textStyle="bold" 
-                    android:layout_width="fill_parent" 
-                    android:layout_height="wrap_content" 
-                    android:textAllCaps="true" 
-                    android:textAlignment="viewStart" 
-                    android:layout_marginStart="10.0dip" 
-                    android:text="@string/designers"
+                <TextView
+                    android:textAppearance="@style/CollapsingToolbarTitle.Expanded"
+                    android:textSize="14.0sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_accent1"
                     android:gravity="center_vertical"
                     android:layout_gravity="center_vertical"
-                    android:textAppearance="@style/CollapsingToolbarTitle.Expanded" />
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/designers"
+                    android:textAllCaps="true"
+                    android:textAlignment="viewStart"
+                    android:layout_marginStart="10.0dip"/>
             </LinearLayout>
-
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/listView2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-
-            <LinearLayout 
-                android:paddingTop="8.0dip" 
-                android:paddingBottom="8.0dip" 
-                android:orientation="horizontal" 
-                android:layout_width="wrap_content" 
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:paddingTop="8.0dip"
+                android:paddingBottom="8.0dip"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
-
-
-                <LinearLayout 
-                    android:paddingTop="8.0dip" 
-                    android:paddingBottom="8.0dip" 
-                    android:orientation="horizontal" 
-                    android:layout_width="wrap_content" 
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:paddingTop="8.0dip"
+                    android:paddingBottom="8.0dip"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
-
-                    <ImageView 
-                        android:src="@drawable/kotak" 
-                        android:layout_width="10.0dip" 
-                        android:layout_height="10.0dip" 
-                        android:tint="@android:color/system_accent1_300" />
-
-                    <ImageView 
-                        android:layout_marginHorizontal="8.0dip" 
-                        android:src="@drawable/segitiga" 
-                        android:layout_width="10.0dip" 
-                        android:layout_height="10.0dip" 
-                        android:tint="@android:color/system_accent3_100" />
-
-                    <ImageView 
-                        android:src="@drawable/bulat" 
-                        android:layout_width="10.0dip" 
-                        android:layout_height="10.0dip" 
-                        android:tint="@android:color/system_accent2_100" />
-
+                    <ImageView
+                        android:layout_width="10.0dip"
+                        android:layout_height="10.0dip"
+                        android:src="@drawable/kotak"
+                        android:tint="@android:color/system_accent1_300"/>
+                    <ImageView
+                        android:layout_width="10.0dip"
+                        android:layout_height="10.0dip"
+                        android:src="@drawable/segitiga"
+                        android:tint="@android:color/system_accent3_100"
+                        android:layout_marginHorizontal="8.0dip"/>
+                    <ImageView
+                        android:layout_width="10.0dip"
+                        android:layout_height="10.0dip"
+                        android:src="@drawable/bulat"
+                        android:tint="@android:color/system_accent2_100"/>
                 </LinearLayout>
-
-                <TextView 
-                    android:textSize="18.0sp" 
-                    android:textStyle="bold" 
-                    android:layout_width="fill_parent" 
-                    android:layout_height="wrap_content" 
-                    android:textAllCaps="true" 
-                    android:textAlignment="viewStart" 
-                    android:text="@string/contributor"
-                    android:layout_marginStart="10.0dip" 
+                <TextView
+                    android:textAppearance="@style/CollapsingToolbarTitle.Expanded"
+                    android:textSize="14.0sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_accent1"
                     android:gravity="center_vertical"
                     android:layout_gravity="center_vertical"
-                    android:textAppearance="@style/CollapsingToolbarTitle.Expanded" />
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/contributor"
+                    android:textAllCaps="true"
+                    android:textAlignment="viewStart"
+                    android:layout_marginStart="10.0dip"/>
             </LinearLayout>
-
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/listView3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" 
-                android:layout_marginBottom="15dp"/>
-
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15.0dip"/>
         </LinearLayout>
     </ScrollView>
-
 </androidx.cardview.widget.CardView>

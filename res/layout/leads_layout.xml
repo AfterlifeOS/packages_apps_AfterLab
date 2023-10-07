@@ -14,96 +14,83 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 -->
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="320dp"
-    android:layout_height="105dp"
-    android:layout_marginEnd="15dp"
-    android:paddingTop="5dp"
+<FrameLayout
     android:id="@+id/leads_base"
-    android:paddingBottom="5dp">
-
+    android:paddingTop="5.0dip"
+    android:paddingBottom="5.0dip"
+    android:layout_width="320.0dip"
+    android:layout_height="105.0dip"
+    android:layout_marginEnd="15.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <androidx.cardview.widget.CardView
-        android:gravity="center" 
-        android:layout_width="match_parent" 
-        android:layout_height="match_parent" 
-        android:paddingStart="4.0dip" 
-        android:paddingEnd="4.0dip" 
-        app:cardBackgroundColor="@color/bg_card" 
-        app:cardCornerRadius="26.0dip" 
-		app:cardElevation="0.0dip">
-
+        android:gravity="center"
+        android:padding="16.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="26.0dip"
+        app:cardElevation="0.0dip">
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
             android:gravity="center_vertical"
             android:layout_gravity="center_vertical"
             android:orientation="vertical"
-            android:layout_marginStart="95dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="12dp">
-
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="95.0dip">
             <TextView
+                android:textAppearance="?android:textAppearanceLarge"
+                android:textSize="17.0sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_accent1"
                 android:id="@+id/devName"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textColor="?android:attr/textColorPrimary"
-                android:textStyle="bold" />
-            
+                android:layout_height="wrap_content"/>
             <TextView
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textSize="14.0sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_accent1"
                 android:id="@+id/devTitle"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="?android:attr/textColorSecondary"
-                android:textStyle="bold" />
-
+                android:layout_height="wrap_content"/>
             <TextView
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textSize="14.0sp"
+                android:textColor="@color/text_accent2"
                 android:id="@+id/devDescribe"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:textColor="?android:attr/textColorPrimary" />
-
-
+                android:layout_height="wrap_content"/>
             <TextView
                 android:id="@+id/no_wa"
+                android:visibility="gone"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:visibility="gone" />
-
+                android:layout_height="wrap_content"/>
             <TextView
                 android:id="@+id/akun_tele"
+                android:visibility="gone"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:visibility="gone" />
-
+                android:layout_height="wrap_content"/>
             <TextView
                 android:id="@+id/akun_ig"
+                android:visibility="gone"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:visibility="gone" />
-
+                android:layout_height="wrap_content"/>
             <TextView
                 android:id="@+id/akun_fb"
+                android:visibility="gone"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:visibility="gone" />
-
+                android:layout_height="wrap_content"/>
         </LinearLayout>
-
         <com.afterlife.afterlab.fragments.team.helper.CircularImageView
+            android:layout_gravity="start|center"
             android:id="@+id/devImage"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_gravity="center|start"
-            android:layout_marginStart="15dp"
-            android:layout_marginEnd="20dp"
+            android:layout_width="60.0dip"
+            android:layout_height="60.0dip"
+            android:layout_marginStart="15.0dip"
+            android:layout_marginEnd="20.0dip"
             app:civ_border="true"
             app:civ_border_color="@*android:color/accent_device_default_light"
-            app:civ_border_width="0.5dp" />
-
+            app:civ_border_width="0.5dip"/>
     </androidx.cardview.widget.CardView>
-
 </FrameLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2023 AfterLife Project
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<LinearLayout
+    android:theme="@style/Theme.TabTheme"
+    android:background="@android:color/transparent"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/afterlifexdeclan_tab_layout"
+        android:background="@drawable/afterlabs_tabs_card_background"
+        android:layout_width="fill_parent"
+        android:layout_height="52.0dip"
+        android:layout_marginVertical="8.0dip"
+        android:layout_marginHorizontal="?android:listPreferredItemPaddingStart"
+        app:tabBackground="@null"
+        app:tabGravity="fill"
+        app:tabIndicator="@drawable/afterlabs_tabs_card_indicator_background"
+        app:tabIndicatorAnimationDuration="500"
+        app:tabIndicatorAnimationMode="elastic"
+        app:tabIndicatorColor="@color/settingslib_tabs_indicator_color"
+        app:tabIndicatorFullWidth="true"
+        app:tabIndicatorGravity="stretch"
+        app:tabMaxWidth="0.0dip"
+        app:tabMode="fixed"
+        app:tabRippleColor="@null"
+        app:tabTextAppearance="@style/TextAppearance.Material3.TitleSmall"
+        app:tabTextColor="@color/settingslib_tabs_text_color" />
+</LinearLayout>
