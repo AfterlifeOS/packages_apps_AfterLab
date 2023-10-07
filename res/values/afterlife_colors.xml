@@ -21,8 +21,11 @@
     <color name="testclrbg1">@android:color/system_accent1_100</color>
     <color name="testclrcrcl1">@color/settingslib_dialog_accent</color>
 
-    <color name="text_white">#ffffffff</color>
-    <color name="text_black">#ff000000</color>
-    <color name="bg_card">#7fFe6700</color>
+    <color name="text_black">@android:color/system_accent1_700</color>
+    <color name="text_white">@android:color/system_accent3_100</color>
+    <color name="text_accent1">@android:color/system_accent2_800</color>
+    <color name="text_accent2">@android:color/system_accent2_700</color>
+    <color name="bg_card">@android:color/system_accent2_100</color>
+    <color name="bg_card_1">@android:color/system_accent2_50</color>
 
 </resources>

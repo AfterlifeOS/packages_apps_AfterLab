@@ -15,5 +15,9 @@
 <resources>
     <color name="testclrbg0">@android:color/system_accent2_900</color>
     <color name="testclrbg1">@android:color/system_accent2_800</color>
+    <color name="text_accent1">@android:color/system_neutral1_0</color>
+    <color name="text_accent2">@android:color/system_neutral2_200</color>
+    <color name="bg_card">@android:color/system_neutral2_800</color>
+    <color name="bg_card_1">@android:color/system_neutral2_900</color>
 
 </resources>

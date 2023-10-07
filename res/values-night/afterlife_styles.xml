@@ -13,23 +13,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <style name="TextAppearance.TileTitle" parent="@*android:style/TextAppearance.DeviceDefault.Subhead"/>
-
-    <style name="OptionTitleTextAppearance" parent="@android:style/TextAppearance.DeviceDefault.Widget.ActionBar.Title">
-        <item name="android:textAlignment">center</item>
-        <item name="android:textSize">15sp</item>
-        <item name="android:lineHeight">15sp</item>
-        <item name="android:textColor">?android:attr/textColorSecondary</item>
-    </style>
-
-    <style name="cardviewconf">
-		<item name="android:elevation">0.0dip</item>
-        <item name="cardElevation">0.0dip</item>
-        <item name="cardMaxElevation">0.0dip</item>
-        <item name="cardCornerRadius">@*android:dimen/config_dialogCornerRadius</item>
-    </style>
-    
-    <style name="AboutAfterlife" parent="@style/Theme.MaterialComponents.Light.BottomSheetDialog">
+    <style name="AboutAfterlife" parent="@style/Theme.MaterialComponents.BottomSheetDialog">
         <item name="android:windowBackground">@null</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowIsFloating">true</item>
