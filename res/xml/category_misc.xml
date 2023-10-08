@@ -32,6 +32,12 @@
             android:title="@string/use_games_spoof_title"
             android:summary="@string/use_games_spoof_summary" />
 
+         <com.afterlife.support.preference.GlobalSettingSwitchPreference
+            android:key="allow_signature_fake"
+            android:title="@string/allow_signature_fake"
+            android:summary="@string/allow_signature_fake_summary"
+            android:defaultValue="false" />
+
      </PreferenceCategory>
 
      <com.afterlife.support.preference.GlobalSettingSwitchPreference

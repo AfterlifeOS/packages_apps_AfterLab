@@ -518,4 +518,8 @@ s that internet users can use wisely</string>
 
     <string name="cust_category_title">Category Preference Style</string>
     <string name="cust_category_summary">set style of Preference Category</string>
+
+    <!-- Allow fake signature checkbox in developer settings -->
+    <string name="allow_signature_fake">Allow signature spoofing</string>
+    <string name="allow_signature_fake_summary">Allow apps to bypass security systems by pretending to be a different app</string>
 </resources>
