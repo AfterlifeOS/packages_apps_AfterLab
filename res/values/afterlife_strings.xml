@@ -532,4 +532,8 @@ s that internet users can use wisely</string>
     <string name="leaf_solid_accent">Leafy Solid color accent</string>
     <string name="leaf_outline">Leafy Outline</string>
     <string name="leaf_solid_accent_gradient">Leafy Solid color accent gradient</string>
+
+    <!-- QS battery -->
+    <string name="qs_use_status_bar_battery_style">Follow status bar style</string>
+    <string name="status_bar_qs_category_title">QS customizations</string>
 </resources>
