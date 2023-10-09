@@ -522,4 +522,8 @@ s that internet users can use wisely</string>
     <!-- Allow fake signature checkbox in developer settings -->
     <string name="allow_signature_fake">Allow signature spoofing</string>
     <string name="allow_signature_fake_summary">Allow apps to bypass security systems by pretending to be a different app</string>
+
+    <!-- QS battery -->
+    <string name="qs_use_status_bar_battery_style">Follow status bar style</string>
+    <string name="status_bar_qs_category_title">QS customizations</string>
 </resources>
