@@ -10,59 +10,76 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<LinearLayout 
+<FrameLayout 
 	android:clipToPadding="false" 
 	android:layout_width="fill_parent" 
-	android:layout_height="wrap_content" 
-	android:layout_marginHorizontal="16.0dip" 
-	android:layout_marginBottom="5.0dip"
+	android:layout_height="wrap_content"
 	xmlns:android="http://schemas.android.com/apk/res/android" 
     xmlns:app="http://schemas.android.com/apk/res-auto">
-	
     <com.google.android.material.card.MaterialCardView
 		android:gravity="center_vertical" 
 		android:layout_width="fill_parent" 
-		android:layout_height="150.0dip" 
-		android:paddingStart="4.0dip" 
-		android:paddingEnd="4.0dip" 
-		app:cardBackgroundColor="@color/card_bg" 
-		app:cardCornerRadius="26.0dip" 
+		android:layout_height="170.0dip"
+	    android:layout_marginHorizontal="16.0dip" 
+	    android:layout_marginBottom="10.0dip"
+		app:cardBackgroundColor="@android:color/transparent" 
+		app:cardCornerRadius="28.0dip" 
 		app:cardElevation="0.0dip">
-		
-    <com.google.android.material.card.MaterialCardView
-		android:layout_width="fill_parent" 
-		android:layout_height="fill_parent" 
-		android:layout_marginTop="11.0dip" 
-		android:layout_marginBottom="11.0dip" android:layout_marginHorizontal="11.0dip" app:cardBackgroundColor="@android:color/transparent" app:cardCornerRadius="26.0dip" 
-		app:cardElevation="0.0dip">
-		
-    <com.afterlife.preferences.WallpaperBlurView 
-		android:gravity="center"
-		android:orientation="vertical" 
-		android:layout_width="fill_parent" 
-		android:layout_height="fill_parent" 
-		android:scaleType="centerCrop" 
-		android:elevation="0.0dip" />
-			
-        <TextView 
-            android:textSize="45.0sp" android:textStyle="normal"
-		    android:fontFamily="@font/Abeganshi" 
-            android:textColor="@android:color/system_accent1_50" 
-            android:gravity="center" 
-		    android:layout_gravity="center" 
-		    android:id="@android:id/title" 
-		    android:layout_width="wrap_content" 
-		    android:layout_height="wrap_content" 
-		    android:layout_marginTop="0.0dip" 
-		    android:maxLines="2" 
-		    android:singleLine="false" 
-		    android:textAllCaps="true" 
-		    android:textAlignment="center" 
-            app:layout_constraintBottom_toBottomOf="parent" 
-            app:layout_constraintTop_toTopOf="parent" />
-		
-        </com.google.android.material.card.MaterialCardView>
-			
+        <com.afterlife.preferences.WallpaperBlurView 
+		    android:gravity="center"
+		    android:orientation="vertical" 
+		    android:layout_width="fill_parent" 
+		    android:layout_height="fill_parent" 
+		    android:scaleType="centerCrop" 
+		    android:elevation="0.0dip" />
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_gravity="bottom|center_vertical"
+            android:background="@drawable/afterlabs_card_header"
+            android:clipToPadding="false"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?android:listPreferredItemHeightSmall"
+            android:paddingHorizontal="?android:listPreferredItemPaddingStart">
+            <LinearLayout
+                android:gravity="start|center"
+                android:orientation="horizontal"
+                android:paddingVertical="4.0dip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="56.0dip"
+                android:paddingEnd="12.0dip">
+                <ImageView
+                    android:background="@drawable/adaptive_icon_shape"
+                    android:backgroundTint="?android:colorAccent"
+                    android:tint="?android:colorPrimary"
+                    android:padding="8.0dip"
+                    android:layout_width="48.0dip"
+                    android:layout_height="48.0dip"
+                    android:src="@drawable/afterlife_logo" />
+            </LinearLayout>
+            <declan.prjct.settings.widget.UserName
+                android:paddingVertical="12.0dip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0">
+                <TextView
+                    android:textAppearance="?android:textAppearanceListItem"
+                    android:ellipsize="marquee"
+                    android:id="@android:id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true" />
+                <TextView
+                    android:textAppearance="?android:textAppearanceListItemSecondary"
+                    android:textColor="?android:textColorSecondary"
+                    android:id="@android:id/summary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="2"
+                    android:layout_below="@android:id/title"
+                    android:layout_alignStart="@android:id/title" />
+            </declan.prjct.settings.widget.UserName>
+        </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
-	
-</LinearLayout>
+</FrameLayout>

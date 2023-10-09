@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2023 AfterLife Project
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<PreferenceScreen
+    android:title="AfterLabs"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <com.android.settingslib.widget.LayoutPreference
+        android:layout="@layout/afterlab_dashboard_header"
+        android:key="afterlabs_header">
+        <intent
+            android:action="com.afterlife.afterlab.fragments.team.AboutAfterLife"/>
+   </com.android.settingslib.widget.LayoutPreference>
+    <com.android.settingslib.widget.LayoutPreference
+        android:layout="@layout/declan_afterlabs_tab_layout"
+        android:selectable="false"
+        android:key="declan_tab_layout" />
+    <PreferenceCategory
+        android:title="Base UI Theme"
+        android:key="ui_category"
+        settings:layout="@layout/afterlab_preference_category">
+        <Preference
+            android:icon="@drawable/ic_interface_sb"
+            android:title="@string/category_statusbar_title"
+            android:key="statusbar_category"
+            android:summary="@string/statusbar_summary"
+            android:fragment="com.afterlife.afterlab.StatusBar"
+            settings:layout="@layout/afterlab_card_interface_grid" />
+        <Preference
+            android:icon="@drawable/ic_interface_qs"
+            android:title="@string/category_quicksettings_title"
+            android:key="quick_settings_category"
+            android:summary="@string/quicksetting_summary"
+            android:fragment="com.afterlife.afterlab.QuickSettings"
+            settings:layout="@layout/afterlab_card_interface_grid_right" />
+        <Preference
+            android:icon="@drawable/ic_interface_battery"
+            android:title="@string/category_battery_title"
+            android:key="battery_category"
+            android:summary="@string/battery_summary"
+            android:fragment="com.afterlife.afterlab.Battery"
+            settings:layout="@layout/afterlab_card_interface_grid" />
+        <Preference
+            android:icon="@drawable/ic_interface_ls"
+            android:title="@string/category_lockscreen_title"
+            android:key="lockscreen_category"
+            android:summary="@string/lockscreen_summary"
+            android:fragment="com.afterlife.afterlab.LockScreen"
+            settings:layout="@layout/afterlab_card_interface_grid_right" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="System Features"
+        android:key="system_category"
+        settings:layout="@layout/afterlab_preference_category">
+        <Preference
+            android:icon="@drawable/ic_interface_notif"
+            android:title="@string/category_notifications_title"
+            android:key="notifications_category"
+            android:summary="@string/notification_summary"
+            android:fragment="com.afterlife.afterlab.Notifications"
+            settings:layout="@layout/afterlab_card_interface_grid" />
+        <Preference
+            android:icon="@drawable/ic_interface_buttons"
+            android:title="@string/category_buttons_title"
+            android:key="buttons_category"
+            android:summary="@string/button_summary"
+            android:fragment="com.afterlife.afterlab.Buttons"
+            settings:layout="@layout/afterlab_card_interface_grid_right" />
+        <Preference
+            android:icon="@drawable/ic_interface_gesture"
+            android:title="@string/category_gestures_title"
+            android:key="gesture_category"
+            android:summary="@string/gestures_summary"
+            android:fragment="com.afterlife.afterlab.Gesture"
+            settings:layout="@layout/afterlab_card_interface_grid" />
+        <Preference
+            android:icon="@drawable/ic_interface_power"
+            android:title="@string/category_powermenu_title"
+            android:key="powermenu_category"
+            android:summary="@string/power_summary"
+            android:fragment="com.afterlife.afterlab.PowerMenu"
+            settings:layout="@layout/afterlab_card_interface_grid_right" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="Misc and General"
+        android:key="general_category"
+        settings:layout="@layout/afterlab_preference_category">
+        <Preference
+            android:icon="@drawable/ic_interface_misc"
+            android:title="@string/category_misc_title"
+            android:key="misc_category"
+            android:summary="@string/misc_summary"
+            android:fragment="com.afterlife.afterlab.Misc"
+            settings:layout="@layout/afterlab_card_interface_grid" />
+        <Preference
+            android:icon="@drawable/ic_interface_system"
+            android:title="@string/category_system_title"
+            android:key="system_category"
+            android:summary="@string/system_summary"
+            android:fragment="com.afterlife.afterlab.System"
+            settings:layout="@layout/afterlab_card_interface_grid_right" />
+    </PreferenceCategory>
+</PreferenceScreen>

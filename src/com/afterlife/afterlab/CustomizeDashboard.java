@@ -18,6 +18,7 @@ package com.afterlife.afterlab;
 import android.content.Context;
 import android.os.Bundle;
 import android.provider.SearchIndexableResource;
+import android.provider.Settings;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
@@ -31,6 +32,10 @@ import com.android.settings.R;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settingslib.search.SearchIndexable;
+import com.android.settingslib.widget.LayoutPreference;
+
+import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.tabs.TabLayout.Tab;
 
 import com.android.internal.logging.nano.MetricsProto;
 
@@ -40,36 +45,114 @@ import java.util.List;
 
 @SearchIndexable
 public class CustomizeDashboard extends SettingsPreferenceFragment { 
+	
+	private PreferenceCategory mThemesCategory, mSystemCategory, mGeneralCategory;
+	private PreferenceScreen mPreferenceScreen;
+	private LayoutPreference mTabPreference;
+	private TabLayout mTabLayout;
 
     @Override
     public void onCreate(Bundle icicle) {
-        super.onCreate(icicle);
-        addPreferencesFromResource(R.xml.customize_dashboard);
-    }
+		super.onCreate(icicle);
+		if (afterLabsStyle() == 1) {
+			addPreferencesFromResource(R.xml.customize_dashboard_grid);
+			//Category Pref//
+			mThemesCategory = findPreference("ui_category");
+			mSystemCategory = findPreference("system_category");
+			mGeneralCategory = findPreference("general_category");
+			//Tab Pref//
+			mTabPreference = findPreference("declan_tab_layout");
+			mTabLayout = mTabPreference.findViewById(R.id.afterlifexdeclan_tab_layout);
+			TabLayout.Tab uiTab = mTabLayout.newTab();
+			uiTab.setText("Themes");
+			TabLayout.Tab systemTab = mTabLayout.newTab();
+			systemTab.setText("System");
+			TabLayout.Tab generalTab = mTabLayout.newTab();
+			generalTab.setText("General");
+			mTabLayout.addTab(uiTab, 0);
+			mTabLayout.addTab(systemTab, 1);
+			mTabLayout.addTab(generalTab, 2);
+			//Remove Screen//
+			mPreferenceScreen = getPreferenceScreen();
+			mPreferenceScreen.removePreference(mSystemCategory);
+			mPreferenceScreen.removePreference(mGeneralCategory);
+			
+			TabLayout.OnTabSelectedListener onTabSelectedListener = new TabLayout.OnTabSelectedListener() {
+				@Override
+				public void onTabSelected(Tab tab) {
+					if (tab.getPosition() == 0) {
+						mPreferenceScreen.addPreference(mThemesCategory);
+						mPreferenceScreen.removePreference(mSystemCategory);
+						mPreferenceScreen.removePreference(mGeneralCategory);
+					} else if (tab.getPosition() == 1) {
+						mPreferenceScreen.removePreference(mThemesCategory);
+						mPreferenceScreen.addPreference(mSystemCategory);
+						mPreferenceScreen.removePreference(mGeneralCategory);
+					} else if (tab.getPosition() == 2) {
+						mPreferenceScreen.removePreference(mThemesCategory);
+						mPreferenceScreen.removePreference(mSystemCategory);
+						mPreferenceScreen.addPreference(mGeneralCategory);
+					}
+				}
+				
+				@Override
+				public void onTabUnselected(Tab tab) {
+				}
+				
+				@Override
+				public void onTabReselected(Tab tab) {
+				}
+			};
+			
+			onTabSelectedListener.onTabSelected(mTabLayout.getTabAt(mTabLayout.getSelectedTabPosition()));
+			mTabLayout.addOnTabSelectedListener(onTabSelectedListener);
+		} else {
+			addPreferencesFromResource(R.xml.customize_dashboard);
+		}
+	}
 
     @Override
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.AFTERLIFE;
     }
+	
+	private int afterLabsStyle() {
+		return Settings.System.getInt(getContentResolver(), "declanxafterlab_style", 0);
+	}
 
     @Override
-    public RecyclerView onCreateRecyclerView(LayoutInflater inflater, ViewGroup parent,
-            Bundle savedInstanceState) {
-        RecyclerView recyclerView = super.onCreateRecyclerView(inflater, parent,
-                savedInstanceState);
-        GridLayoutManager layoutManager = new GridLayoutManager(getActivity(), 2);
-		layoutManager.setSpanSizeLookup(new AfterlifeSpanSizeOP());
-		recyclerView.setLayoutManager(layoutManager);
-        return recyclerView;
-    }
+    public RecyclerView onCreateRecyclerView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+		RecyclerView recyclerView = super.onCreateRecyclerView(inflater, container, savedInstanceState);
+		GridLayoutManager gridManager = new GridLayoutManager(getActivity(), 2);
+		gridManager.setSpanSizeLookup(new AfterlifeSpanSizeGD());
+		GridLayoutManager semiGridManager = new GridLayoutManager(getActivity(), 2);
+		semiGridManager.setSpanSizeLookup(new AfterlifeSpanSizeSG());
+		if (afterLabsStyle() == 0) {
+			recyclerView.setLayoutManager(gridManager);
+		} else if (afterLabsStyle() == 1) {
+			recyclerView.setLayoutManager(semiGridManager);
+		}
+		return recyclerView;
+	}
 
-    class AfterlifeSpanSizeOP extends GridLayoutManager.SpanSizeLookup {
+    class AfterlifeSpanSizeGD extends GridLayoutManager.SpanSizeLookup {
 		@Override
 		public int getSpanSize(int position) {
 		    if (position == 2 || position == 3 || position == 4 || position == 5 || position == 6 || position == 7 || position == 8 || position == 9 || position == 10 || position == 11) {
 				return 1;
 			} else {
 				return 2;
+			}
+		}
+	}
+	
+	class AfterlifeSpanSizeSG extends GridLayoutManager.SpanSizeLookup {
+		@Override
+		public int getSpanSize(int position) {
+		    if (position == 0 || position == 1 || position == 2) {
+				return 2;
+			} else {
+				return 1;
 			}
 		}
 	}

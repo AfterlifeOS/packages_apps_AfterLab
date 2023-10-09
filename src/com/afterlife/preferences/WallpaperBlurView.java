@@ -17,41 +17,46 @@
 package com.afterlife.preferences;
 
 import android.app.WallpaperManager;
+import android.content.ContentResolver;
 import android.content.Context;
+import android.database.ContentObserver;
 import android.graphics.RenderEffect;
-import android.graphics.Shader;
+import android.graphics.Shader.TileMode;
+import android.os.Handler;
+import android.provider.Settings;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
-
 public class WallpaperBlurView extends ImageView {
-
-    Context contextM;
-
-    public WallpaperBlurView(Context context, AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
-        contextM = context;
-        setRenderEffect(RenderEffect.createBlurEffect(15, 15, Shader.TileMode.CLAMP));
-    }
-
-    public WallpaperBlurView(Context context, AttributeSet attrs) {
-        super(context, attrs);
-        contextM = context;
-        setRenderEffect(RenderEffect.createBlurEffect(15, 15, Shader.TileMode.CLAMP));
-    }
-
-
-    public WallpaperBlurView(Context context) {
-        super(context);
-        contextM = context;
-        setRenderEffect(RenderEffect.createBlurEffect(15, 15, Shader.TileMode.CLAMP));
-    }
-
-    @Override
-    protected void onSizeChanged(int w, int h, int oldw, int oldh) {
-        super.onSizeChanged(w, h, oldw, oldh);
-        WallpaperManager wallpaperManager = WallpaperManager.getInstance(contextM);
-        setImageDrawable(wallpaperManager.getDrawable());
-    }
-
+	
+	public WallpaperBlurView(Context context, AttributeSet attrs) {
+		super(context, attrs);
+		new SettingsObserver(new Handler()).observe();
+		updateBlurView();
+	}
+	
+	private void updateBlurView() {
+		int blurEffect = Settings.System.getInt(mContext.getContentResolver(), "declan_wpblur_radius", 15);
+		WallpaperManager wm = WallpaperManager.getInstance(mContext);
+		if (blurEffect != 0) {
+			setRenderEffect(RenderEffect.createBlurEffect(blurEffect, blurEffect, TileMode.CLAMP));
+		}
+		setImageDrawable(wm.getDrawable());
+	}
+	
+	class SettingsObserver extends ContentObserver {
+		SettingsObserver(Handler handler) {
+			super(handler);
+		}
+		
+		public void observe() {
+			ContentResolver cr = mContext.getContentResolver();
+			cr.registerContentObserver(Settings.System.getUriFor("declan_wpblur_radius"), false, this);
+		}
+		
+		@Override
+		public void onChange(boolean selfChange) {
+			updateBlurView();
+		}
+	}
 }
