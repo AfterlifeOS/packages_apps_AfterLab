@@ -10,81 +10,64 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<LinearLayout 
-    android:orientation="vertical" 
-    android:background="@drawable/card_background" 
-    android:layout_width="fill_parent" 
-    android:layout_height="wrap_content" 
-    android:layout_marginStart="5.0dip" 
-    android:layout_marginEnd="16.0dip" 
-    android:backgroundTint="@color/card_bg" 
-    android:layout_marginVertical="10.0dip" 
-    xmlns:android="http://schemas.android.com/apk/res/android" 
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:background="@drawable/card_background"
+    android:backgroundTint="@android:color/transparent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8.0dip"
+    android:layout_marginEnd="16.0dip"
+    android:layout_marginVertical="8.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-
-    <LinearLayout 
-        android:gravity="center_horizontal" 
-        android:layout_width="fill_parent" 
-        android:layout_height="wrap_content" 
-        android:paddingHorizontal="16.0dip" 
-        android:paddingVertical="16.0dip">
-
-        <androidx.preference.internal.PreferenceImageView 
-            android:layout_gravity="center" 
-            android:id="@android:id/icon" 
-            android:background="@drawable/adaptive_icon_shape" 
-            android:padding="8.0dip" 
-            android:layout_width="wrap_content" 
-            android:layout_height="wrap_content" 
-            android:tint="@color/icon_tint1" 
-            android:layout_marginEnd="5.0dip" 
-            android:backgroundTint="@color/icon_tint" />
-
-    </LinearLayout>
-
-    <androidx.cardview.widget.CardView 
-        android:orientation="vertical" 
-        android:layout_width="fill_parent" 
-        android:layout_height="wrap_content" 
-        android:layout_marginBottom="5.0dip" 
-        android:layout_marginHorizontal="5.0dip" 
-        android:elevation="0.0dip"
-        app:cardCornerRadius="@*android:dimen/config_dialogCornerRadius"
-        app:cardBackgroundColor="@color/card_fg" 
-        app:cardMaxElevation="0.0dip" 
-        app:cardElevation="0.0dip" 
-        app:rippleColor="@android:color/system_accent1_50">
-
-        <LinearLayout 
-            android:orientation="vertical" 
-            android:paddingBottom="10.0dip" 
-            android:layout_width="fill_parent" 
-            android:layout_height="wrap_content" 
-            android:paddingHorizontal="16.0dip">
-
-            <TextView 
-                android:textSize="18.0dip" 
-                android:textStyle="bold" 
-                android:textColor="@color/text_tint" 
-                android:layout_gravity="center_horizontal" 
-                android:id="@android:id/title" 
-                android:layout_width="wrap_content" 
-                android:layout_height="wrap_content" 
-                android:layout_marginTop="10.0dip" 
-                android:layout_marginBottom="5.0dip" 
-                android:singleLine="true" />
-
-            <TextView 
-                android:textSize="12.0dip" 
-                android:textColor="?android:textColorSecondary" 
-                android:layout_gravity="center_horizontal" 
-                android:id="@android:id/summary" 
-                android:layout_width="wrap_content" 
-                android:layout_height="wrap_content" 
-                android:textAlignment="center" />
-
-        </LinearLayout>
-
-    </androidx.cardview.widget.CardView>
-    
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="fill_parent"
+        android:layout_height="180dp"
+        app:cardBackgroundColor="@color/card_bg"
+        app:cardCornerRadius="26.0dip"
+        app:cardElevation="0.0dip"
+        app:rippleColor="@color/ripple">
+        <ImageView
+            android:gravity="center"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:tint="@color/card_bg_1"
+            android:src="@drawable/dot_bg"
+            android:scaleType="centerCrop"/>
+        <RelativeLayout
+            android:padding="16.0dip"
+            android:layout_width="wrap_content"
+            android:layout_height="180.0dip">
+            <ImageView
+                android:gravity="end"
+                android:background="@drawable/bg_icon"
+                android:layout_gravity="end"
+                android:padding="4dp"
+                android:id="@android:id/icon"
+                android:layout_width="55.0dip"
+                android:layout_height="35.0dip"
+                android:backgroundTint="@color/icon_bg"
+                android:tint="@color/icon_tint"
+                android:layout_alignParentTop="true"/>
+            <TextView
+                android:layout_gravity="start"
+                android:textSize="18.0sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_tint"
+                android:id="@android:id/title"
+                android:layout_width="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:singleLine="true"
+                android:layout_height="wrap_content"
+                android:layout_above="@android:id/summary"/>
+            <TextView
+                android:layout_gravity="start|center"
+                android:textSize="14.0sp"
+                android:textColor="@color/text_tint"
+                android:id="@android:id/summary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
 </LinearLayout>
