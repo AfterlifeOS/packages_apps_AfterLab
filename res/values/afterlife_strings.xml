@@ -536,4 +536,8 @@ s that internet users can use wisely</string>
     <!-- QS battery -->
     <string name="qs_use_status_bar_battery_style">Follow status bar style</string>
     <string name="status_bar_qs_category_title">QS customizations</string>
+
+     <!-- Notification guts kill app button -->
+    <string name="notification_guts_kill_app_button_title">Kill app button</string>
+    <string name="notification_guts_kill_app_button_summary">Show a kill app button in the notification\'s longpress menu</string>
 </resources>
