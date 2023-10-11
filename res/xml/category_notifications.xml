@@ -35,6 +35,12 @@
         android:title="@string/reticker_colored_title"
         android:summary="@string/reticker_colored_summary"
         android:defaultValue="false" />
+
+     <com.afterlife.support.preference.SystemSettingSwitchPreference
+        android:key="notification_guts_kill_app_button"
+        android:title="@string/notification_guts_kill_app_button_title"
+        android:summary="@string/notification_guts_kill_app_button_summary"
+        android:defaultValue="false" />
     
      <PreferenceCategory
           android:title="@string/less_boring_headsup_category_title">
