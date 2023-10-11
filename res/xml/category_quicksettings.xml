@@ -44,6 +44,18 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        android:key="qs_tile_layout_cat"
+        android:title="@string/qs_tile_layout_cat">
+
+        <Preference
+            android:key="qs_tile_layout"
+            android:title="@string/qs_tile_layout_title"
+            android:summary="@string/qs_tile_layout_summary"
+            android:fragment="com.afterlife.afterlab.fragments.QsTileLayoutSettings" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="quick_settings_brighness_category"
         android:title="@string/qs_show_brightness_slider_title">
 
