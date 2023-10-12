@@ -30,6 +30,16 @@
             android:title="@string/qs_colored_icons_title"
             android:summary="@string/qs_colored_icons_summary"
             android:defaultValue="false" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Quick Settings Style">
+
+        <Preference
+            android:key="qs_tile_layout"
+            android:title="@string/qs_tile_layout_title"
+            android:summary="@string/qs_tile_layout_summary"
+            android:fragment="com.afterlife.afterlab.fragments.QsTileLayoutSettings" />
 
         <com.afterlife.support.preference.SystemSettingSeekBarPreference
             android:key="qs_transparency"
