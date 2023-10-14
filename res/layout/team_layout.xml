@@ -31,10 +31,9 @@ limitations under the License.
         app:cardBackgroundColor="@color/bg_card"
         app:cardCornerRadius="26.0dip"
         app:cardElevation="0.0dip">
-        <LinearLayout
+        <RelativeLayout
             android:gravity="center_vertical"
             android:layout_gravity="center_vertical"
-            android:orientation="horizontal"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_marginStart="95.0dip">
@@ -83,7 +82,7 @@ limitations under the License.
                 android:visibility="gone"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:layout_weight="0.5">
+                android:layout_alignParentEnd="true">
                 <LinearLayout
                     android:gravity="end|center"
                     android:layout_gravity="end|center"
@@ -119,7 +118,7 @@ limitations under the License.
                         android:layout_marginEnd="5.0dip"/>
                 </LinearLayout>
             </LinearLayout>
-        </LinearLayout>
+        </RelativeLayout>
         <com.afterlife.afterlab.fragments.team.helper.CircularImageView
             android:layout_gravity="start|center"
             android:id="@+id/devImage"

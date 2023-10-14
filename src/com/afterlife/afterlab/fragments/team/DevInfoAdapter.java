@@ -23,7 +23,7 @@ public class DevInfoAdapter {
     private String devDescribe;
     private String githubName;
     private String telegramName;
-    private String noWa;
+    private String akunGitHub;
     private String akunFb;
     private String akunIg;
 
@@ -74,12 +74,12 @@ public class DevInfoAdapter {
     public String getTelegramName() {
         return telegramName;
     }
-    public void setNoWa(String noWa) {
-        this.noWa = noWa;
+    public void setAkunGitHub(String akunGitHub) {
+        this.akunGitHub = akunGitHub;
     }
 
-    public String getNoWa() {
-        return noWa;
+    public String getAkunGitHub() {
+        return akunGitHub;
     }
     public void setAkunFb(String akunFb) {
         this.akunFb = akunFb;
