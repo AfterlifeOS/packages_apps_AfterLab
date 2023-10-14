@@ -59,7 +59,7 @@ public class LeadsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
         ((ViewHolder) viewHolder).mDevTitle.setText(itemAdapter.getDevTitle());
         ((ViewHolder) viewHolder).mDevDescribe.setText(itemAdapter.getDevDescribe());
 
-        ((ViewHolder) viewHolder).mNoWa.setText(itemAdapter.getNoWa());
+        ((ViewHolder) viewHolder).mAkunGitHub.setText(itemAdapter.getAkunGitHub());
         ((ViewHolder) viewHolder).mAkunFb.setText(itemAdapter.getAkunFb());
         ((ViewHolder) viewHolder).mAkunIg.setText(itemAdapter.getAkunIg());
         ((ViewHolder) viewHolder).mAkunTele.setText(itemAdapter.getTelegramName());
@@ -78,9 +78,9 @@ public class LeadsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
         public TextView mDevTitle;
         public TextView mDevDescribe;
         private Dialog customDialog;
-        private LinearLayout mWa, mTele, mFb, mIg;
+        private LinearLayout mGitHub, mTele, mFb, mIg;
 
-        public TextView mNoWa, mAkunFb, mAkunIg, mAkunTele, hubName;
+        public TextView mAkunGitHub, mAkunFb, mAkunIg, mAkunTele, hubName;
 
         private Context mContext;
 
@@ -93,7 +93,7 @@ public class LeadsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
             mDevTitle = itemView.findViewById(R.id.devTitle);
             mDevDescribe = itemView.findViewById(R.id.devDescribe);
 
-            mNoWa = itemView.findViewById(R.id.no_wa);
+            mAkunGitHub = itemView.findViewById(R.id.akun_github);
             mAkunTele = itemView.findViewById(R.id.akun_tele);
             mAkunFb = itemView.findViewById(R.id.akun_fb);
             mAkunIg = itemView.findViewById(R.id.akun_ig);
@@ -114,17 +114,17 @@ public class LeadsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
 
 
                         hubName = customDialog.findViewById(R.id.hub_name);
-                        mWa = customDialog.findViewById(R.id.leads_wa);
+                        mGitHub = customDialog.findViewById(R.id.leads_github);
                         mTele = customDialog.findViewById(R.id.leads_tele);
                         mFb = customDialog.findViewById(R.id.leads_fb);
                         mIg = customDialog.findViewById(R.id.leads_ig);
                         hubName.setText(mDevName.getText());
-                        mWa.setOnClickListener(new View.OnClickListener() {
+                        mGitHub.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View v) {
                                     try {
                                         Intent intent = new Intent(Intent.ACTION_VIEW,
-                                                                   Uri.parse("https://github.com/" + mNoWa.getText()));
+                                                                   Uri.parse("https://github.com/" + mAkunGitHub.getText()));
                                         mContext.startActivity(intent);
                                     } catch (ActivityNotFoundException e) {
                                         e.printStackTrace();

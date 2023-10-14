@@ -23,7 +23,7 @@
         android:weightSum="4"
         android:orientation="horizontal">
         <LinearLayout 
-            android:id="@+id/leads_wa" 
+            android:id="@+id/leads_github" 
             android:orientation="vertical" 
             android:layout_weight="1"
             android:layout_width="0dp" 
