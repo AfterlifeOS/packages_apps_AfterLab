@@ -66,23 +66,6 @@
             android:defaultValue="0" />
 
     </PreferenceCategory>
-     
-   <PreferenceCategory
-      android:title="@string/network_traffic_title">
-      
-      <com.afterlife.support.preference.SystemSettingMainSwitchPreference
-         android:key="network_traffic_state"
-         android:title="@string/network_traffic_master_switch_title"
-         android:defaultValue="false" />
-        
-      <com.afterlife.support.preference.SystemSettingSwitchPreference
-         android:key="network_traffic_autohide_threshold"
-         android:title="@string/network_traffic_autohide_title"
-         android:summary="@string/network_traffic_autohide_summary"
-         android:dependency="network_traffic_state"
-         android:defaultValue="false" />
-
-    </PreferenceCategory>
 
     <PreferenceCategory
          android:title="Misc Statusbar" >
