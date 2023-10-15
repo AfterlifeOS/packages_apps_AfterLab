@@ -41,7 +41,8 @@
                 android:layout_marginTop="-40dp"
                 android:src="@drawable/fluid_bg"
                 android:scaleType="centerCrop"/>
-            <TextView
+
+            <com.afterlife.afterlab.fragments.team.RainbowTextView
                 android:textSize="40.0sp"
                 android:textStyle="normal"
                 android:textColor="@android:color/system_accent1_50"
