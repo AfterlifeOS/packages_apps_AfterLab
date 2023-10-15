@@ -516,16 +516,6 @@ s that internet users can use wisely</string>
     <string name="allow_signature_fake">Allow signature spoofing</string>
     <string name="allow_signature_fake_summary">Allow apps to bypass security systems by pretending to be a different app</string>
 
-    <!-- Statusbar Clock background chip -->
-    <string name="statusbar_clock_chip_title">Background chip</string>
-    <string name="statusbar_clock_chip_summary">Display accented chip behind clock</string>
-    <string name="solid_accent">Solid color accent</string>
-    <string name="outline">Outline</string>
-    <string name="solid_accent_gradient">Solid color accent gradient</string>
-    <string name="leaf_solid_accent">Leafy Solid color accent</string>
-    <string name="leaf_outline">Leafy Outline</string>
-    <string name="leaf_solid_accent_gradient">Leafy Solid color accent gradient</string>
-
     <!-- QS battery -->
     <string name="qs_use_status_bar_battery_style">Follow status bar style</string>
     <string name="status_bar_qs_category_title">QS customizations</string>
