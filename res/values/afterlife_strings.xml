@@ -123,14 +123,6 @@
     <string name="powermenu_logout">Logout</string>
     <string name="powermenu_emergency">Emergency</string>
     <string name="powermenu_torch">Flashlight</string>
-
-    <!-- Network traffic -->
-    <string name="network_traffic_title">Network traffic indicator</string>
-    <string name="network_traffic_summary">Enable or disable network speed indicator in status bar</string>
-    <string name="network_traffic_master_switch_title">Use Network Traffic Indicator</string>
-    <string name="network_options_title">Options</string>
-    <string name="network_traffic_autohide_title">Hide network traffic indicator if inactive</string>
-    <string name="network_traffic_autohide_summary">Hide when network traffic indicator is below 1 KB/s</string>
     
     <!-- Less boring heads up -->
     <string name="less_boring_headsup_category_title">Less Boring Headsup</string>
@@ -236,76 +228,79 @@
 
     <!-- About Project -->
     <string name="about_afterlife_title">About Afterlife</string>
-    
     <string name="abouttitl">AfterLife Prjkt</string>
     <string name="aboutsumm">AfterLifePrjkt is an operating system that runs on the Android system with the current API level at 13.0 - 14.0 (beta). This OS provides a comfortable experience to users both in terms of performance and appearance and also has open source propertie
-s that internet users can use wisely</string>
+s that internet users can use wisely.</string>
     <string name="github">Github</string>
     <string name="github_description">View our source code</string>
     <string name="telegram">Telegram</string>
     <string name="telegram_description">Subscribe to our Telegram channel</string>
     <string name="leads">The Leads</string>
-    <string name="designers">Man Of UI/UX</string>
-    <string name="contributor">Contributor</string>
+    <string name="designers">Design UI/UX</string>
+    <string name="contributor">Contributors</string>
 
+    <!-- Leads --> 
     <string name="afl_team_1">Romeo Delta Whiskey</string>
     <string name="founder">Founder</string>
-    <string name="afl_team1_description">Lead and Source manager</string>
-    <string name="afl_team1_no_wa">RdW-afk</string>
+    <string name="afl_team1_description">Lead and Source Manager</string>
+    <string name="afl_team1_github">RdW-afk</string>
     <string name="afl_team1_tele">Romeo_Delta_Whiskey</string>
     <string name="afl_team1_ig">rdw_inst</string>
     <string name="afl_team1_fb">RIefhan Xanderzz</string>
 
     <string name="afl_team_2">Ari Lesmana</string>
-    <string name="coli">Co-Lead</string>
-    <string name="afl_team2_description">Designer and Source manager</string>
-    <string name="afl_team2_no_wa">arilsmn</string>
+    <string name="coli_1">Co-Lead</string>
+    <string name="afl_team2_description">Idea and Source Manager</string>
+    <string name="afl_team2_github">arilsmn</string>
     <string name="afl_team2_tele">xarilsmn</string>
     <string name="afl_team2_ig">xarilsmn</string>
     <string name="afl_team2_fb">muhammad.saidillah.14</string>
 
-    <string name="afl_team_3">∂σткιт</string>
-    <string name="coli_design">Co-Lead</string>
-    <string name="afl_team3_description">Source manager</string>
-    <string name="afl_team3_no_wa">Tiktodz</string>
-    <string name="afl_team3_tele">fakedotkit</string>
+    <string name="afl_team_3">Aditya Eka Pranata</string>
+    <string name="coli_2">Co-Lead</string>
+    <string name="afl_team3_description">Source Manager</string>
+    <string name="afl_team3_github">aepranata</string>
+    <string name="afl_team3_tele">aepranata</string>
     <string name="afl_team3_ig">null</string>
-    <string name="afl_team3_fb">null</string>
+    <string name="afl_team3_fb">aepranata.bwi</string>
 
+    <!-- Designer -->
     <string name="afl_designer_1">ᄅ0ㄣ⇂XᴚƆ</string>
-    <string name="afl_github1">Indra1402-sfyn</string>
-    <string name="afl_tele1">Corex1402</string>
+    <string name="afl_designer_github_1">Indra1402-sfyn</string>
+    <string name="afl_designer_telegram_1">Corex1402</string>
 
     <string name="afl_designer_2">nssʇıǝɹ</string>
-    <string name="afl_github2">itssu4012650</string>
-    <string name="afl_tele2">reitssu</string>
+    <string name="afl_designer_github_2">itssu4012650</string>
+    <string name="afl_designer_telegram_2">reitssu</string>
 
-    <string name="afl_designer_3">IverzAsterix</string>
-    <string name="afl_github3">asterixiverz</string>
-    <string name="afl_tele3">iverzasterix</string>
+    <string name="afl_designer_3">Declanヅ</string>
+    <string name="afl_designer_github_3">DeclanG9</string>
+    <string name="afl_designer_telegram_3">seklek</string>
 
-    <string name="afl_designer_4">Declanヅ</string>
-    <string name="afl_github4">DeclanG9</string>
-    <string name="afl_tele4">seklek</string>
+    <string name="afl_designer_4">Joko Jr😎</string>
+    <string name="afl_designer_github_4">703joko</string>
+    <string name="afl_designer_telegram_4">jrinfected</string>
 
-    <string name="afl_designer_5">Mlkyjuicee</string>
-    <string name="afl_github5">affandilham</string>
-    <string name="afl_tele5">affandilham</string>
-
-    <string name="afl_designer_6">Joko Jr😎</string>
-    <string name="afl_github6">703joko</string>
-    <string name="afl_tele6">jrinfected</string>
-
-    <string name="afl_designer_7">Aernma</string>
-    <string name="afl_github7">aaernma</string>
-    <string name="afl_tele7">aavadaakedavra</string>
-
+    <!-- Designer Summary -->
     <string name="afl_designer_description">Core, Designer UI/UX</string>
 
-    <string name="afl_contri_1">Aepranata</string>
-    <string name="afl_contri_description">Contributor</string>
-    <string name="afl_contri_github">aepranata</string>
-    <string name="afl_contri_tele">aepranata</string>
+    <!-- Contributors -->
+    <string name="afl_contributors_1">IverzAsterix</string>
+    <string name="afl_contributors_github_1">asterixiverz</string>
+    <string name="afl_contributors_telegram_1">iverzasterix</string>
+
+    <string name="afl_contributors_2">Mlkyjuicee</string>
+    <string name="afl_contributors_github_2">affandilham</string>
+    <string name="afl_contributors_telegram_2">affandilham</string>
+
+    <string name="afl_contributors_3">Aernma</string>
+    <string name="afl_contributors_github_3">aaernma</string>
+    <string name="afl_contributors_telegram_3">aavadaakedavra</string>
+
+    <!-- Contributors Descript -->
+    <string name="afl_contributors_description">Helper</string>
+
+    <!-- ETC -->
     <string name="more">View more..</string>
 
 
@@ -558,5 +553,57 @@ s that internet users can use wisely</string>
     <string name="edge_light_repeat_animation_summary_on">Repeat until timeout</string>
     <string name="edge_light_repeat_animation_summary_off">Show only once</string>
     <string name="edge_light_color_mode_title">Edge light color mode</string>
+
+    <!-- Max visible notification icons -->
+    <string name="max_visible_notification_icons_title">Notification icons</string>
+    <string name="max_visible_notification_icons_summary">Max. notification icons visible on statusbar</string>
+
+    <!-- Fonts -->
+    <string name="clock_format">12\n26</string>
+    <string name="text_sample">AaBbCc</string>
+    <string name="theme_customization_lock_clock_title">Clock font style</string>
+    <string name="theme_customization_lock_clock_summary">Set lockscreen clock font style</string>
+
+    <!-- Volume Category -->
+    <string name="volume_cat">Volume</string>
+
+    <!-- Volume panel to left -->
+    <string name="volume_panel_on_left_title">Show volume panel on left</string>
+    <string name="volume_panel_on_left_summary">Display volume panel on the left side of the screen</string>
+
+    <!-- Volume Media Output Toggle -->
+    <string name="volume_media_output_toggle_title">Volume media output</string>
+    <string name="volume_media_output_toggle_summary">Show media output toggle when there is an active stream</string>
+
+    <!-- Volume rocker cursor control -->
+    <string name="cursor_section_header">Cursor</string>
+    <string name="volume_key_cursor_control_title">Keyboard cursor control</string>
+    <string name="volume_key_cursor_control_off">Disabled</string>
+    <string name="volume_key_cursor_control_on">Volume Up/Down - Cursor Left/Right</string>
+    <string name="volume_key_cursor_control_on_reverse">Volume Up/Down - Cursor Right/Left</string>
+
+    <!-- Volume Styles -->
+    <string name="rui_style">Realme UI style</string>
+    <string name="rising_style">Rice style</string>
+    <string name="volume_style_title">Volume panel styles</string>
+    <string name="two_tone_style">Two tone style</string>
+    <string name="two_tone_thin_style">Two tone thin style</string>
+
+    <!-- Statusbar net monitor -->
+    <string name="traffic_title">Traffic indicators</string>
+    <string name="traffic_summary">Show current network traffic levels in the status bar</string>
+    <string name="network_traffic_state_title">Network traffic</string>
+    <string name="network_traffic_state_summary">Show net activity in statusbar</string>
+    <string name="network_traffic_autohide_threshold_title">Net activity autohide threshold (KB/s)</string>555
     <string name="enable">Enable</string>
+    <string name="network_traffic_hidearrow">Show arrows</string>
+    <string name="network_traffic_hidearrow_summary">Show-Hide the traffic indicator arrows</string>
+    <string name="network_traffic_type">Select net activity type</string>
+    <string name="show_network_traffic_up">Upload</string>
+    <string name="show_network_traffic_down">Download</string>
+    <string name="show_network_traffic_all">Both</string>
+    <string name="network_traffic_layout">Activity layout</string>
+    <string name="network_traffic_layout_h">Horizontal</string>
+    <string name="network_traffic_layout_v">Vertical</string>
+    <string name="nettraf_font_size">Single net font size</string>
 </resources>

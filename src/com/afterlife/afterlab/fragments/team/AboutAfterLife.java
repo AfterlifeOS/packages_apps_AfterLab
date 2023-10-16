@@ -134,32 +134,34 @@ public class AboutAfterLife extends Activity {
                     }
                 }
             });
+
+        // Leads Info
         setLeadsMember(getString(R.string.afl_team_1), //devName
                        getString(R.string.founder), //devTitle
                        getString(R.string.afl_team1_description), // devDescribe
-                       getString(R.string.afl_team1_no_wa), // nowa
+                       getString(R.string.afl_team1_github), // github
                        getString(R.string.afl_team1_fb), // fb
                        getString(R.string.afl_team1_ig), // ig
                        getString(R.string.afl_team1_tele), // tele
                        R.drawable.ava_romeo); // img
         setLeadsMember(getString(R.string.afl_team_2), //devName
-                       getString(R.string.coli), //devTitle
+                       getString(R.string.coli_1), //devTitle
                        getString(R.string.afl_team2_description), // devDescribe
-                       getString(R.string.afl_team1_no_wa), // nowa
-                       getString(R.string.afl_team1_fb), // fb
-                       getString(R.string.afl_team1_ig), // ig
-                       getString(R.string.afl_team1_tele), // tele
+                       getString(R.string.afl_team2_github), // github
+                       getString(R.string.afl_team2_fb), // fb
+                       getString(R.string.afl_team2_ig), // ig
+                       getString(R.string.afl_team2_tele), // tele
                        R.drawable.ava_ari); // img
         setLeadsMember(getString(R.string.afl_team_3), //devName
-                       getString(R.string.coli_design), //devTitle
+                       getString(R.string.coli_2), //devTitle
                        getString(R.string.afl_team3_description), // devDescribe
-                       getString(R.string.afl_team3_no_wa), // nowa
+                       getString(R.string.afl_team3_github), // github
                        getString(R.string.afl_team3_fb), // fb
                        getString(R.string.afl_team3_ig), // ig
                        getString(R.string.afl_team3_tele), // tele
-                       R.drawable.ava_dotkit); // img  
+                       R.drawable.ava_aditya); // img  
 
-
+        // Designer Info
         setDesignerMember(getString(R.string.afl_designer_1), //nama
                           getString(R.string.afl_designer_description),//jabatan
                           getString(R.string.afl_github1), //git uname
@@ -180,29 +182,25 @@ public class AboutAfterLife extends Activity {
                           getString(R.string.afl_github4), //git uname
                           getString(R.string.afl_tele4), //tele uname
                           R.drawable.ava_designer4); // avatar
-        setDesignerMember(getString(R.string.afl_designer_5), //nama
-                          getString(R.string.afl_designer_description),//jabatan
-                          getString(R.string.afl_github5), //git uname
-                          getString(R.string.afl_tele5), //tele uname
-                          R.drawable.ava_designer5); // avatar
-        setDesignerMember(getString(R.string.afl_designer_6), //nama
-                          getString(R.string.afl_designer_description),//jabatan
-                          getString(R.string.afl_github6), //git uname
-                          getString(R.string.afl_tele6), //tele uname
-                          R.drawable.ava_designer6); // avatar
-        setDesignerMember(getString(R.string.afl_designer_7), //nama
-                          getString(R.string.afl_designer_description),//jabatan
-                          getString(R.string.afl_github7), //git uname
-                          getString(R.string.afl_tele7), //tele uname
-                          R.drawable.ava_designer7); // avatar
+        
 
-
-        setOtherMember(getString(R.string.afl_contri_1), //nama
-                       getString(R.string.afl_contri_description),//jabatan
-                       getString(R.string.afl_contri_github), //git uname
-                       getString(R.string.afl_contri_tele), //tele uname
-                       R.drawable.ava_contri1); // avatar
-
+        // Contributors
+        setOtherMember(getString(R.string.afl_contributors_1), //nama
+                       getString(R.string.afl_contributors_description),//jabatan
+                       getString(R.string.afl_contributors_github_1), //git uname
+                       getString(R.string.afl_contributors_telegram_1), //tele uname
+                       R.drawable.ava_contri_1); // avatar
+        setOtherMember(getString(R.string.afl_contributors_2), //nama
+                       getString(R.string.afl_contributors_description),//jabatan
+                       getString(R.string.afl_contributors_github_2), //git uname
+                       getString(R.string.afl_contributors_telegram_2), //tele uname
+                       R.drawable.ava_contri_2); // avatar
+        setOtherMember(getString(R.string.afl_contributors_3), //nama
+                       getString(R.string.afl_contributors_description),//jabatan
+                       getString(R.string.afl_contributors_github_3), //git uname
+                       getString(R.string.afl_contributors_telegram_3), //tele uname
+                       R.drawable.ava_contri_3); // avatar
+                       
 
         LeadsAdapter mAdapter = new LeadsAdapter(mList);
         ListAdapter mAdapter2 = new ListAdapter(mList2);
@@ -235,7 +233,7 @@ public class AboutAfterLife extends Activity {
     }
 
     private void setLeadsMember(String devName, String devTitle, String devDescribe, 
-                                String noWa, String fbLink, String igLink, String teleLink,
+                                String GitHub, String fbLink, String igLink, String teleLink,
                                 int devImage) {
         DevInfoAdapter adapter;
 
@@ -244,7 +242,7 @@ public class AboutAfterLife extends Activity {
         adapter.setDevName(devName);
         adapter.setDevTitle(devTitle);
         adapter.setDevDescribe(devDescribe);
-        adapter.setNoWa(noWa);
+        adapter.setGithub(GitHub);
         adapter.setAkunFb(fbLink);
         adapter.setAkunIg(igLink);
         adapter.setTelegramName(teleLink);

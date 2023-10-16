@@ -72,9 +72,7 @@ import android.os.SystemProperties;
 @SearchIndexable
 public class StatusBar extends SettingsPreferenceFragment 
             implements Preference.OnPreferenceChangeListener {
-            
-    private SystemSettingSwitchPreference mThreshold;
-    private SystemSettingMainSwitchPreference mNetMonitor;
+
 
     private static final String KEY_STATUS_BAR_AM_PM = "status_bar_am_pm";
     private SecureSettingListPreference mStatusBarAmPm;
@@ -90,40 +88,13 @@ public class StatusBar extends SettingsPreferenceFragment
         final Resources res = getResources();
         final PreferenceScreen prefScreen = getPreferenceScreen();
         
-        // Network traffic 
-        boolean isNetMonitorEnabled = Settings.System.getIntForUser(resolver,
-                Settings.System.NETWORK_TRAFFIC_STATE, 1, UserHandle.USER_CURRENT) == 1;
-        mNetMonitor = (SystemSettingMainSwitchPreference) findPreference("network_traffic_state");
-        mNetMonitor.setChecked(isNetMonitorEnabled);
-        mNetMonitor.setOnPreferenceChangeListener(this);
-
-        boolean isThresholdEnabled = Settings.System.getIntForUser(resolver,
-                Settings.System.NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD, 0, UserHandle.USER_CURRENT) == 1;
-        mThreshold = (SystemSettingSwitchPreference) findPreference("network_traffic_autohide_threshold");
-        mThreshold.setChecked(isThresholdEnabled);
-        mThreshold.setOnPreferenceChangeListener(this);
-        
         mCombinedSignalIcons = findPreference("persist.sys.flags.combined_signal_icons");
         mCombinedSignalIcons.setOnPreferenceChangeListener(this);
     }
     
     @Override
     public boolean onPreferenceChange(Preference preference, Object objValue) {
-        if (preference == mNetMonitor) {
-            boolean value = (Boolean) objValue;
-            Settings.System.putIntForUser(getActivity().getContentResolver(),
-                    Settings.System.NETWORK_TRAFFIC_STATE, value ? 1 : 0,
-                    UserHandle.USER_CURRENT);
-            mNetMonitor.setChecked(value);
-            mThreshold.setChecked(value);
-            return true;
-        } else if (preference == mThreshold) {
-            boolean value = (Boolean) objValue;
-            Settings.System.putIntForUser(getContentResolver(),
-                    Settings.System.NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD, value ? 1 : 0,
-                    UserHandle.USER_CURRENT);
-            return true;
-        } else if (preference == mCombinedSignalIcons) {
+        if (preference == mCombinedSignalIcons) {
             boolean value = (Boolean) objValue;
             Settings.Secure.putIntForUser(getContentResolver(),
                 Settings.Secure.ENABLE_COMBINED_SIGNAL_ICONS, value ? 1 : 0, UserHandle.USER_CURRENT);
