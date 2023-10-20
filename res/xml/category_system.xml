@@ -16,79 +16,98 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/category_system_title" >
 
-    <PreferenceCategory
-        android:title="@string/general_category">
-        <com.afterlife.support.preference.SystemSettingListPreference
-            android:entries="@array/afterlabs_style_entries"
-            android:title="AfterLabs Style"
-            android:key="declanxafterlab_style"
-            android:summary="%s"
-            android:defaultValue="0"
-            android:entryValues="@array/afterlabs_style_values" />
-        <com.afterlife.support.preference.SystemSettingEditTextPreference
-            android:key="afterlab_set_username"
-            android:title="AfterLabs Username"
-            android:summary="Change username in afterlabs"
-            android:defaultValue="Hi User?" />
-        <com.afterlife.support.preference.SystemSettingSeekBarPreference
-            android:max="100"
-            android:title="AfterLab Blur Header"
-            android:key="declan_wpblur_radius"
-            android:defaultValue="15"
-            settings:units="%" />
+     <!-- Afterlabs Theme -->
+     <PreferenceCategory
+         android:title="@string/afterlabs_theme_cat">
+
+          <com.afterlife.support.preference.SystemSettingListPreference
+             android:entries="@array/afterlabs_style_entries"
+             android:title="AfterLabs Style"
+             android:key="declanxafterlab_style"
+             android:summary="%s"
+             android:defaultValue="0"
+             android:entryValues="@array/afterlabs_style_values" />
+
+          <com.afterlife.support.preference.SystemSettingEditTextPreference
+             android:key="afterlab_set_username"
+             android:title="AfterLabs Username"
+             android:summary="Change username in afterlabs"
+             android:defaultValue="Hi User!" />
+
+          <com.afterlife.support.preference.SystemSettingSeekBarPreference
+             android:max="100"
+             android:title="AfterLab Blur Header"
+             android:key="declan_wpblur_radius"
+             android:defaultValue="15"
+             settings:units="%" />
+
+          <!-- Custom Category preference -->
+          <Preference
+             android:key="custom_pref"
+             android:title="@string/cust_category_title"
+             android:summary="@string/cust_category_summary"
+             android:fragment="com.afterlife.afterlab.fragments.CustomCategory" />
+
     </PreferenceCategory>
 
     <!-- Monet Engine -->
-    <Preference
-            android:key="monet_engine"
-            android:title="@string/monet_engine_title"
-            android:summary="@string/monet_engine_summary"
-            android:fragment="com.afterlife.afterlab.fragments.MonetEngine" />
+    <PreferenceCategory
+        android:title="@string/monet_engine_cat">
 
-     <!-- Custom Category preference -->
-     <Preference
-            android:key="custom_pref"
-            android:title="@string/cust_category_title"
-            android:summary="@string/cust_category_summary"
-            android:fragment="com.afterlife.afterlab.fragments.CustomCategory" />
-       
-     <!-- Font style -->
-     <Preference
-            android:key="android.theme.customization.font"
-            android:title="@string/theme_customization_font_title"
-            android:summary="@string/theme_customization_font_summary"
-            android:fragment="com.afterlife.afterlab.fragments.FontsPicker"/>
+          <Preference
+             android:key="monet_engine"
+             android:title="@string/monet_engine_title"
+             android:summary="@string/monet_engine_summary"
+             android:fragment="com.afterlife.afterlab.fragments.MonetEngine" />
 
-	<!-- Icon pack -->
-     <Preference
-          android:key="android.theme.customization.icon_pack"
-          android:title="@string/theme_customization_icon_pack_title"
-          android:summary="@string/theme_customization_icon_pack_summary"
-          android:fragment="com.afterlife.afterlab.fragments.StatusbarIcons"/>
+     </PreferenceCategory>
 
-     <Preference
-            android:key="android.theme.customization.signal_icon"
-            android:title="@string/theme_customization_signal_icon_title"
-            android:summary="@string/theme_customization_signal_icon_summary"
-            android:fragment="com.afterlife.afterlab.fragments.SignalIcons"/>
+     <!-- General -->
+     <PreferenceCategory
+        android:title="@string/general_category">
 
-      <Preference
-            android:key="android.theme.customization.wifi_icon"
-            android:title="@string/theme_customization_wifi_icon_title"
-            android:summary="@string/theme_customization_wifi_icon_summary"
-            android:fragment="com.afterlife.afterlab.fragments.WifiIcons"/>
+          <!-- Font Pack -->
+          <Preference
+             android:key="android.theme.customization.font"
+             android:title="@string/theme_customization_font_title"
+             android:summary="@string/theme_customization_font_summary"
+             android:fragment="com.afterlife.afterlab.fragments.FontsPicker"/>
 
-      <Preference
-            android:key="android.theme.customization.lockscreen_clock_font"
-            android:title="@string/theme_customization_lock_clock_title"
-            android:summary="@string/theme_customization_lock_clock_summary"
-            android:fragment="com.afterlife.afterlab.fragments.LockClockFonts"/>
+          <!-- Lockscreen Clock Fonts Pack -->
+          <Preference
+             android:key="android.theme.customization.lockscreen_clock_font"
+             android:title="@string/theme_customization_lock_clock_title"
+             android:summary="@string/theme_customization_lock_clock_summary"
+             android:fragment="com.afterlife.afterlab.fragments.LockClockFonts"/>
 
-     <!-- Adaptive icon shape -->
-     <Preference
-          android:key="android.theme.customization.adaptive_icon_shape"
-          android:title="@string/theme_customization_icon_shape_title"
-          android:summary="@string/theme_customization_icon_shape_summary"
-          android:fragment="com.afterlife.afterlab.fragments.IconShapes"/>
+	     <!-- Icon Pack -->
+          <Preference
+             android:key="android.theme.customization.icon_pack"
+             android:title="@string/theme_customization_icon_pack_title"
+             android:summary="@string/theme_customization_icon_pack_summary"
+             android:fragment="com.afterlife.afterlab.fragments.StatusbarIcons"/>
+
+          <!-- Signal Icons Pack -->
+          <Preference
+             android:key="android.theme.customization.signal_icon"
+             android:title="@string/theme_customization_signal_icon_title"
+             android:summary="@string/theme_customization_signal_icon_summary"
+             android:fragment="com.afterlife.afterlab.fragments.SignalIcons"/>
+
+          <!-- Wifi Icons  Pack -->
+          <Preference
+             android:key="android.theme.customization.wifi_icon"
+             android:title="@string/theme_customization_wifi_icon_title"
+             android:summary="@string/theme_customization_wifi_icon_summary"
+             android:fragment="com.afterlife.afterlab.fragments.WifiIcons"/>
+
+          <!-- Adaptive icon shape Pack -->
+          <Preference
+             android:key="android.theme.customization.adaptive_icon_shape"
+             android:title="@string/theme_customization_icon_shape_title"
+             android:summary="@string/theme_customization_icon_shape_summary"
+             android:fragment="com.afterlife.afterlab.fragments.IconShapes"/>
+
+     </PreferenceCategory>
 
 </PreferenceScreen>

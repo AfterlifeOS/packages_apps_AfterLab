@@ -67,7 +67,7 @@
         android:id="@+id/battery"
         android:title="@string/category_battery_title"
         android:summary="@string/battery_summary"
-        android:fragment="com.afterlife.afterlab.battery"
+        android:fragment="com.afterlife.afterlab.Battery"
         settings:layout="@layout/afterlab_interface_single_left"/>
         
     <Preference

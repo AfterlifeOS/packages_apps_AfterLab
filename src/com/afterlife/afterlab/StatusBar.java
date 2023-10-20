@@ -74,7 +74,7 @@ public class StatusBar extends SettingsPreferenceFragment
             implements Preference.OnPreferenceChangeListener {
             
     private SystemSettingSwitchPreference mThreshold;
-    private SystemSettingMainSwitchPreference mNetMonitor;
+    private SystemSettingSwitchPreference mNetMonitor;
 
     private static final String KEY_STATUS_BAR_AM_PM = "status_bar_am_pm";
     private SecureSettingListPreference mStatusBarAmPm;
@@ -93,7 +93,7 @@ public class StatusBar extends SettingsPreferenceFragment
         // Network traffic 
         boolean isNetMonitorEnabled = Settings.System.getIntForUser(resolver,
                 Settings.System.NETWORK_TRAFFIC_STATE, 1, UserHandle.USER_CURRENT) == 1;
-        mNetMonitor = (SystemSettingMainSwitchPreference) findPreference("network_traffic_state");
+        mNetMonitor = (SystemSettingSwitchPreference) findPreference("network_traffic_state");
         mNetMonitor.setChecked(isNetMonitorEnabled);
         mNetMonitor.setOnPreferenceChangeListener(this);
 
