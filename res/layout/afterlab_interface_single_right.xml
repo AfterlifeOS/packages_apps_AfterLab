@@ -11,63 +11,57 @@
      limitations under the License.
 -->
 <LinearLayout
+    android:background="@android:color/transparent"
     android:layout_width="fill_parent"
-    android:background="@drawable/card_background"
-    android:backgroundTint="@android:color/transparent"
-    android:layout_height="wrap_content"
-    android:layout_marginStart="8.0dip"
+    android:layout_height="220.0dip"
+    android:layout_marginTop="-44.0dip"
+    android:layout_marginBottom="8.0dip"
+    android:layout_marginStart="7.0dip"
     android:layout_marginEnd="16.0dip"
-    android:layout_marginVertical="8.0dip"
+    android:minHeight="?android:listPreferredItemHeightSmall"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <com.google.android.material.card.MaterialCardView
         android:layout_width="fill_parent"
-        android:layout_height="180dp"
+        android:layout_height="220.0dip"
         app:cardBackgroundColor="@color/card_bg"
         app:cardCornerRadius="26.0dip"
         app:cardElevation="0.0dip"
         app:rippleColor="@color/ripple">
-        <ImageView
-            android:gravity="center"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:tint="@color/card_bg_1"
-            android:src="@drawable/dot_bg"
-            android:scaleType="centerCrop"/>
         <RelativeLayout
             android:padding="16.0dip"
             android:layout_width="wrap_content"
-            android:layout_height="180.0dip">
-            <ImageView
-                android:gravity="end"
-                android:background="@drawable/bg_icon"
-                android:layout_gravity="end"
-                android:padding="4dp"
-                android:id="@android:id/icon"
-                android:layout_width="55.0dip"
-                android:layout_height="35.0dip"
-                android:backgroundTint="@color/icon_bg"
-                android:tint="@color/icon_tint"
-                android:layout_alignParentTop="true"/>
+            android:layout_height="220.0dip">
             <TextView
-                android:layout_gravity="start"
                 android:textSize="18.0sp"
                 android:textStyle="bold"
-                android:textColor="@color/text_tint"
+                android:textColor="?android:textColorPrimary"
+                android:layout_gravity="start"
                 android:id="@android:id/title"
                 android:layout_width="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:singleLine="true"
                 android:layout_height="wrap_content"
-                android:layout_above="@android:id/summary"/>
+                android:layout_marginBottom="5.0dip"
+                android:singleLine="true"
+                android:layout_alignParentTop="true"/>
             <TextView
-                android:layout_gravity="start|center"
                 android:textSize="14.0sp"
-                android:textColor="@color/text_tint"
+                android:textColor="?android:textColorSecondary"
+                android:layout_gravity="start|center"
                 android:id="@android:id/summary"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"/>
+                android:layout_below="@android:id/title"/>
+            <ImageView
+                android:gravity="start"
+                android:layout_gravity="start"
+                android:id="@android:id/icon"
+                android:background="@drawable/bg_icon"
+                android:padding="4.0dip"
+                android:layout_width="55.0dip"
+                android:layout_height="35.0dip"
+                android:tint="@android:color/system_accent1_900"
+                android:layout_alignParentBottom="true"
+                android:backgroundTint="@android:color/system_accent1_100"/>
         </RelativeLayout>
     </com.google.android.material.card.MaterialCardView>
 </LinearLayout>
