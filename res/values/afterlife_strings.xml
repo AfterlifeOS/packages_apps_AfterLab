@@ -19,6 +19,9 @@
     <string name="customize_dashboard_title">AfterLabs</string>
     <string name="build_tweaks_summary_title">Go to another World</string>
 
+    <!-- Afterlabs Theme -->
+    <string name="afterlabs_theme_cat">Afterlabs Theme</string>
+
     <!-- General -->
     <string name="ok">Okay</string>
     <string name="default_string">Default</string>
@@ -313,7 +316,8 @@ s that internet users can use wisely.</string>
 
 
     <!-- Monet Engine -->
-    <string name="monet_engine_title">Monet engine</string>
+    <string name="monet_engine_cat">Monet Settings</string>
+    <string name="monet_engine_title">Monet Engine</string>
     <string name="monet_engine_summary">Customize monet parameters</string>
     <string name="monet_engine_custom_color_title">Accent color</string>
     <string name="monet_engine_custom_color_summary">Choose custom color for accent</string>
@@ -371,6 +375,7 @@ s that internet users can use wisely.</string>
     <string name="screen_off_animation_scale">Scale</string>
 
     <!-- Status bar - Battery Bar -->
+    <string name="battery_bar_cat">Battery Bar</string>
     <string name="battery_bar_title">Battery bar</string>
     <string name="battery_bar_summary">Display and customize battery bar above status bar</string>
     <string name="battery_bar_color">Color</string>
@@ -576,4 +581,11 @@ s that internet users can use wisely.</string>
     <string name="text_sample">AaBbCc</string>
     <string name="theme_customization_lock_clock_title">Clock font style</string>
     <string name="theme_customization_lock_clock_summary">Set lockscreen clock font style</string>
+
+    <!-- Extra Title Category-->
+    <string name="notification_icon_cat">Statusbar Icon</string>
+    <string name="reticker_cat">Re-Ticker</string>
+    <string name="notification_clear_all_cat">Clear All Buttons</string>
+    <string name="misc_cat">Misc</string>
+    <string name="weather_cat">Weather</string>
 </resources>

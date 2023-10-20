@@ -17,77 +17,108 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/category_notifications_title" >
 
-    <com.afterlife.support.preference.SystemSettingSwitchPreference
-          android:key="statusbar_colored_icons"
-          android:title="@string/statusbar_colored_icons_title"
-          android:summary="@string/statusbar_colored_icons_summary"
-          android:defaultValue="false" />
+     <!-- General -->
+     <PreferenceCategory
+        android:title="@string/general_category">
+
+         <com.afterlife.support.preference.SystemSettingSwitchPreference
+            android:key="notification_guts_kill_app_button"
+            android:title="@string/notification_guts_kill_app_button_title"
+            android:summary="@string/notification_guts_kill_app_button_summary"
+            android:defaultValue="false" />
      
-     <com.afterlife.support.preference.SystemSettingSeekBarPreference
-            android:key="max_visible_notification_icons"
-            android:title="@string/max_visible_notification_icons_title"
-            android:summary="@string/max_visible_notification_icons_summary"
-            android:defaultValue="5"
-            android:max="10"
-            settings:min="0"
-            settings:units="" />
-     
-	<com.afterlife.support.preference.SystemSettingSwitchPreference
-        android:key="reticker_status"
-        android:title="@string/reticker_title"
-        android:summary="@string/reticker_summary"
-        android:defaultValue="false" />
+     </PreferenceCategory>
 
-     <com.afterlife.support.preference.SystemSettingSwitchPreference
-        android:dependency="reticker_status"
-        android:key="reticker_colored"
-        android:title="@string/reticker_colored_title"
-        android:summary="@string/reticker_colored_summary"
-        android:defaultValue="false" />
-
-     <com.afterlife.support.preference.SystemSettingSwitchPreference
-        android:key="notification_guts_kill_app_button"
-        android:title="@string/notification_guts_kill_app_button_title"
-        android:summary="@string/notification_guts_kill_app_button_summary"
-        android:defaultValue="false" />
-
-     <com.afterlife.support.preference.SystemSettingSwitchPreference
-        android:key="notification_material_dismiss"
-        android:title="@string/notification_material_dismiss_title"
-        android:summary="@string/notification_material_dismiss_summary"
-        android:defaultValue="false" />
-
-    <com.afterlife.support.preference.SystemSettingSeekBarPreference
-        android:key="notification_material_dismiss_style"
-        android:title="@string/notification_material_dismiss_style_title"
-        android:dependency="notification_material_dismiss"
-        android:defaultValue="0"
-        android:max="9"
-        android:min="0" />
-
-    <com.afterlife.support.preference.SystemSettingSeekBarPreference
-        android:key="notification_material_dismiss_bgstyle"
-        android:title="@string/notification_material_dismiss_bgstyle_title"
-        android:dependency="notification_material_dismiss"
-        android:defaultValue="0"
-        android:max="4"
-        android:min="0" />
-
-   <Preference
-        android:key="edge_light_settings"
-        android:title="@string/edge_light_title"
-        android:summary="@string/edge_light_summary"
-        android:fragment="com.afterlife.afterlab.fragments.EdgeLightSettings" />
-    
+     <!-- HeadsUp -->
      <PreferenceCategory
           android:title="@string/less_boring_headsup_category_title">
           
           <com.afterlife.support.preference.SystemSettingSwitchPreference
-               android:key="less_boring_heads_up"
-               android:title="@string/less_boring_heads_up_title"
-               android:summary="@string/less_boring_heads_up_summary"
-               android:defaultValue="false" />
+             android:key="less_boring_heads_up"
+             android:title="@string/less_boring_heads_up_title"
+             android:summary="@string/less_boring_heads_up_summary"
+             android:defaultValue="false" />
      
      </PreferenceCategory>
+
+     <!-- Statusbar Icon -->
+     <PreferenceCategory
+         android:title="@string/notification_icon_cat">
+
+           <com.afterlife.support.preference.SystemSettingSwitchPreference
+              android:key="statusbar_colored_icons"
+              android:title="@string/statusbar_colored_icons_title"
+              android:summary="@string/statusbar_colored_icons_summary"
+              android:defaultValue="false" />
      
+           <com.afterlife.support.preference.SystemSettingSeekBarPreference
+              android:key="max_visible_notification_icons"
+              android:title="@string/max_visible_notification_icons_title"
+              android:summary="@string/max_visible_notification_icons_summary"
+              android:defaultValue="5"
+              android:max="10"
+              settings:min="0"
+              settings:units="" />
+     
+     </PreferenceCategory>
+
+     <!-- ReTicker -->
+     <PreferenceCategory
+         android:title="@string/reticker_cat">
+     
+	     <com.afterlife.support.preference.SystemSettingSwitchPreference
+             android:key="reticker_status"
+             android:title="@string/reticker_title"
+             android:summary="@string/reticker_summary"
+             android:defaultValue="false" />
+
+          <com.afterlife.support.preference.SystemSettingSwitchPreference
+             android:dependency="reticker_status"
+             android:key="reticker_colored"
+             android:title="@string/reticker_colored_title"
+             android:summary="@string/reticker_colored_summary"
+             android:defaultValue="false" />
+     
+     </PreferenceCategory>
+
+     <!-- Clear All Buttons -->
+     <PreferenceCategory
+         android:title="@string/notification_clear_all_cat">
+
+          <com.afterlife.support.preference.SystemSettingSwitchPreference
+             android:key="notification_material_dismiss"
+             android:title="@string/notification_material_dismiss_title"
+             android:summary="@string/notification_material_dismiss_summary"
+             android:defaultValue="false" />
+
+          <com.afterlife.support.preference.SystemSettingSeekBarPreference
+             android:key="notification_material_dismiss_style"
+             android:title="@string/notification_material_dismiss_style_title"
+             android:dependency="notification_material_dismiss"
+             android:defaultValue="0"
+             android:max="9"
+             android:min="0" />
+
+          <com.afterlife.support.preference.SystemSettingSeekBarPreference
+             android:key="notification_material_dismiss_bgstyle"
+             android:title="@string/notification_material_dismiss_bgstyle_title"
+             android:dependency="notification_material_dismiss"
+             android:defaultValue="0"
+             android:max="4"
+             android:min="0" />
+     
+      </PreferenceCategory>
+
+     <!-- Edge Light -->
+     <PreferenceCategory
+         android:title="@string/misc_cat">
+
+          <Preference
+              android:key="edge_light_settings"
+              android:title="@string/edge_light_title"
+              android:summary="@string/edge_light_summary"
+              android:fragment="com.afterlife.afterlab.fragments.EdgeLightSettings" />
+
+     </PreferenceCategory>
+
 </PreferenceScreen>

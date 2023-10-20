@@ -43,9 +43,10 @@
 
         </PreferenceCategory>
 
-        <PreferenceCategory
-            android:key="quick_settings_battery_category"
-            android:title="@string/status_bar_qs_category_title">
+    <!-- Battery QS Style -->
+    <PreferenceCategory
+        android:key="quick_settings_battery_category"
+        android:title="@string/status_bar_qs_category_title">
 
         <com.afterlife.support.preference.SystemSettingListPreference
             android:key="qs_battery_style"
@@ -69,11 +70,17 @@
 
     </PreferenceCategory>
 
-        <!-- Battery Bar View -->
+    <!-- Battery Bar View -->
+    <PreferenceCategory
+        android:key="battery_bar"
+        android:title="@string/battery_bar_cat">
+
         <Preference
             android:key="batterybar"
             android:title="@string/battery_bar_title"
             android:summary="@string/battery_bar_summary"
             android:fragment="com.afterlife.afterlab.fragments.BatteryBar" />
+
+    </PreferenceCategory>
     
 </PreferenceScreen>

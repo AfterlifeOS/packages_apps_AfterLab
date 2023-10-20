@@ -16,32 +16,37 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/category_lockscreen_title" >
 
-      <com.afterlife.support.preference.SystemSettingListPreference
-        android:key="screen_off_animation"
-        android:title="@string/screen_off_animation_title"
-        android:entries="@array/screen_off_animation_entries"
-        android:entryValues="@array/screen_off_animation_values"
-        android:summary="%s"
-        android:defaultValue="0" />
+     <!-- General -->
+     <PreferenceCategory
+        android:title="@string/general_category">
+
+         <com.afterlife.support.preference.SystemSettingListPreference
+            android:key="screen_off_animation"
+            android:title="@string/screen_off_animation_title"
+            android:entries="@array/screen_off_animation_entries"
+            android:entryValues="@array/screen_off_animation_values"
+            android:summary="%s"
+            android:defaultValue="0" />
     
-     <com.afterlife.support.preference.SystemSettingSwitchPreference
-        android:key="ambient_wake_gestures"
-        android:title="@string/ambient_wake_gestures_title"
-        android:summary="@string/ambient_wake_gestures_summary"
-        android:defaultValue="false" />
+         <com.afterlife.support.preference.SystemSettingSwitchPreference
+            android:key="ambient_wake_gestures"
+            android:title="@string/ambient_wake_gestures_title"
+            android:summary="@string/ambient_wake_gestures_summary"
+            android:defaultValue="false" />
 
-     <com.afterlife.support.preference.SystemSettingSwitchPreference
-        android:key="double_tap_sleep_lockscreen"
-        android:title="@string/double_tap_to_sleep_lockscreen_title"
-        android:summary="@string/double_tap_to_sleep_lockscreen_summary"
-        android:defaultValue="false"/>
+         <com.afterlife.support.preference.SystemSettingSwitchPreference
+            android:key="double_tap_sleep_lockscreen"
+            android:title="@string/double_tap_to_sleep_lockscreen_title"
+            android:summary="@string/double_tap_to_sleep_lockscreen_summary"
+            android:defaultValue="false"/>
 
-     <com.afterlife.support.preference.GlobalSettingSwitchPreference
-        android:key="wake_when_plugged_or_unplugged"
-        android:title="@string/wake_when_plugged_or_unplugged_title"
-        android:summary="@string/wake_when_plugged_or_unplugged_summary"
-        android:defaultValue="@*android:bool/config_unplugTurnsOnScreen" />
-        
+         <com.afterlife.support.preference.GlobalSettingSwitchPreference
+            android:key="wake_when_plugged_or_unplugged"
+            android:title="@string/wake_when_plugged_or_unplugged_title"
+            android:summary="@string/wake_when_plugged_or_unplugged_summary"
+            android:defaultValue="@*android:bool/config_unplugTurnsOnScreen" />
+     
+     <!-- Media Cover Art -->
      <PreferenceCategory
         android:key="lockscreen_media_art_options"
         android:title="@string/lockscreen_media_art_options_title">
@@ -58,13 +63,9 @@
             android:summary="@string/lockscreen_power_menu_disabled_summary"
             android:defaultValue="true" /> 
 
-         <com.afterlife.support.preference.SystemSettingSwitchPreference
-            android:key="enable_ripple_effect"
-            android:title="@string/enable_fingerprint_ripple_effect_title"
-            android:summary="@string/enable_fingerprint_ripple_effect_summary"
-            android:defaultValue="true" />
     </PreferenceCategory>
 
+    <!-- Fingerprint -->
     <PreferenceCategory
         android:key="lockscreen_ui_finterprint_category"
         android:title="@string/fingerprint_category">
@@ -80,6 +81,12 @@
             android:title="@string/fprint_error_vib_title"
             android:summary="@string/fprint_error_vib_summary"
             android:persistent="true" />
+
+        <com.afterlife.support.preference.SystemSettingSwitchPreference
+            android:key="enable_ripple_effect"
+            android:title="@string/enable_fingerprint_ripple_effect_title"
+            android:summary="@string/enable_fingerprint_ripple_effect_summary"
+            android:defaultValue="true" />
 
     </PreferenceCategory>
 
