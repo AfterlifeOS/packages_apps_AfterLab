@@ -35,6 +35,8 @@ import androidx.preference.SwitchPreference;
 
 import com.android.internal.logging.nano.MetricsProto;
 
+import com.afterlife.support.preference.SecureSettingSwitchPreference;
+
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.search.BaseSearchIndexProvider;
@@ -51,10 +53,12 @@ public class LockScreen extends SettingsPreferenceFragment
 
     private static final String FINGERPRINT_SUCCESS_VIB = "fingerprint_success_vib";
     private static final String FINGERPRINT_ERROR_VIB = "fingerprint_error_vib";
+    private static final String LOCKSCREEN_DOUBLE_LINE_CLOCK = "lockscreen_double_line_clock_switch";
 
     private FingerprintManager mFingerprintManager;
     private SwitchPreference mFingerprintSuccessVib;
     private SwitchPreference mFingerprintErrorVib;
+    private SecureSettingSwitchPreference mDoubleLineClock;
     
     @Override
     public void onCreate(Bundle icicle) {
@@ -65,6 +69,10 @@ public class LockScreen extends SettingsPreferenceFragment
         final PreferenceScreen prefSet = getPreferenceScreen();
         final PackageManager mPm = getActivity().getPackageManager();
 
+        mDoubleLineClock = (SecureSettingSwitchPreference ) findPreference(LOCKSCREEN_DOUBLE_LINE_CLOCK);
+        mDoubleLineClock.setChecked((Settings.Secure.getInt(getContentResolver(),
+             Settings.Secure.LOCKSCREEN_USE_DOUBLE_LINE_CLOCK, 1) != 0));
+        mDoubleLineClock.setOnPreferenceChangeListener(this);
         mFingerprintManager = (FingerprintManager) getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
         mFingerprintSuccessVib = (SwitchPreference) findPreference(FINGERPRINT_SUCCESS_VIB);
         mFingerprintErrorVib = (SwitchPreference) findPreference(FINGERPRINT_ERROR_VIB);
@@ -101,6 +109,11 @@ public class LockScreen extends SettingsPreferenceFragment
             boolean value = (Boolean) newValue;
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.FP_ERROR_VIBRATE, value ? 1 : 0);
+            return true;
+        } else if (preference == mDoubleLineClock) {
+          boolean value = (Boolean) newValue;
+            Settings.Secure.putInt(getActivity().getContentResolver(),
+                    Settings.Secure.LOCKSCREEN_USE_DOUBLE_LINE_CLOCK, value ? 1 : 0);
             return true;
         }
         return false;
