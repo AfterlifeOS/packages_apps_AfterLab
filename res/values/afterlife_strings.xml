@@ -579,4 +579,8 @@ s that internet users can use wisely.</string>
     <string name="qs_style_title">QS Panel style</string>
     <string name="qs_style_default">Android 13</string>
     <string name="qs_style_round">Android 11</string>
+
+    <!-- Charging animation -->
+    <string name="charging_animation_title">Charging animation</string>
+    <string name="charging_animation_summary">Display an animation when the device is plugged in</string>
 </resources>
