@@ -84,6 +84,13 @@
         android:key="lockscreen_media_art_options"
         android:title="Misc">
 
+         <!-- Charging animation -->
+        <com.afterlife.support.preference.SystemSettingSwitchPreference
+            android:key="charging_animation"
+            android:title="@string/charging_animation_title"
+            android:summary="@string/charging_animation_summary"
+            android:defaultValue="true" />
+
         <com.afterlife.support.preference.SecureSettingSwitchPreference
             android:key="lockscreen_media_metadata"
             android:title="@string/media_art_title"

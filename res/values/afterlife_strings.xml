@@ -592,4 +592,8 @@ s that internet users can use wisely.</string>
     
     <string name="qs_ui_title">Quick Settings UI</string>
     <string name="android_eleven">Android 11</string>
+
+    <!-- Charging animation -->
+    <string name="charging_animation_title">Charging animation</string>
+    <string name="charging_animation_summary">Display an animation when the device is plugged in</string>
 </resources>
