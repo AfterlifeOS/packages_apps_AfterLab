@@ -31,12 +31,22 @@
             android:summary="@string/qs_colored_icons_summary"
             android:defaultValue="false" />
 
+    <PreferenceCategory
+        android:title="Quick Settings Style">
+
         <com.afterlife.support.preference.SecureSettingListPreference
             android:key="qs_style_round"
             android:title="@string/qs_style_title"
             android:entries="@array/qs_style_entries"
             android:entryValues="@array/qs_style_values"
             android:defaultValue="1" />
+
+        <com.afterlife.support.preference.SecureSettingListPreference
+            android:key="qs_tile_shape"
+            android:title="@string/qs_tile_shape"
+            android:entries="@array/qs_tile_shape_entries"
+            android:entryValues="@array/qs_tile_shape_values"
+            android:defaultValue="2" />
 
         <com.afterlife.support.preference.SystemSettingSwitchPreference
             android:key="qs_dual_tone"
