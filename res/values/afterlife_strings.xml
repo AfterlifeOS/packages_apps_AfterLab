@@ -596,4 +596,10 @@ s that internet users can use wisely.</string>
     <!-- Charging animation -->
     <string name="charging_animation_title">Charging animation</string>
     <string name="charging_animation_summary">Display an animation when the device is plugged in</string>
+
+    <!-- QS tile shape -->
+    <string name="qs_tile_shape">QS tile shape</string>
+    <string name="qs_tile_round">Round</string>
+    <string name="qs_tile_rect">Rounded Rectangle</string>
+    <string name="qs_tile_mix">Round for active tiles and Rounded Rectangle for inactive tiles</string>
 </resources>
