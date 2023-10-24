@@ -27,6 +27,7 @@
     <string name="default_string">Default</string>
     <string name="add">Add</string>
     <string name="enabled">Enabled</string>
+	<string name="disabled">Disabled</string>
     <string name="choose_app">Choose application</string>
     <string name="help">Help</string>
     <string name="reset_message">Reset all entries to default?</string>
@@ -589,4 +590,11 @@ s that internet users can use wisely.</string>
     <string name="qs_tile_round">Round</string>
     <string name="qs_tile_rect">Rounded Rectangle</string>
     <string name="qs_tile_mix">Round for active tiles and Rounded Rectangle for inactive tiles</string>
+	
+	<!-- AOD Schedule -->
+    <string name="always_on_display_schedule_title">Always on display schedule</string>
+    <string name="always_on_display_schedule_sunset">Sunset</string>
+    <string name="always_on_display_schedule_sunrise">Sunrise</string>
+    <string name="always_on_display_schedule_mixed_sunset">Turns on from sunset till a time</string>
+    <string name="always_on_display_schedule_mixed_sunrise">Turns on from a time till sunrise</string>
 </resources>
