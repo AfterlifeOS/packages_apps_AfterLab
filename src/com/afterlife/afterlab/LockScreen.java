@@ -54,11 +54,19 @@ public class LockScreen extends SettingsPreferenceFragment
     private static final String FINGERPRINT_SUCCESS_VIB = "fingerprint_success_vib";
     private static final String FINGERPRINT_ERROR_VIB = "fingerprint_error_vib";
     private static final String LOCKSCREEN_DOUBLE_LINE_CLOCK = "lockscreen_double_line_clock_switch";
-
+    private static final String AOD_SCHEDULE_KEY = "always_on_display_schedule";
+    
     private FingerprintManager mFingerprintManager;
     private SwitchPreference mFingerprintSuccessVib;
     private SwitchPreference mFingerprintErrorVib;
     private SecureSettingSwitchPreference mDoubleLineClock;
+    private Preference mAODPref;
+    
+	public static final int MODE_DISABLED = 0;
+    public static final int MODE_NIGHT = 1;
+    public static final int MODE_TIME = 2;
+    public static final int MODE_MIXED_SUNSET = 3;
+    public static final int MODE_MIXED_SUNRISE = 4;
     
     @Override
     public void onCreate(Bundle icicle) {
@@ -92,6 +100,39 @@ public class LockScreen extends SettingsPreferenceFragment
         } else {
             prefSet.removePreference(mFingerprintSuccessVib);
             prefSet.removePreference(mFingerprintErrorVib);
+        }
+        
+        mAODPref = findPreference(AOD_SCHEDULE_KEY);
+        updateAlwaysOnSummary();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        updateAlwaysOnSummary();
+    }
+
+    private void updateAlwaysOnSummary() {
+        if (mAODPref == null) return;
+        int mode = Settings.Secure.getIntForUser(getActivity().getContentResolver(),
+                Settings.Secure.DOZE_ALWAYS_ON_AUTO_MODE, MODE_DISABLED, UserHandle.USER_CURRENT);
+        switch (mode) {
+            default:
+            case MODE_DISABLED:
+                mAODPref.setSummary(R.string.disabled);
+                break;
+            case MODE_NIGHT:
+                mAODPref.setSummary(R.string.night_display_auto_mode_twilight);
+                break;
+            case MODE_TIME:
+                mAODPref.setSummary(R.string.night_display_auto_mode_custom);
+                break;
+            case MODE_MIXED_SUNSET:
+                mAODPref.setSummary(R.string.always_on_display_schedule_mixed_sunset);
+                break;
+            case MODE_MIXED_SUNRISE:
+                mAODPref.setSummary(R.string.always_on_display_schedule_mixed_sunrise);
+                break;
         }
 
         final Resources res = getResources();
