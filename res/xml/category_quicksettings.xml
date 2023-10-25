@@ -34,13 +34,6 @@
 
     <PreferenceCategory
         android:title="Quick Settings Style">
-
-        <com.afterlife.support.preference.SecureSettingListPreference
-            android:key="qs_tile_shape"
-            android:title="@string/qs_tile_shape"
-            android:entries="@array/qs_tile_shape_entries"
-            android:entryValues="@array/qs_tile_shape_values"
-            android:defaultValue="2" />
         
         <Preference
             android:key="qs_tile_layout"

@@ -39,6 +39,7 @@ import com.android.settingslib.widget.LayoutPreference;
 import com.afterlife.support.preference.ProperSeekBarPreference;
 import com.afterlife.support.preference.SystemSettingSwitchPreference;
 import com.afterlife.support.preference.SystemSettingListPreference;
+import com.afterlife.support.preference.SecureSettingListPreference;
 
 public class QsTileLayoutSettings extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {
@@ -49,6 +50,7 @@ public class QsTileLayoutSettings extends SettingsPreferenceFragment
     private static final String KEY_QS_ROW_PORTRAIT = "qs_layout_rows";
     private static final String KEY_QQS_ROW_PORTRAIT = "qqs_layout_rows";
     private static final String KEY_QS_UI_STYLE  = "qs_ui_style";
+    private static final String KEY_QS_SHAPE = "qs_tile_shape";
     private static final String KEY_APPLY_CHANGE_BUTTON = "apply_change_button";
     private static final String overlayThemeTarget  = "com.android.systemui";
 
@@ -65,6 +67,7 @@ public class QsTileLayoutSettings extends SettingsPreferenceFragment
 
     private SystemSettingSwitchPreference mHide;
     private SystemSettingSwitchPreference mVertical;
+    private SecureSettingListPreference mQsShape;
 
     private int[] currentValue = new int[2];
 
@@ -130,17 +133,24 @@ public class QsTileLayoutSettings extends SettingsPreferenceFragment
 
         mHide = (SystemSettingSwitchPreference) findPreference(KEY_QS_HIDE_LABEL);
         mHide.setOnPreferenceChangeListener(this);
-
-        mVertical = (SystemSettingSwitchPreference) findPreference(KEY_QS_VERTICAL_LAYOUT);
-        mVertical.setEnabled(!hideLabel);
         
         int qsStyleVal = Settings.System.getInt(getContentResolver(), KEY_QS_UI_STYLE, 0);
-        boolean enable = !hideLabel && qsStyleVal == 0;
 
-         mQsUI = (SystemSettingListPreference) findPreference(KEY_QS_UI_STYLE);
-         mQsUI.setValue(String.valueOf(qsStyleVal));
-         mQsUI.setSummary(mQsUI.getEntry());
-         mQsUI.setOnPreferenceChangeListener(this);
+        mVertical = (SystemSettingSwitchPreference) findPreference(KEY_QS_VERTICAL_LAYOUT);
+        boolean enable = !hideLabel && qsStyleVal == 0;
+         mVertical.setEnabled(enable);
+        mQsShape = (SecureSettingListPreference) findPreference(KEY_QS_SHAPE);
+        int qsShapeVal = Settings.Secure.getInt(getContentResolver(), KEY_QS_SHAPE, 0);
+        mQsShape.setValue(String.valueOf(qsShapeVal));
+        mQsShape.setSummary(mQsShape.getEntry());
+        mQsShape.setOnPreferenceChangeListener(this);
+        mQsShape.setEnabled(qsStyleVal == 1);
+
+        mQsUI = (SystemSettingListPreference) findPreference(KEY_QS_UI_STYLE);
+        mQsUI.setValue(String.valueOf(qsStyleVal));
+        mQsUI.setSummary(mQsUI.getEntry());
+        mQsUI.setOnPreferenceChangeListener(this);
+        
       }
 
     @Override
@@ -178,6 +188,7 @@ public class QsTileLayoutSettings extends SettingsPreferenceFragment
              Settings.System.putInt(getContentResolver(), KEY_QS_UI_STYLE, value);
              qsStyle.setSummary(qsStyle.getEntries()[index]);
              if (value == 0) {
+                 mQsShape.setEnabled(false);
                  mVertical.setEnabled(true);
                  Settings.System.putIntForUser(getContentResolver(),
                          Settings.System.QS_LAYOUT, 42, UserHandle.USER_CURRENT);
@@ -187,6 +198,7 @@ public class QsTileLayoutSettings extends SettingsPreferenceFragment
                  mQsRows.setValue(22 / 10);
                  QSLayoutUtils.updateLayout(mContext);
              } else {
+                 mQsShape.setEnabled(true);
                  mVertical.setEnabled(false);
                  Settings.System.putIntForUser(getContentResolver(),
                          Settings.System.QS_LAYOUT, 35, UserHandle.USER_CURRENT);
@@ -197,6 +209,12 @@ public class QsTileLayoutSettings extends SettingsPreferenceFragment
                  QSLayoutUtils.updateLayout(mContext);
              }
              mQqsRows.setMax(mQsRows.getValue() - 1);
+         } else if (preference == mQsShape) {
+             int value = Integer.parseInt((String) newValue);
+             SecureSettingListPreference qsShape = mQsShape;
+             int index = qsShape.findIndexOfValue((String) newValue);
+             Settings.Secure.putInt(getContentResolver(), KEY_QS_SHAPE, value);
+             qsShape.setSummary(qsShape.getEntries()[index]);
         }
         return true;
     }

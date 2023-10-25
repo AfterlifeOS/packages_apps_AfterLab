@@ -62,11 +62,11 @@
             android:entryValues="@array/status_bar_battery_percent_values"
             android:defaultValue="2" />
 
-        <!-- Battery estimate -->
+        <!-- Battery estimate 
         <com.afterlife.support.preference.SystemSettingSwitchPreference
             android:key="qs_show_battery_estimate"
             android:title="@string/battery_estimate_title"
-            android:summary="@string/battery_estimate_summary" />
+            android:summary="@string/battery_estimate_summary" /-->
 
     </PreferenceCategory>
 
