@@ -108,6 +108,13 @@
              android:summary="@string/theme_customization_icon_shape_summary"
              android:fragment="com.afterlife.afterlab.fragments.IconShapes"/>
 
+         <!-- Media Thumb Styles -->
+         <Preference
+             android:key="android.theme.customization.media_thumb"
+             android:title="@string/theme_customization_thumb_title"
+             android:summary="@string/theme_customization_thumb_summary"
+             android:fragment="com.afterlife.afterlab.fragments.Thumbs"/>
+
      </PreferenceCategory>
 
 </PreferenceScreen>

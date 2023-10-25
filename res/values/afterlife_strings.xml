@@ -75,6 +75,9 @@
     <string name="theme_customization_signal_icon_summary">Set custom signal icon style</string>
     <string name="theme_customization_wifi_icon_title">WiFi icon style</string>
     <string name="theme_customization_wifi_icon_summary">Set custom wifi icon style</string>
+    <!-- Media Thumb Styles -->
+    <string name="theme_customization_thumb_title">Media Thumb style</string>
+    <string name="theme_customization_thumb_summary">Set media thumb style</string>
 
     <!-- Status bar - Battery -->
     <string name="status_bar_battery_category_title">StatusBar Battery customizations</string>
