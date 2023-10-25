@@ -133,7 +133,15 @@ public class QsTileLayoutSettings extends SettingsPreferenceFragment
 
         mVertical = (SystemSettingSwitchPreference) findPreference(KEY_QS_VERTICAL_LAYOUT);
         mVertical.setEnabled(!hideLabel);
-    }
+        
+        int qsStyleVal = Settings.System.getInt(getContentResolver(), KEY_QS_UI_STYLE, 0);
+        boolean enable = !hideLabel && qsStyleVal == 0;
+
+         mQsUI = (SystemSettingListPreference) findPreference(KEY_QS_UI_STYLE);
+         mQsUI.setValue(String.valueOf(qsStyleVal));
+         mQsUI.setSummary(mQsUI.getEntry());
+         mQsUI.setOnPreferenceChangeListener(this);
+      }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -164,6 +172,31 @@ public class QsTileLayoutSettings extends SettingsPreferenceFragment
             );
         } else if (preference == mQsUI) {
             mCustomSettingsObserver.observe();
+            int value = Integer.parseInt((String) newValue);
+             SystemSettingListPreference qsStyle = mQsUI;
+             int index = qsStyle.findIndexOfValue((String) newValue);
+             Settings.System.putInt(getContentResolver(), KEY_QS_UI_STYLE, value);
+             qsStyle.setSummary(qsStyle.getEntries()[index]);
+             if (value == 0) {
+                 mVertical.setEnabled(true);
+                 Settings.System.putIntForUser(getContentResolver(),
+                         Settings.System.QS_LAYOUT, 42, UserHandle.USER_CURRENT);
+                 Settings.System.putIntForUser(getContentResolver(),
+                         Settings.System.QQS_LAYOUT, 22, UserHandle.USER_CURRENT);
+                 mQsColumns.setValue(42 % 10);
+                 mQsRows.setValue(22 / 10);
+                 QSLayoutUtils.updateLayout(mContext);
+             } else {
+                 mVertical.setEnabled(false);
+                 Settings.System.putIntForUser(getContentResolver(),
+                         Settings.System.QS_LAYOUT, 35, UserHandle.USER_CURRENT);
+                 Settings.System.putIntForUser(getContentResolver(),
+                         Settings.System.QQS_LAYOUT, 15, UserHandle.USER_CURRENT);
+                 mQsColumns.setValue(35 % 10);
+                 mQsRows.setValue(35 / 10);
+                 QSLayoutUtils.updateLayout(mContext);
+             }
+             mQqsRows.setMax(mQsRows.getValue() - 1);
         }
         return true;
     }
