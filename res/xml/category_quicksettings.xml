@@ -20,12 +20,6 @@
         android:title="@string/general_category">
 
         <com.afterlife.support.preference.SystemSettingSwitchPreference
-            android:key="qs_footer_data_usage"
-            android:title="@string/qs_footer_datausage_title"
-            android:summary="@string/qs_footer_datausage_summary"
-            android:defaultValue="false" />
-
-        <com.afterlife.support.preference.SystemSettingSwitchPreference
             android:key="qs_colored_icons"
             android:title="@string/qs_colored_icons_title"
             android:summary="@string/qs_colored_icons_summary"
@@ -35,6 +29,29 @@
 
     <PreferenceCategory
         android:title="Quick Settings Style">
+
+        <com.afterlife.support.preference.SystemSettingSwitchPreference
+            android:title="Footer Profile Picture"
+            android:key="qs_footer_avatar_show"
+            android:summary="Enable to show qs footer profile image"
+            android:defaultValue="false" />
+        <Preference
+            android:title="Select Avatar Image"
+            android:key="declan_avatar_picker_uri"
+            android:dependency="qs_footer_avatar_show"
+            android:summary="Select image from storage"
+            android:persistent="false" />
+        <com.afterlife.support.preference.SystemSettingSwitchPreference
+            android:title="QS Footer Username"
+            android:key="qs_footer_text_show"
+            android:summary="Display username at bottom of QS panel"
+            android:defaultValue="false" />
+        <com.afterlife.support.preference.SystemSettingEditTextPreference
+            android:title="Customize footer text"
+            android:key="qs_footer_text_string"
+            android:summary="Switch to back default"
+            android:dependency="qs_footer_text_show"
+            android:defaultValue="\#KeepAfterLife" />
 
         <com.afterlife.support.preference.SecureSettingListPreference
             android:key="qs_tile_shape"
@@ -70,14 +87,14 @@
             android:title="@string/qs_show_brightness_slider_title"
             android:entries="@array/qs_show_brightness_slider_entries"
             android:entryValues="@array/qs_show_brightness_slider_values"
-            android:defaultValue="1" />
+            android:defaultValue="2" />
 
         <com.afterlife.support.preference.SecureSettingListPreference
             android:key="qs_brightness_slider_position"
             android:title="@string/qs_brightness_slider_position_title"
             android:entries="@array/qs_brightness_slider_position_entries"
             android:entryValues="@array/qs_brightness_slider_position_values"
-            android:defaultValue="0" />
+            android:defaultValue="1" />
 
         <com.afterlife.support.preference.SecureSettingSwitchPreference
             android:key="qs_show_auto_brightness"
