@@ -29,7 +29,7 @@
       <Preference
          android:key="statusbar_battery"
          android:title="@string/status_bar_battery_category_title"
-         android:summary="@string/battery_summary"
+         android:summary="@string/status_bar_battery_category_summary"
          android:fragment="com.afterlife.afterlab.Battery"/>
 
       <Preference
