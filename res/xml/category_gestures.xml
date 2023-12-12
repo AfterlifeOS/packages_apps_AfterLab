@@ -39,4 +39,22 @@
         android:summary="@string/click_partial_screenshot_summary"
         android:defaultValue="false" />
     </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/navbar_layout_category_title">
+
+    <com.afterlife.support.preference.SecureSettingListPreference
+        android:key="navbar_layout_views"
+        android:title="@string/navbar_layout_title"
+        android:summary="%s"
+        android:entries="@array/navbar_layout_entries"
+        android:entryValues="@array/navbar_layout_values"
+        android:defaultValue="default" />
+
+    <com.afterlife.support.preference.SecureSettingSwitchPreference
+        android:key="navbar_inverse_layout"
+        android:title="@string/navbar_invert_layout_title"
+        android:summary="@string/navbar_invert_layout_summary"
+        android:defaultValue="false" />
+    </PreferenceCategory>
 </PreferenceScreen>
