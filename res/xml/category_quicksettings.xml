@@ -23,7 +23,8 @@
             android:key="qs_colored_icons"
             android:title="@string/qs_colored_icons_title"
             android:summary="@string/qs_colored_icons_summary"
-            android:defaultValue="false" />
+            android:defaultValue="false"
+            settings:layout="@layout/afterlab_card_preference_single" />
 
     </PreferenceCategory>
 
@@ -34,37 +35,45 @@
             android:title="Footer Profile Picture"
             android:key="qs_footer_avatar_show"
             android:summary="Enable to show qs footer profile image"
-            android:defaultValue="false" />
+            android:defaultValue="false"
+            settings:layout="@layout/afterlab_card_preference_top" />
         <Preference
             android:title="Select Avatar Image"
             android:key="declan_avatar_picker_uri"
             android:dependency="qs_footer_avatar_show"
             android:summary="Select image from storage"
-            android:persistent="false" />
+            android:persistent="false"
+            settings:layout="@layout/afterlab_card_preference_middle" />
+
         <com.afterlife.support.preference.SystemSettingSwitchPreference
             android:title="QS Footer Username"
             android:key="qs_footer_text_show"
             android:summary="Display username at bottom of QS panel"
-            android:defaultValue="false" />
+            android:defaultValue="false"
+            settings:layout="@layout/afterlab_card_preference_middle" />
+
         <com.afterlife.support.preference.SystemSettingEditTextPreference
             android:title="Customize footer text"
             android:key="qs_footer_text_string"
             android:summary="Switch to back default"
             android:dependency="qs_footer_text_show"
-            android:defaultValue="\#KeepAfterLife" />
+            android:defaultValue="\#KeepAfterLife"
+            settings:layout="@layout/afterlab_card_preference_middle" />
 
         <com.afterlife.support.preference.SecureSettingListPreference
             android:key="qs_tile_shape"
             android:title="@string/qs_tile_shape"
             android:entries="@array/qs_tile_shape_entries"
             android:entryValues="@array/qs_tile_shape_values"
-            android:defaultValue="2" />
+            android:defaultValue="2" 
+            settings:layout="@layout/afterlab_card_preference_middle"/>
 
         <com.afterlife.support.preference.SystemSettingSwitchPreference
             android:key="qs_dual_tone"
             android:title="@string/qs_dual_tone_title"
             android:summary="@string/qs_dual_tone_summary"
-            android:defaultValue="false" />
+            android:defaultValue="false" 
+            settings:layout="@layout/afterlab_card_preference_bottom"/>
 
         <com.afterlife.support.preference.SystemSettingSeekBarPreference
             android:key="qs_transparency"
@@ -74,7 +83,8 @@
             settings:interval="1"
             settings:units="%"
             android:max="100"
-            android:min="1" />
+            android:min="1" 
+            settings:layout="@layout/preference_costum_seekbar"/>
 
     </PreferenceCategory>
 
@@ -87,20 +97,23 @@
             android:title="@string/qs_show_brightness_slider_title"
             android:entries="@array/qs_show_brightness_slider_entries"
             android:entryValues="@array/qs_show_brightness_slider_values"
-            android:defaultValue="3" />
+            android:defaultValue="3"
+            settings:layout="@layout/afterlab_card_preference_top" />
 
         <com.afterlife.support.preference.SecureSettingListPreference
             android:key="qs_brightness_slider_position"
             android:title="@string/qs_brightness_slider_position_title"
             android:entries="@array/qs_brightness_slider_position_entries"
             android:entryValues="@array/qs_brightness_slider_position_values"
-            android:defaultValue="2" />
+            android:defaultValue="2"
+            settings:layout="@layout/afterlab_card_preference_middle" />
 
         <com.afterlife.support.preference.SecureSettingSwitchPreference
             android:key="qs_show_auto_brightness"
             android:title="@string/qs_show_auto_brightness_title"
             android:summary="@string/qs_show_auto_brightness_summary"
-            android:defaultValue="true" />
+            android:defaultValue="true"
+            settings:layout="@layout/afterlab_card_preference_bottom" />
 
     </PreferenceCategory>
     
@@ -113,16 +126,8 @@
             android:entries="@array/qs_tile_animation_style_entries"
             android:entryValues="@array/qs_tile_animation_style_values"
             android:summary="%s"
-            android:defaultValue="0" />
-
-        <com.afterlife.support.preference.SystemSettingSeekBarPreference
-            android:key="qs_tile_animation_duration"
-            android:title="@string/qs_tile_animation_duration_title"
-            android:defaultValue="1"
-            settings:interval="1"
-            settings:units="@string/unit_seconds"
-            android:max="5"
-            android:min="1" />
+            android:defaultValue="0"
+            settings:layout="@layout/afterlab_card_preference_top" />
 
         <com.afterlife.support.preference.SystemSettingListPreference
             android:key="qs_tile_animation_interpolator"
@@ -130,7 +135,18 @@
             android:entries="@array/qs_tile_animation_interpolator_entries"
             android:entryValues="@array/qs_tile_animation_interpolator_values"
             android:summary="%s"
-            android:defaultValue="0" />
+            android:defaultValue="0"
+            settings:layout="@layout/afterlab_card_preference_bottom" />
+        
+        <com.afterlife.support.preference.SystemSettingSeekBarPreference
+            android:key="qs_tile_animation_duration"
+            android:title="@string/qs_tile_animation_duration_title"
+            android:defaultValue="1"
+            settings:interval="1"
+            settings:units="@string/unit_seconds"
+            android:max="5"
+            android:min="1"
+            settings:layout="@layout/preference_costum_seekbar" />
 
     </PreferenceCategory>
     

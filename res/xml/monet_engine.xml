@@ -21,31 +21,36 @@
         android:key="system_black_theme"
         android:title="@string/system_black_theme_title"
         android:summary="@string/system_black_theme_summary"
-        android:defaultValue="false" />
+        android:defaultValue="false"
+        settings:layout="@layout/afterlab_card_preference_top" />
 
     <com.afterlife.support.preference.SecureSettingSwitchPreference
         android:key="monet_engine_custom_color"
         android:title="@string/monet_engine_custom_color_title"
         android:summary="@string/monet_engine_custom_color_summary"
-        android:defaultValue="false" />
+        android:defaultValue="false"
+        settings:layout="@layout/afterlab_card_preference_middle" />
 
     <com.afterlife.support.colorpicker.SecureSettingColorPickerPreference
         android:key="monet_engine_color_override"
         android:title="@string/monet_engine_color_override_title"
         android:dependency="monet_engine_custom_color"
-        android:defaultValue="0xFF1b6ef3" />
+        android:defaultValue="0xFF1b6ef3"
+        settings:layout="@layout/afterlab_card_preference_middle" />
 
     <com.afterlife.support.preference.SecureSettingSwitchPreference
         android:key="monet_engine_custom_bgcolor"
         android:title="@string/monet_engine_custom_bgcolor_title"
         android:summary="@string/monet_engine_custom_bgcolor_summary"
-        android:defaultValue="false" />
+        android:defaultValue="false"
+        settings:layout="@layout/afterlab_card_preference_middle" />
 
     <com.afterlife.support.colorpicker.SecureSettingColorPickerPreference
         android:key="monet_engine_bgcolor_override"
         android:title="@string/monet_engine_color_override_title"
         android:dependency="monet_engine_custom_bgcolor"
-        android:defaultValue="0xFF1b6ef3" />
+        android:defaultValue="0xFF1b6ef3"
+        settings:layout="@layout/afterlab_card_preference_bottom" />
 
     <com.afterlife.support.preference.SecureSettingSeekBarPreference
         android:key="monet_engine_luminance_factor"
@@ -54,7 +59,8 @@
         android:defaultValue="100"
         android:max="225"
         settings:min="25"
-        settings:interval="5"/>
+        settings:interval="5"
+        settings:layout="@layout/preference_costum_seekbar"/>
 
     <com.afterlife.support.preference.SecureSettingSeekBarPreference
         android:key="monet_engine_chroma_factor"
@@ -63,12 +69,14 @@
         android:defaultValue="100"
         android:max="225"
         settings:min="25"
-        settings:interval="5"/>
+        settings:interval="5"
+        settings:layout="@layout/preference_costum_seekbar"/>
 
     <com.afterlife.support.preference.SecureSettingSwitchPreference
         android:key="monet_engine_tint_background"
         android:title="@string/monet_engine_tint_background_title"
         android:summary="@string/monet_engine_tint_background_summary"
-        android:defaultValue="false" />
+        android:defaultValue="false"
+        settings:layout="@layout/afterlab_card_preference_single" />
 
 </PreferenceScreen>

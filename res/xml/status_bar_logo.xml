@@ -19,7 +19,8 @@
         android:key="status_bar_logo"
         android:title="@string/status_bar_logo_title"
         android:summary="@string/status_bar_logo_summary"
-        android:defaultValue="false" />
+        android:defaultValue="false"
+        settings:layout="@layout/afterlab_card_preference_top" />
 
     <com.afterlife.support.preference.SystemSettingListPreference
         android:key="status_bar_logo_position"
@@ -27,6 +28,7 @@
         android:entries="@array/status_bar_logo_position_entries"
         android:entryValues="@array/status_bar_logo_position_values"
         android:defaultValue="0"
-        android:dependency="status_bar_logo" />
+        android:dependency="status_bar_logo"
+        settings:layout="@layout/afterlab_card_preference_bottom" />
         
 </PreferenceScreen>
