@@ -577,4 +577,10 @@ s that internet users can use wisely.</string>
     <string name="navbar_layout_rightleaning">Right-leaning</string>
     <string name="navbar_invert_layout_title">Invert layout</string>
     <string name="navbar_invert_layout_summary">Inverts the layout of the navigation bar and other items, such as the IME switcher</string>
+
+    <!-- Status bar padding -->
+    <string name="statusbar_padding">Status bar padding</string>
+    <string name="statusbar_top_padding">Top padding</string>
+    <string name="statusbar_left_padding">Left padding</string>
+    <string name="statusbar_right_padding">Right padding</string>
 </resources>
