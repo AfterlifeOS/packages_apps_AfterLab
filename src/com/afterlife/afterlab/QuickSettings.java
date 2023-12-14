@@ -22,6 +22,7 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.net.Uri;
+import android.provider.MediaStore;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.UserHandle;
@@ -42,7 +43,6 @@ import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.Indexable;
 import com.android.settingslib.search.SearchIndexable;
 
-import com.declan.prjct.utils.SettingsUtils;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -53,7 +53,6 @@ public class QuickSettings extends SettingsPreferenceFragment
             	
     private static final String KEY_FOOTER_AVATAR_URI = "declan_avatar_picker_uri";
 	private static final int REQUEST_AVATAR_PICKER = 10001;
-	private static final String AVATAR_PICKER_ACTIVITY = "gallery.photomanager.picturegalleryapp.imagegallery";
 	
 	private Preference mAvatarPicker;
 
@@ -64,10 +63,6 @@ public class QuickSettings extends SettingsPreferenceFragment
         PreferenceScreen prefSet = getPreferenceScreen();
         
         mAvatarPicker = findPreference(KEY_FOOTER_AVATAR_URI);
-		if (!SettingsUtils.isPackageAktif(getContext(), AVATAR_PICKER_ACTIVITY)) {
-			mAvatarPicker.setEnabled(false);
-		}
-
     }
 
     @Override
@@ -83,9 +78,7 @@ public class QuickSettings extends SettingsPreferenceFragment
     @Override
 	public boolean onPreferenceTreeClick(Preference preference) {
 		if (preference == mAvatarPicker) {
-			Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
-			intent.addCategory(Intent.CATEGORY_OPENABLE);
-			intent.setPackage(AVATAR_PICKER_ACTIVITY);
+			Intent intent = new Intent("android.intent.action.PICK", MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
 			intent.setType("image/*");
 			startActivityForResult(intent, REQUEST_AVATAR_PICKER);
 			return true;
