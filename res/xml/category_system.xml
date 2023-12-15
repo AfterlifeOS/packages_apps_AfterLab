@@ -36,6 +36,15 @@
              android:defaultValue="Hi User!"
              settings:layout="@layout/afterlab_card_preference_middle" />
 
+         <com.afterlife.support.preference.SystemSettingListPreference
+            android:entries="@array/afl_homepage_style_entries"
+            android:title="Dashboard Style"
+            android:key="afl_dashboard_style"
+            android:summary="%s"
+            android:defaultValue="0"
+            android:entryValues="@array/afl_homepage_style_values"
+            settings:layout="@layout/afterlab_card_preference_middle" />
+
          <!-- Custom Category preference -->
           <Preference
              android:key="custom_pref"

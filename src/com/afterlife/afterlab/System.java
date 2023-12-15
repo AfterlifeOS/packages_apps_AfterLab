@@ -40,6 +40,10 @@ import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.Indexable;
 import com.android.settingslib.search.SearchIndexable;
 
+import com.afterlife.support.preference.SystemSettingListPreference;
+
+import declan.prjct.utils.SettingsUtils;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -48,6 +52,10 @@ import java.util.List;
 public class System extends SettingsPreferenceFragment 
             implements Preference.OnPreferenceChangeListener {
 
+    private static final String KEY_DASHBOARD_STYLE = "afl_dashboard_style";
+
+    private SystemSettingListPreference mDashboardStyle;
+
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
@@ -55,10 +63,16 @@ public class System extends SettingsPreferenceFragment
         PreferenceScreen prefSet = getPreferenceScreen();
         final Resources res = getResources();
         final PreferenceScreen prefScreen = getPreferenceScreen();
+        
+        mDashboardStyle = findPreference(KEY_DASHBOARD_STYLE);
+        mDashboardStyle.setOnPreferenceChangeListener(this);
     }
     
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+    	if (preference == mDashboardStyle) {
+    	    SettingsUtils.showSettingsRestartDialog(getActivity());
+        }
         return false;
     }  
 
