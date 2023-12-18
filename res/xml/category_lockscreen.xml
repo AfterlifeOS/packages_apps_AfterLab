@@ -17,6 +17,38 @@
     android:title="@string/category_lockscreen_title" >
 
      <!-- General -->
+     <Preference
+        android:key="lockscreen_preview"
+        settings:layout="@layout/lockscreen_preview" />
+        
+     <PreferenceCategory
+        android:title="Custom Lockscreen Clock">
+        	
+        <com.afterlife.support.preference.SecureSettingSwitchPreference
+            android:key="clock_ls"
+            android:title="Use Costum Lockscreen Clock"
+            android:summary="use custom lockscreen clock instead of default clock"
+            android:defaultValue="false"
+            settings:layout="@layout/afterlab_card_preference_top" />
+            
+        <com.afterlife.support.preference.SystemSettingListPreference
+            android:entries="@array/clock_style_entries"
+            android:title="Custom Clock style"
+            android:key="clock_style"
+            android:defaultValue="0"
+            android:dependency="clock_ls"
+            android:entryValues="@array/clock_style_values" 
+            settings:layout="@layout/afterlab_card_preference_middle" />
+            
+        <com.afterlife.support.preference.SecureSettingSwitchPreference
+            android:key="lockscreen_double_line_clock_switch"
+            android:title="@string/lockscreen_double_line_clock_setting_toggle"
+            android:summary="@string/lockscreen_double_line_clock_summary"
+            android:defaultValue="false" 
+            settings:layout="@layout/afterlab_card_preference_bottom" />
+            
+     </PreferenceCategory>
+            
      <PreferenceCategory
         android:title="@string/general_category">
 
@@ -29,10 +61,10 @@
          android:defaultValue="0"
          settings:layout="@layout/afterlab_card_preference_top" />
 			
-		<Preference
-			android:key="always_on_display_schedule"
-			android:title="@string/always_on_display_schedule_title"
-			android:fragment="com.afterlife.afterlab.fragments.AODSchedule"
+	  <Preference
+		 android:key="always_on_display_schedule"
+		 android:title="@string/always_on_display_schedule_title"
+		 android:fragment="com.afterlife.afterlab.fragments.AODSchedule"
          settings:layout="@layout/afterlab_card_preference_middle" />
     
       <com.afterlife.support.preference.SystemSettingSwitchPreference
@@ -54,13 +86,6 @@
          android:title="@string/wake_when_plugged_or_unplugged_title"
          android:summary="@string/wake_when_plugged_or_unplugged_summary"
          android:defaultValue="@*android:bool/config_unplugTurnsOnScreen"
-         settings:layout="@layout/afterlab_card_preference_middle" />
-
-      <com.afterlife.support.preference.SecureSettingSwitchPreference
-         android:key="lockscreen_double_line_clock_switch"
-         android:title="@string/lockscreen_double_line_clock_setting_toggle"
-         android:summary="@string/lockscreen_double_line_clock_summary"
-         android:defaultValue="false"
          settings:layout="@layout/afterlab_card_preference_bottom" />
 
       </PreferenceCategory>
