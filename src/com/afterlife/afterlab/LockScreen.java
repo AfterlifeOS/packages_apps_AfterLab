@@ -55,12 +55,14 @@ public class LockScreen extends SettingsPreferenceFragment
     private static final String FINGERPRINT_ERROR_VIB = "fingerprint_error_vib";
     private static final String LOCKSCREEN_DOUBLE_LINE_CLOCK = "lockscreen_double_line_clock_switch";
     private static final String AOD_SCHEDULE_KEY = "always_on_display_schedule";
+    private static final String CLOCK_LS = "clock_ls";
+    private static final String CLOCK_PREVIEW= "lockscreen_preview";
     
     private FingerprintManager mFingerprintManager;
     private SwitchPreference mFingerprintSuccessVib;
     private SwitchPreference mFingerprintErrorVib;
-    private SecureSettingSwitchPreference mDoubleLineClock;
-    private Preference mAODPref;
+    private SecureSettingSwitchPreference mDoubleLineClock, mCustomClock;
+    private Preference mAODPref, mPreviewClock;
     
 	public static final int MODE_DISABLED = 0;
     public static final int MODE_NIGHT = 1;
@@ -81,6 +83,24 @@ public class LockScreen extends SettingsPreferenceFragment
         mDoubleLineClock.setChecked((Settings.Secure.getInt(getContentResolver(),
              Settings.Secure.LOCKSCREEN_USE_DOUBLE_LINE_CLOCK, 1) != 0));
         mDoubleLineClock.setOnPreferenceChangeListener(this);
+        
+        mCustomClock = (SecureSettingSwitchPreference ) findPreference(CLOCK_LS);
+        mCustomClock.setChecked((Settings.Secure.getInt(getContentResolver(),
+             Settings.Secure.CLOCK_LS, 1) != 0));
+        mCustomClock.setOnPreferenceChangeListener(this);
+        if (!mCustomClock.isChecked()) {
+        	mDoubleLineClock.setEnabled(true);
+        } else {
+        	mDoubleLineClock.setEnabled(false);
+        }
+        mPreviewClock = (Preference ) findPreference(CLOCK_PREVIEW);
+        if (!mCustomClock.isChecked()) {
+            mPreviewClock.setEnabled(false);
+            getPreferenceScreen().removePreference(mPreviewClock);
+        } else {
+        	mPreviewClock.setEnabled(true);
+            getPreferenceScreen().addPreference(mPreviewClock);
+        }
         mFingerprintManager = (FingerprintManager) getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
         mFingerprintSuccessVib = (SwitchPreference) findPreference(FINGERPRINT_SUCCESS_VIB);
         mFingerprintErrorVib = (SwitchPreference) findPreference(FINGERPRINT_ERROR_VIB);
@@ -155,6 +175,25 @@ public class LockScreen extends SettingsPreferenceFragment
           boolean value = (Boolean) newValue;
             Settings.Secure.putInt(getActivity().getContentResolver(),
                     Settings.Secure.LOCKSCREEN_USE_DOUBLE_LINE_CLOCK, value ? 1 : 0);
+            return true;
+        } else if (preference == mCustomClock) {
+          boolean value = (Boolean) newValue;
+            Settings.Secure.putInt(getActivity().getContentResolver(),
+                    Settings.Secure.CLOCK_LS, value ? 1 : 0);
+            if (mDoubleLineClock.isChecked()) {
+            	Settings.Secure.putInt(getActivity().getContentResolver(),
+                        Settings.Secure.LOCKSCREEN_USE_DOUBLE_LINE_CLOCK, 0);
+                mDoubleLineClock.setChecked(false);
+            }
+        	if (!mCustomClock.isChecked()) {
+            	mDoubleLineClock.setEnabled(false);
+                mPreviewClock.setEnabled(true);
+                getPreferenceScreen().addPreference(mPreviewClock);
+            } else {
+            	mDoubleLineClock.setEnabled(true);
+                mPreviewClock.setEnabled(false);
+                getPreferenceScreen().removePreference(mPreviewClock);
+            }
             return true;
         }
         return false;
