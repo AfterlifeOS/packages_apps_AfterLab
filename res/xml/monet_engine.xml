@@ -60,7 +60,7 @@
         android:max="225"
         settings:min="25"
         settings:interval="5"
-        settings:layout="@layout/preference_costum_seekbar"/>
+        settings:layout="@layout/preference_custom_seekbar"/>
 
     <com.afterlife.support.preference.SecureSettingSeekBarPreference
         android:key="monet_engine_chroma_factor"
@@ -70,7 +70,7 @@
         android:max="225"
         settings:min="25"
         settings:interval="5"
-        settings:layout="@layout/preference_costum_seekbar"/>
+        settings:layout="@layout/preference_custom_seekbar"/>
 
     <com.afterlife.support.preference.SecureSettingSwitchPreference
         android:key="monet_engine_tint_background"

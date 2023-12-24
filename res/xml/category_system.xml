@@ -59,7 +59,7 @@
              android:key="declan_wpblur_radius"
              android:defaultValue="15"
              settings:units="%" 
-             settings:layout="@layout/preference_costum_seekbar"/>
+             settings:layout="@layout/preference_custom_seekbar"/>
 
     </PreferenceCategory>
 

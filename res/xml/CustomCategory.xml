@@ -88,7 +88,7 @@
             android:dependency="declan_category_stroke_enabled"
             android:defaultValue="2"
             settings:units="dp"
-            settings:layout="@layout/preference_costum_seekbar" />
+            settings:layout="@layout/preference_custom_seekbar" />
 
         <com.afterlife.support.preference.SystemSettingSeekBarPreference
             android:max="20"
@@ -97,7 +97,7 @@
             android:dependency="declan_category_stroke_enabled"
             android:defaultValue="8"
             settings:units="dp"
-            settings:layout="@layout/preference_costum_seekbar" />
+            settings:layout="@layout/preference_custom_seekbar" />
 
         <com.afterlife.support.preference.SystemSettingSeekBarPreference
             android:max="20"
@@ -106,7 +106,7 @@
             android:dependency="declan_category_stroke_enabled"
             android:defaultValue="8"
             settings:units="dp"
-            settings:layout="@layout/preference_costum_seekbar" />
+            settings:layout="@layout/preference_custom_seekbar" />
 
         <com.afterlife.support.preference.SystemSettingSeekBarPreference
             android:max="20"
@@ -115,7 +115,7 @@
             android:dependency="declan_category_stroke_enabled"
             android:defaultValue="8"
             settings:units="dp"
-            settings:layout="@layout/preference_costum_seekbar" />
+            settings:layout="@layout/preference_custom_seekbar" />
 
         <com.afterlife.support.preference.SystemSettingSeekBarPreference
             android:max="20"
@@ -124,7 +124,7 @@
             android:dependency="declan_category_stroke_enabled"
             android:defaultValue="8"
             settings:units="dp"
-            settings:layout="@layout/preference_costum_seekbar" />
+            settings:layout="@layout/preference_custom_seekbar" />
 
         <com.afterlife.support.preference.SystemSettingSeekBarPreference
             android:max="15"
@@ -133,7 +133,7 @@
             android:dependency="declan_category_stroke_enabled"
             android:defaultValue="4"
             settings:units="dp"
-            settings:layout="@layout/preference_costum_seekbar" />
+            settings:layout="@layout/preference_custom_seekbar" />
 
         <com.afterlife.support.preference.SystemSettingSeekBarPreference
             android:max="15"
@@ -142,7 +142,7 @@
             android:dependency="declan_category_stroke_enabled"
             android:defaultValue="4"
             settings:units="dp"
-            settings:layout="@layout/preference_costum_seekbar" />
+            settings:layout="@layout/preference_custom_seekbar" />
 
         <com.afterlife.support.preference.SystemSettingSeekBarPreference
             android:max="15"
@@ -151,7 +151,7 @@
             android:dependency="declan_category_stroke_enabled"
             android:defaultValue="4"
             settings:units="dp"
-            settings:layout="@layout/preference_costum_seekbar" />
+            settings:layout="@layout/preference_custom_seekbar" />
 
         <com.afterlife.support.preference.SystemSettingSeekBarPreference
             android:max="15"
@@ -160,6 +160,6 @@
             android:dependency="declan_category_stroke_enabled"
             android:defaultValue="4"
             settings:units="dp"
-            settings:layout="@layout/preference_costum_seekbar" />
+            settings:layout="@layout/preference_custom_seekbar" />
         </PreferenceCategory>
     </PreferenceScreen>

@@ -84,7 +84,7 @@
             settings:units="%"
             android:max="100"
             android:min="1" 
-            settings:layout="@layout/preference_costum_seekbar"/>
+            settings:layout="@layout/preference_custom_seekbar"/>
 
     </PreferenceCategory>
 
@@ -146,7 +146,7 @@
             settings:units="@string/unit_seconds"
             android:max="5"
             android:min="1"
-            settings:layout="@layout/preference_costum_seekbar" />
+            settings:layout="@layout/preference_custom_seekbar" />
 
     </PreferenceCategory>
     

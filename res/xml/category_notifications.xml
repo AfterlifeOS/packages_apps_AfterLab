@@ -62,7 +62,7 @@
               android:max="10"
               settings:min="0"
               settings:units=""
-              settings:layout="@layout/preference_costum_seekbar" />
+              settings:layout="@layout/preference_custom_seekbar" />
      
      </PreferenceCategory>
 
@@ -105,7 +105,7 @@
              android:defaultValue="0"
              android:max="9"
              android:min="0"
-             settings:layout="@layout/preference_costum_seekbar" />
+             settings:layout="@layout/preference_custom_seekbar" />
 
           <com.afterlife.support.preference.SystemSettingSeekBarPreference
              android:key="notification_material_dismiss_bgstyle"
@@ -114,7 +114,7 @@
              android:defaultValue="0"
              android:max="4"
              android:min="0"
-             settings:layout="@layout/preference_costum_seekbar" />
+             settings:layout="@layout/preference_custom_seekbar" />
      
       </PreferenceCategory>
 

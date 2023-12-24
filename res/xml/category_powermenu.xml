@@ -102,7 +102,7 @@
             android:max="100"
             android:min="0"
             android:defaultValue="100"
-            settings:layout="@layout/preference_costum_seekbar" />
+            settings:layout="@layout/preference_custom_seekbar" />
 
         <com.afterlife.support.preference.SystemSettingSeekBarPreference
             android:key="transparent_power_dialog_dim"
@@ -110,7 +110,7 @@
             android:max="100"
             android:min="0"
             android:defaultValue="50"
-            settings:layout="@layout/preference_costum_seekbar" />
+            settings:layout="@layout/preference_custom_seekbar" />
 
     </PreferenceCategory>
 
