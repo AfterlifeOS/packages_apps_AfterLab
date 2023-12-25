@@ -63,18 +63,19 @@ public class System extends SettingsPreferenceFragment
         PreferenceScreen prefSet = getPreferenceScreen();
         final Resources res = getResources();
         final PreferenceScreen prefScreen = getPreferenceScreen();
-        
+
         mDashboardStyle = findPreference(KEY_DASHBOARD_STYLE);
         mDashboardStyle.setOnPreferenceChangeListener(this);
     }
-    
+
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
     	if (preference == mDashboardStyle) {
     	    SettingsUtils.showSettingsRestartDialog(getActivity());
+            return true;
         }
         return false;
-    }  
+    }
 
     @Override
     public int getMetricsCategory() {
