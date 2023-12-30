@@ -29,20 +29,20 @@
         <com.afterlife.support.preference.SystemSettingSwitchPreference
             android:key="lockscreen_weather_enabled"
             android:title="@string/lockscreen_weather_title"
-            android:defaultValue="false"
+            android:defaultValue="true"
             android:summary="@string/lockscreen_weather_summary" />
 
         <com.afterlife.support.preference.SystemSettingSwitchPreference
             android:key="lockscreen_weather_location"
             android:title="@string/lockscreen_weather_location_title"
-            android:defaultValue="false"
+            android:defaultValue="true"
             android:summary="@string/lockscreen_weather_location_summary"
             android:dependency="lockscreen_weather_enabled" />
 
         <com.afterlife.support.preference.SystemSettingSwitchPreference
             android:key="lockscreen_weather_style"
             android:title="@string/lockscreen_weather_style_title"
-            android:defaultValue="false"
+            android:defaultValue="true"
             android:summary="@string/lockscreen_weather_style_summary"
             android:dependency="lockscreen_weather_enabled" />
 
