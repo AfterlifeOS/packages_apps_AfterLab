@@ -385,5 +385,15 @@
         <item>5</item>
         <item>6</item>
     </string-array>
-    
+
+    <string-array name="declan_background_category_entries">
+        <item>Surface Color</item>
+        <item>Accent Color</item>
+        <item>Custom Color</item>
+    </string-array>
+    <string-array name="declan_background_category_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
 </resources>
