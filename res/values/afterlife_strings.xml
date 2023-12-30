@@ -583,4 +583,8 @@ s that internet users can use wisely.</string>
     <string name="statusbar_top_padding">Top padding</string>
     <string name="statusbar_left_padding">Left padding</string>
     <string name="statusbar_right_padding">Right padding</string>
+
+    <!-- WiFi Standard icon -->
+    <string name="wifi_standard_icon_title">WiFi standard</string>
+    <string name="wifi_standard_icon_summary">Display WiFi standard next to WiFi signal</string>
 </resources>
