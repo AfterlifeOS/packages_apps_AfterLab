@@ -29,7 +29,7 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:title="Quick Settings Style">
+        android:title="Footers Style">
 
         <com.afterlife.support.preference.SystemSettingSwitchPreference
             android:title="Footer Profile Picture"
@@ -58,7 +58,17 @@
             android:summary="Switch to back default"
             android:dependency="qs_footer_text_show"
             android:defaultValue="\#KeepAfterLife"
-            settings:layout="@layout/afterlab_card_preference_middle" />
+            settings:layout="@layout/afterlab_card_preference_bottom" />
+
+        <com.android.settingslib.widget.FooterPreference 
+            android:title="Do not use Google photos for pick image avatar!" 
+            android:selectable="false" />
+
+        </PreferenceCategory>
+
+        <PreferenceCategory
+        android:title="Quick Settings Style">
+
 
         <com.afterlife.support.preference.SecureSettingListPreference
             android:key="qs_tile_shape"
