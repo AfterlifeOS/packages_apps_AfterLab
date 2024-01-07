@@ -6,6 +6,13 @@
     android:layout_height="match_parent">
     <LinearLayout
         android:gravity="center_vertical"
+        android:id="@+id/keyguard_clock_style_default"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/keyguard_clock_default"/>
+    </LinearLayout>
+    <LinearLayout
+        android:gravity="center_vertical"
         android:id="@+id/keyguard_clock_style_oos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
