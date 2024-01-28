@@ -53,7 +53,10 @@ import com.android.settingslib.search.SearchIndexable;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 @SearchIndexable
 public class LockScreen extends SettingsPreferenceFragment 
@@ -63,11 +66,27 @@ public class LockScreen extends SettingsPreferenceFragment
         private static final String FINGERPRINT_VIB = "fingerprint_success_vib";
         private static final String KEY_WEATHER = "lockscreen_weather_enabled";
 
+        private static final String MAIN_WIDGET_1_KEY = "main_custom_widgets1";
+        private static final String MAIN_WIDGET_2_KEY = "main_custom_widgets2";
+        private static final String EXTRA_WIDGET_1_KEY = "custom_widgets1";
+        private static final String EXTRA_WIDGET_2_KEY = "custom_widgets2";
+        private static final String EXTRA_WIDGET_3_KEY = "custom_widgets3";
+        private static final String EXTRA_WIDGET_4_KEY = "custom_widgets4";
+
         private FingerprintManager mFingerprintManager;
         private SwitchPreference mFingerprintVib;
         private Preference mWeather;
         private OmniJawsClient mWeatherClient;
-    
+
+        private Preference mMainWidget1;
+        private Preference mMainWidget2;
+        private Preference mExtraWidget1;
+        private Preference mExtraWidget2;
+        private Preference mExtraWidget3;
+        private Preference mExtraWidget4;
+
+    private Map<Preference, String> widgetKeysMap = new HashMap<>();
+
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
@@ -96,10 +115,34 @@ public class LockScreen extends SettingsPreferenceFragment
                 Settings.System.FINGERPRINT_SUCCESS_VIB, 1) == 1));
             mFingerprintVib.setOnPreferenceChangeListener(this);
         }
+
+        mMainWidget1 = findPreference(MAIN_WIDGET_1_KEY);
+        mMainWidget2 = findPreference(MAIN_WIDGET_2_KEY);
+        mExtraWidget1 = findPreference(EXTRA_WIDGET_1_KEY);
+        mExtraWidget2 = findPreference(EXTRA_WIDGET_2_KEY);
+        mExtraWidget3 = findPreference(EXTRA_WIDGET_3_KEY);
+        mExtraWidget4 = findPreference(EXTRA_WIDGET_4_KEY);
+
+        List<Preference> widgetPreferences = Arrays.asList(mMainWidget1, mMainWidget2, mExtraWidget1, mExtraWidget2, mExtraWidget3, mExtraWidget4);
+        for (Preference widgetPref : widgetPreferences) {
+            widgetPref.setOnPreferenceChangeListener(this);
+            widgetKeysMap.put(widgetPref, "");
+        }
+
+        String mainWidgets = Settings.System.getString(getActivity().getContentResolver(), "lockscreen_widgets");
+        String extraWidgets = Settings.System.getString(getActivity().getContentResolver(), "lockscreen_widgets_extras");
+
+        setWidgetValues(mainWidgets, mMainWidget1, mMainWidget2);
+        setWidgetValues(extraWidgets, mExtraWidget1, mExtraWidget2, mExtraWidget3, mExtraWidget4);
     }
     
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+        ContentResolver resolver = getActivity().getContentResolver();
+       if (widgetKeysMap.containsKey(preference)) {
+            widgetKeysMap.put(preference, String.valueOf(newValue));
+            updateWidgetPreferences();
+            return true;
         if (preference == mFingerprintVib) {
             boolean value = (Boolean) newValue;
             Settings.System.putInt(getActivity().getContentResolver(),
@@ -108,6 +151,34 @@ public class LockScreen extends SettingsPreferenceFragment
         }
         return false;
     }  
+
+    private void setWidgetValues(String widgets, Preference... preferences) {
+        if (widgets == null) {
+            return;
+        }
+        List<String> widgetList = Arrays.asList(widgets.split(","));
+        for (int i = 0; i < preferences.length && i < widgetList.size(); i++) {
+            widgetKeysMap.put(preferences[i], widgetList.get(i).trim());
+        }
+    }
+
+    private void updateWidgetPreferences() {
+        List<String> mainWidgetsList = Arrays.asList(widgetKeysMap.get(mMainWidget1), widgetKeysMap.get(mMainWidget2));
+        List<String> extraWidgetsList = Arrays.asList(widgetKeysMap.get(mExtraWidget1), widgetKeysMap.get(mExtraWidget2), widgetKeysMap.get(mExtraWidget3), widgetKeysMap.get(mExtraWidget4));
+
+        mainWidgetsList = filterEmptyStrings(mainWidgetsList);
+        extraWidgetsList = filterEmptyStrings(extraWidgetsList);
+
+        String mainWidgets = TextUtils.join(",", mainWidgetsList);
+        String extraWidgets = TextUtils.join(",", extraWidgetsList);
+
+        Settings.System.putString(getActivity().getContentResolver(), "lockscreen_widgets", mainWidgets);
+        Settings.System.putString(getActivity().getContentResolver(), "lockscreen_widgets_extras", extraWidgets);
+    }
+
+    private List<String> filterEmptyStrings(List<String> inputList) {
+        return inputList.stream().filter(s -> !TextUtils.isEmpty(s)).collect(Collectors.toList());
+    }
 
     private void updateWeatherSettings() {
         if (mWeatherClient == null || mWeather == null) return;
