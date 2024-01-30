@@ -216,22 +216,46 @@
     </string-array>
 
     <!-- Custom category -->
-    <string-array name="declan_icon_category_entries">
+    <string-array name="declan_category_icon_style_entries">
         <item>Style 1</item>
         <item>Style 2</item>
     </string-array>
 
-    <string-array name="declan_icon_category_values">
+    <string-array name="declan_category_icon_style_values">
         <item>0</item>
         <item>1</item>
     </string-array>
 
-    <string-array name="declan_stroke_category_entries">
-        <item>Accent</item>
-        <item>Custom color</item>
+    <string-array name="declan_category_background_entries">
+        <item>Default Surface</item>
+        <item>Accent Color</item>
+        <item>Accent Primary</item>
+        <item>Accent Tertiary</item>
     </string-array>
-    
-    <string-array name="declan_stroke_category_values">
+
+    <string-array name="declan_category_background_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="declan_base_title_mode_entries">
+        <item>Fade</item>
+        <item>Scale</item>
+    </string-array>
+
+    <string-array name="declan_base_title_mode_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+    <string-array name="declan_base_title_gravity_entries">
+        <item>Left</item>
+        <item>Center</item>
+    </string-array>
+
+    <string-array name="declan_base_title_gravity_values">
         <item>0</item>
         <item>1</item>
     </string-array>
