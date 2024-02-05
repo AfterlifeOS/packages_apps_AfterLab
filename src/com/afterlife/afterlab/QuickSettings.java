@@ -15,14 +15,10 @@
  */
 package com.afterlife.afterlab;
 
-import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Context;
-import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Color;
-import android.net.Uri;
-import android.provider.MediaStore;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.UserHandle;
@@ -50,19 +46,12 @@ import java.util.List;
 @SearchIndexable
 public class QuickSettings extends SettingsPreferenceFragment 
             implements Preference.OnPreferenceChangeListener {
-            	
-    private static final String KEY_FOOTER_AVATAR_URI = "declan_avatar_picker_uri";
-	private static final int REQUEST_AVATAR_PICKER = 10001;
-	
-	private Preference mAvatarPicker;
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         addPreferencesFromResource(R.xml.category_quicksettings);
         PreferenceScreen prefSet = getPreferenceScreen();
-        
-        mAvatarPicker = findPreference(KEY_FOOTER_AVATAR_URI);
     }
 
     @Override
@@ -75,31 +64,6 @@ public class QuickSettings extends SettingsPreferenceFragment
         return MetricsProto.MetricsEvent.AFTERLIFE;
     }
     
-    @Override
-	public boolean onPreferenceTreeClick(Preference preference) {
-		if (preference == mAvatarPicker) {
-			Intent intent = new Intent("android.intent.action.PICK", MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-			intent.setType("image/*");
-			startActivityForResult(intent, REQUEST_AVATAR_PICKER);
-			return true;
-		}
-		return super.onPreferenceTreeClick(preference);
-    }
-    
-    @Override
-	public void onActivityResult(int requestCode, int resultCode, Intent result) {
-		if (requestCode == REQUEST_AVATAR_PICKER) {
-			if (resultCode != Activity.RESULT_OK) {
-				return;
-			}
-			ContentResolver resolver = getContext().getContentResolver();
-			final Uri imgUri = result.getData();
-			if (imgUri != null) {
-				Settings.System.putStringForUser(resolver, "declan_avatar_picker", imgUri.toString(), UserHandle.USER_CURRENT);
-			}
-		}
-    }
-
     public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
             new BaseSearchIndexProvider() {
                 @Override
