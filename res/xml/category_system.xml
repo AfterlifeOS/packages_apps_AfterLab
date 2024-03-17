@@ -28,7 +28,7 @@
              android:key="android.theme.customization.font"
              android:title="@string/theme_customization_font_title"
              android:summary="@string/theme_customization_font_summary"
-             android:fragment="com.afterlife.afterlab.fragments.FontsPicker"/>
+             android:fragment="com.afterlife.afterlab.fragments.fonts.FontPickerPreview"/>
 
 	     <!-- Icon Pack -->
           <Preference
