@@ -481,6 +481,9 @@ s that internet users can use wisely.</string>
     <string name="theme_customization_lock_clock_summary">Set LS clock font style</string>
 
     <!-- Lockscreen widgets  -->
+    <string name="lockscreen_widgets_title">Lockscreen Widgets</string>
+    <string name="lockscreen_widgets_enabled_title">Enable Lockscreen Widgets</string>
+    <string name="lockscreen_widgets_enabled_summary">Add widgets to lockscreen</string>
     <string name="large_widgets_category_title">Big widgets</string>
     <string name="main_custom_widgets1">Big widget 1</string>
     <string name="main_custom_widgets2">Big widget 2</string>
@@ -497,4 +500,9 @@ s that internet users can use wisely.</string>
     <string name="torch">Torch</string>
     <string name="controls_media_button_play">Play</string>
     <string name="weather">Weather</string>
+
+    <!-- Custom Clock Style -->
+    <string name="lockscreen_clock_category_title">Lockscreen Styles</string>
+    <string name="lockscreen_clock_category_summary">Configure lockscreen clock and styles</string>
+    <string name="custom_clock_style">Custom Clock Style</string>
 </resources>
