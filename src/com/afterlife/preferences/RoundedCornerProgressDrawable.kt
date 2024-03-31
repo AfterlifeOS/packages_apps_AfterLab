@@ -29,7 +29,7 @@ class RoundedCornerProgressDrawable(drawable: Drawable? = null) : InsetDrawable(
     }
 
     override fun getConstantState(): ConstantState {
-        return RoundedCornerState(super.getConstantState())
+        return RoundedCornerState(super.getConstantState()!!)
     }
 
     override fun onBoundsChange(bounds: Rect) {
