@@ -29,7 +29,7 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.Preference.OnPreferenceChangeListener;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.internal.logging.nano.MetricsProto;
 
@@ -66,7 +66,7 @@ public class LockScreenClock extends SettingsPreferenceFragment
     
     private Map<Preference, String> widgetKeysMap = new HashMap<>();
     
-    private SwitchPreference mLockScreenWidgetsEnabledPref;
+    private SwitchPreferenceCompat mLockScreenWidgetsEnabledPref;
     private List<Preference> mWidgetPreferences;
     
     private Preference mClockStyle;
@@ -111,7 +111,7 @@ public class LockScreenClock extends SettingsPreferenceFragment
             setWidgetValues(extraWidgets, mExtraWidget1, mExtraWidget2, mExtraWidget3, mExtraWidget4);
         }
 
-        mLockScreenWidgetsEnabledPref = (SwitchPreference) findPreference("lockscreen_widgets_enabled");
+        mLockScreenWidgetsEnabledPref = (SwitchPreferenceCompat) findPreference("lockscreen_widgets_enabled");
         mLockScreenWidgetsEnabledPref.setChecked(isLsWidgetsEnabled);
         mLockScreenWidgetsEnabledPref.setOnPreferenceChangeListener(this);
     }
