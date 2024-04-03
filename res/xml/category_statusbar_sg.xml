@@ -38,6 +38,13 @@
     android:title="@string/data_disabled_icon_title"
     android:summary="@string/data_disabled_icon_summary"
     android:defaultValue="true"/>
+
+  <com.afterlife.support.preference.SystemSettingSwitchPreference
+      android:key="roaming_indicator_icon"
+      android:title="@string/roaming_indicator_icon_title"
+      android:summary="@string/roaming_indicator_icon_summary"
+      android:defaultValue="true"/>
+
     </PreferenceCategory>
     
 </PreferenceScreen>
