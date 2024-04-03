@@ -260,4 +260,15 @@
         <item>3</item>
 	<item>4</item>
     </string-array>
+
+    <!-- QS panel style -->
+    <string-array name="qs_style_entries">
+        <item>@string/qs_style_default</item>
+        <item>@string/qs_style_round</item>
+    </string-array>
+
+    <string-array name="qs_style_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
 </resources>
