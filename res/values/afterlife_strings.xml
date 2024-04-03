@@ -175,4 +175,8 @@ s that internet users can use wisely.</string>
     <!-- Roaming indicator icon -->
     <string name="roaming_indicator_icon_title">Show roaming indicator icon</string>
     <string name="roaming_indicator_icon_summary">Display roaming indicator above signal icon when in roaming mode</string>
+
+    <!-- 4G icon -->
+    <string name="show_fourg_icon_title">4G icon</string>
+    <string name="show_fourg_icon_summary">Display 4G icon in signal icon instead LTE</string>
 </resources>
