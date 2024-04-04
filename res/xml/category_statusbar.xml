@@ -58,6 +58,12 @@
           android:summary="@string/show_fourg_icon_summary"
           android:defaultValue="false"/>
 
+     <com.afterlife.support.preference.SystemSettingSwitchPreference
+          android:key="statusbar_colored_icons"
+          android:title="@string/statusbar_colored_icons_title"
+          android:summary="@string/statusbar_colored_icons_summary"
+          android:defaultValue="false" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>
