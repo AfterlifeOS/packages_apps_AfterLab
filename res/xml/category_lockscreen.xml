@@ -18,6 +18,19 @@
     android:title="@string/category_lockscreen_title" >
 
     <PreferenceCategory
+        android:title="@string/general_category">
+
+	<com.afterlife.support.preference.SystemSettingListPreference
+          android:key="screen_off_animation"
+          android:title="@string/screen_off_animation_title"
+          android:entries="@array/screen_off_animation_entries"
+          android:entryValues="@array/screen_off_animation_values"
+          android:summary="%s"
+          android:defaultValue="0" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="lockscreen_ui_finterprint_category"
         android:title="@string/fingerprint_category">
 
