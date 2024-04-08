@@ -101,6 +101,21 @@
         <item>@string/status_bar_battery_style_icon_landscape</item>
         <item>@string/status_bar_battery_style_big_circle</item>
         <item>@string/status_bar_battery_style_big_dotted_circle</item>
+	<item>@string/status_bar_battery_style_land_a</item>
+        <item>@string/status_bar_battery_style_land_b</item>
+        <item>@string/status_bar_battery_style_land_c</item>
+        <item>@string/status_bar_battery_style_land_d</item>
+        <item>@string/status_bar_battery_style_land_e</item>
+        <item>@string/status_bar_battery_style_land_f</item>
+        <item>@string/status_bar_battery_style_land_g</item>
+        <item>@string/status_bar_battery_style_land_h</item>
+        <item>@string/status_bar_battery_style_land_i</item>
+        <item>@string/status_bar_battery_style_land_j</item>
+        <item>@string/status_bar_battery_style_land_k</item>
+        <item>@string/status_bar_battery_style_land_l</item>
+        <item>@string/status_bar_battery_style_land_m</item>
+        <item>@string/status_bar_battery_style_land_n</item>
+        <item>@string/status_bar_battery_style_land_o</item>
     </string-array>
 
     <string-array name="status_bar_battery_style_values" translatable="false">
@@ -114,6 +129,22 @@
         <item>7</item>
         <item>8</item>
         <item>9</item>
+	<item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
     </string-array>
 
     <string-array name="status_bar_battery_percent_entries">
@@ -143,6 +174,21 @@
         <item>@string/status_bar_battery_style_icon_landscape</item>
         <item>@string/status_bar_battery_style_big_circle</item>
         <item>@string/status_bar_battery_style_big_dotted_circle</item>
+	<item>@string/status_bar_battery_style_land_a</item>
+        <item>@string/status_bar_battery_style_land_b</item>
+        <item>@string/status_bar_battery_style_land_c</item>
+        <item>@string/status_bar_battery_style_land_d</item>
+        <item>@string/status_bar_battery_style_land_e</item>
+        <item>@string/status_bar_battery_style_land_f</item>
+        <item>@string/status_bar_battery_style_land_g</item>
+        <item>@string/status_bar_battery_style_land_h</item>
+        <item>@string/status_bar_battery_style_land_i</item>
+        <item>@string/status_bar_battery_style_land_j</item>
+        <item>@string/status_bar_battery_style_land_k</item>
+        <item>@string/status_bar_battery_style_land_l</item>
+        <item>@string/status_bar_battery_style_land_m</item>
+        <item>@string/status_bar_battery_style_land_n</item>
+        <item>@string/status_bar_battery_style_land_o</item>
     </string-array>
 
     <string-array name="qs_battery_style_values" translatable="false">
@@ -157,5 +203,21 @@
         <item>7</item>
         <item>8</item>
         <item>9</item>
+	<item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
     </string-array>
 </resources>
