@@ -55,7 +55,7 @@ public class BatteryStyleSettings extends SettingsPreferenceFragment implements
 
     private SystemSettingListPreference mBatteryPercent;
     private SystemSettingListPreference mBatteryStyle;
-    private SwitchPreferenceCompat mBatteryTextCharging;
+    private SystemSettingSwitchPreference mBatteryTextCharging;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -79,10 +79,10 @@ public class BatteryStyleSettings extends SettingsPreferenceFragment implements
                 batterystyle != BATTERY_STYLE_TEXT && batterystyle != BATTERY_STYLE_HIDDEN);
         mBatteryPercent.setOnPreferenceChangeListener(this);
 
-        mBatteryTextCharging = (SwitchPreferenceCompat) findPreference(KEY_STATUS_BAR_BATTERY_TEXT_CHARGING);
+        // Change the casting to SystemSettingSwitchPreference
+        mBatteryTextCharging = (SystemSettingSwitchPreference) findPreference(KEY_STATUS_BAR_BATTERY_TEXT_CHARGING);
         mBatteryTextCharging.setEnabled(batterystyle == BATTERY_STYLE_HIDDEN ||
                 (batterystyle != BATTERY_STYLE_TEXT && batterypercent != 2));
-
     }
 
     @Override
