@@ -8,13 +8,13 @@
     android:layout_width="match_parent"
     android:layout_height="300dp"
     android:layout_marginTop="10dp"
-    android:layout_marginBottom="10dp"
+    android:layout_marginBottom="20dp"
     android:layout_marginHorizontal="20dp">
     <FrameLayout
-        android:gravity="center_vertical"
+        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <com.android.settings.preferences.ui.WallpaperView
+        <com.afterlife.preferences.WallpaperView
             android:gravity="center"
             android:orientation="vertical"
             android:background="@drawable/preview_bg"
