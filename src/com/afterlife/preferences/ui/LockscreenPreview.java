@@ -30,19 +30,7 @@ public class LockscreenPreview extends LinearLayout {
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-        String lockscreenWidgets = Settings.System.getString(getContext().getContentResolver(), "lockscreen_widgets");
-        String lockscreenExtras = Settings.System.getString(getContext().getContentResolver(), "lockscreen_widgets_extras");
-        boolean hasLockscreenWidgets = lockscreenWidgets != null && !lockscreenWidgets.isEmpty();
-        boolean hasLockscreenExtras = lockscreenExtras != null && !lockscreenExtras.isEmpty();
-
-        int previewHeight;
-        if (hasLockscreenWidgets && hasLockscreenExtras) {
-            previewHeight = (int) getResources().getDimension(R.dimen.lockscreen_preview_height_all);
-        } else if (hasLockscreenWidgets || hasLockscreenExtras) {
-            previewHeight = (int) getResources().getDimension(R.dimen.lockscreen_preview_height_with_widgets);
-        } else {
-            previewHeight = (int) getResources().getDimension(R.dimen.lockscreen_preview_height_with_no_widgets);
-        }
+        int previewHeight = (int) getResources().getDimension(R.dimen.lockscreen_preview_height_with_no_widgets);
         int newHeightMeasureSpec = MeasureSpec.makeMeasureSpec(previewHeight, MeasureSpec.EXACTLY);
         super.onMeasure(widthMeasureSpec, newHeightMeasureSpec);
     }

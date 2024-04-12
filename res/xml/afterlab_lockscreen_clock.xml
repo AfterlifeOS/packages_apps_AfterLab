@@ -38,6 +38,10 @@
     <PreferenceCategory
         android:key="lockscreen_widgets"
         android:title="@string/lockscreen_widgets_title">
+        
+         <Preference
+            android:key="lockscreen_widgets_preview"
+            settings:layout="@layout/lockscreen_widgets_preview" />
 
         <com.afterlife.support.preference.SystemSettingSwitchPreference
             android:key="lockscreen_widgets_enabled"

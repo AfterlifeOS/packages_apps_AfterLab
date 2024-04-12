@@ -150,12 +150,4 @@
             <include layout="@layout/keyguard_clock_minimal3" />
         </LinearLayout>
     </RelativeLayout>
-    <LinearLayout
-        android:gravity="center"
-        android:id="@+id/keyguard_widgets"
-        android:layout_below="@+id/clock_frame"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <include layout="@layout/keyguard_clock_widgets" />
-    </LinearLayout>
 </com.afterlife.preferences.ClockStyle>
