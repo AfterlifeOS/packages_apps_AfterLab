@@ -43,5 +43,11 @@
         android:summary="@string/statusbar_clock_chip_summary"
         android:defaultValue="true" />
 
+    <com.blaze.house.preferences.SecureSettingSwitchPreference
+        android:key="clock_seconds"
+        android:title="@string/status_bar_clock_show_seconds_title"
+        android:summary="@string/status_bar_clock_show_seconds_desc"
+        android:defaultValue="false"/>
+
 </PreferenceScreen>
 
