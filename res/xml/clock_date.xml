@@ -37,4 +37,11 @@
         android:entryValues="@array/status_bar_am_pm_values"
         android:defaultValue="0"/>
 
+    <com.afterlife.support.preference.SystemSettingSwitchPreference
+        android:key="statusbar_clock_chip"
+        android:title="@string/statusbar_clock_chip_title"
+        android:summary="@string/statusbar_clock_chip_summary"
+        android:defaultValue="true" />
+
 </PreferenceScreen>
+
