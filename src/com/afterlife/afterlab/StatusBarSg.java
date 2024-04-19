@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2020 Project-Awaken
+ * Copyright (C) 2023-2024 AfterLife Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,11 +16,8 @@
  */
 package com.afterlife.afterlab;
 
-import android.content.Context;
 import android.content.ContentResolver;
-import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.content.pm.ResolveInfo;
+import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -27,128 +25,45 @@ import android.os.Handler;
 import android.os.UserHandle;
 import android.provider.SearchIndexableResource;
 import android.provider.Settings;
-import android.text.TextUtils;
-import android.util.Log;
-import android.view.View;
 
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
-import androidx.preference.PreferenceGroup;
 import androidx.preference.PreferenceScreen;
-import androidx.preference.PreferenceCategory;
-import androidx.preference.Preference.OnPreferenceChangeListener;
-import androidx.preference.PreferenceFragment;
 import androidx.preference.SwitchPreference;
 
 import com.android.internal.logging.nano.MetricsProto;
 
 import com.android.settings.R;
-import android.text.format.DateFormat;
-import com.afterlife.support.preference.SecureSettingListPreference;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.Indexable;
 import com.android.settingslib.search.SearchIndexable;
-import com.android.settings.Utils;
 
-import java.util.Locale;
-import java.util.List;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Map;
-import java.util.HashMap;
-import java.util.Collections;
-
-import com.android.settingslib.development.SystemPropPoker;
-import android.os.SystemProperties;
-import com.afterlife.support.preference.SystemSettingSwitchPreference;
-import com.afterlife.support.preference.SystemSettingMainSwitchPreference;
-import android.os.Process;
-
-import com.android.settingslib.development.SystemPropPoker;
-import android.os.SystemProperties;
+import java.util.List;
 
 @SearchIndexable
 public class StatusBarSg extends SettingsPreferenceFragment 
             implements Preference.OnPreferenceChangeListener {
-            
-    private SystemSettingSwitchPreference mThreshold;
-    private SystemSettingSwitchPreference mNetMonitor;
 
-    private static final String KEY_STATUS_BAR_AM_PM = "status_bar_am_pm";
-    private SecureSettingListPreference mStatusBarAmPm;
-    private Preference mCombinedSignalIcons;
-    
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         addPreferencesFromResource(R.xml.category_statusbar_sg);
-        final ContentResolver resolver = getActivity().getContentResolver();
-        mStatusBarAmPm = findPreference(KEY_STATUS_BAR_AM_PM);
         PreferenceScreen prefSet = getPreferenceScreen();
-        final Resources res = getResources();
-        final PreferenceScreen prefScreen = getPreferenceScreen();
-        
-        // Network traffic 
-        boolean isNetMonitorEnabled = Settings.System.getIntForUser(resolver,
-                Settings.System.NETWORK_TRAFFIC_STATE, 1, UserHandle.USER_CURRENT) == 1;
-        mNetMonitor = (SystemSettingSwitchPreference) findPreference("network_traffic_state");
-        mNetMonitor.setChecked(isNetMonitorEnabled);
-        mNetMonitor.setOnPreferenceChangeListener(this);
 
-        boolean isThresholdEnabled = Settings.System.getIntForUser(resolver,
-                Settings.System.NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD, 0, UserHandle.USER_CURRENT) == 1;
-        mThreshold = (SystemSettingSwitchPreference) findPreference("network_traffic_autohide_threshold");
-        mThreshold.setChecked(isThresholdEnabled);
-        mThreshold.setOnPreferenceChangeListener(this);
-        
-        mCombinedSignalIcons = findPreference("persist.sys.flags.combined_signal_icons");
-        mCombinedSignalIcons.setOnPreferenceChangeListener(this);
     }
-    
+
     @Override
-    public boolean onPreferenceChange(Preference preference, Object objValue) {
-        if (preference == mNetMonitor) {
-            boolean value = (Boolean) objValue;
-            Settings.System.putIntForUser(getActivity().getContentResolver(),
-                    Settings.System.NETWORK_TRAFFIC_STATE, value ? 1 : 0,
-                    UserHandle.USER_CURRENT);
-            mNetMonitor.setChecked(value);
-            mThreshold.setChecked(value);
-            return true;
-        } else if (preference == mThreshold) {
-            boolean value = (Boolean) objValue;
-            Settings.System.putIntForUser(getContentResolver(),
-                    Settings.System.NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD, value ? 1 : 0,
-                    UserHandle.USER_CURRENT);
-            return true;
-        } else if (preference == mCombinedSignalIcons) {
-            boolean value = (Boolean) objValue;
-            Settings.Secure.putIntForUser(getContentResolver(),
-                Settings.Secure.ENABLE_COMBINED_SIGNAL_ICONS, value ? 1 : 0, UserHandle.USER_CURRENT);
-            return true;
-        } 
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
         return false;
-    }
+    }  
     
     @Override
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.AFTERLIFE;
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-	if (DateFormat.is24HourFormat(requireContext())) {
-            mStatusBarAmPm.setEnabled(false);
-            mStatusBarAmPm.setSummary(R.string.status_bar_am_pm_unavailable);
-            }
-    }
-
-    @Override
-    public void onPause() {
-        super.onPause();
     }
 
     public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
