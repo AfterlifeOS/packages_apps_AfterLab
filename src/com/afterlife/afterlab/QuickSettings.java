@@ -1,6 +1,7 @@
 /*
  * Copyright (C) 2020 Project-Awaken
- *
+ * Copyright (C) 2023-2024 AfterLife Project
+ * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -52,6 +53,7 @@ public class QuickSettings extends SettingsPreferenceFragment
         super.onCreate(icicle);
         addPreferencesFromResource(R.xml.category_quicksettings);
         PreferenceScreen prefSet = getPreferenceScreen();
+
     }
 
     @Override
@@ -63,7 +65,7 @@ public class QuickSettings extends SettingsPreferenceFragment
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.AFTERLIFE;
     }
-    
+
     public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
             new BaseSearchIndexProvider() {
                 @Override

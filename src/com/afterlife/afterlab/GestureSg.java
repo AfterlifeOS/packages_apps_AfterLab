@@ -1,6 +1,7 @@
 /*
  * Copyright (C) 2020 Project-Awaken
  * Copyright (C) 2021 CrystalOS-Project
+ * Copyright (C) 2023-2024 AfterLife Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -44,12 +45,12 @@ import java.util.Arrays;
 import java.util.List;
 
 @SearchIndexable
-public class GestureSg extends SettingsPreferenceFragment {
+public class GestureSG extends SettingsPreferenceFragment {
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
-        addPreferencesFromResource(R.xml.category_gestures_sg);
+        addPreferencesFromResource(R.xml.category_gestures);
         PreferenceScreen prefSet = getPreferenceScreen();
         final Resources res = getResources();
         final PreferenceScreen prefScreen = getPreferenceScreen();

@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2020 Project-Awaken
+ * Copyright (C) 2023-2024 AfterLife Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,7 +21,6 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.os.SystemProperties;
 import android.os.Handler;
 import android.os.UserHandle;
 import android.provider.SearchIndexableResource;
@@ -48,40 +48,17 @@ import java.util.List;
 public class Misc extends SettingsPreferenceFragment 
             implements Preference.OnPreferenceChangeListener {
     
-    private static final String KEY_GAMES_SPOOF = "use_games_spoof";
-    private static final String KEY_PHOTOS_SPOOF = "use_photos_spoof";
-    private static final String SYS_GAMES_SPOOF = "persist.sys.pixelprops.games";
-    private static final String SYS_PHOTOS_SPOOF = "persist.sys.pixelprops.gphotos";
-    private SwitchPreference mGamesSpoof;
-    private SwitchPreference mPhotosSpoof;
-
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         addPreferencesFromResource(R.xml.category_misc);
-        final PreferenceScreen prefScreen = getPreferenceScreen();
+        PreferenceScreen prefSet = getPreferenceScreen();
         final Resources res = getResources();
-
-        mPhotosSpoof = (SwitchPreference) prefScreen.findPreference(KEY_PHOTOS_SPOOF);
-        mGamesSpoof = (SwitchPreference) findPreference(KEY_GAMES_SPOOF);
-        mGamesSpoof.setChecked(SystemProperties.getBoolean(SYS_GAMES_SPOOF, false));
-        mGamesSpoof.setOnPreferenceChangeListener(this);
-        mPhotosSpoof.setChecked(SystemProperties.getBoolean(SYS_PHOTOS_SPOOF, true));
-        mPhotosSpoof.setOnPreferenceChangeListener(this);
+        final PreferenceScreen prefScreen = getPreferenceScreen();
     }
     
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        ContentResolver resolver = getActivity().getContentResolver();
-        if (preference == mGamesSpoof) {
-            boolean value = (Boolean) newValue;
-            SystemProperties.set(SYS_GAMES_SPOOF, value ? "true" : "false");
-            return true;
-        } else if (preference == mPhotosSpoof) {
-            boolean value = (Boolean) newValue;
-            SystemProperties.set(SYS_PHOTOS_SPOOF, value ? "true" : "false");
-            return true;
-        }
         return false;
     }  
 

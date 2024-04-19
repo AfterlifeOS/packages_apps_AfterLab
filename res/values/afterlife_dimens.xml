@@ -12,11 +12,9 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-
-    <!-- Dashboard tile minimum height -->
+<!-- Dashboard tile minimum height -->
     <dimen name="dashboard_tile_minimum_height">72dp</dimen>
 
     <!-- Dashboard tile image margin start / end -->
     <dimen name="dashboard_tile_image_margin">18dp</dimen>
-
 </resources>

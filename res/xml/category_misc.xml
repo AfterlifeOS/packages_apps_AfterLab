@@ -2,6 +2,7 @@
 <!--
      Copyright (C) 2020 Project-Awaken
      Copyright (C) 2021 CrystalOS-Project
+     Copyright (C) 2023-2024 AfterLife Project
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
      You may obtain a copy of the License at
@@ -16,92 +17,5 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/category_misc_title" >
-
-      <!-- Spoof Settings -->
-      <PreferenceCategory
-          android:title="@string/Spoof_Area_category_title">
-
-            <!-- Photo Spoof -->
-            <SwitchPreference
-               android:key="use_photos_spoof"
-               android:title="@string/use_photos_spoof_title"
-               android:summary="@string/use_photos_spoof_summary"
-               android:defaultValue="true"
-               settings:layout="@layout/afterlab_card_preference_top" />
-
-            <!-- Unlock FPS for specific games -->
-            <SwitchPreference
-               android:key="use_games_spoof"
-               android:title="@string/use_games_spoof_title"
-               android:summary="@string/use_games_spoof_summary"
-               settings:layout="@layout/afterlab_card_preference_middle" />
-
-            <!-- Fake Signature -->
-            <com.afterlife.support.preference.GlobalSettingSwitchPreference
-               android:key="allow_signature_fake"
-               android:title="@string/allow_signature_fake"
-               android:summary="@string/allow_signature_fake_summary"
-               android:defaultValue="false"
-               settings:layout="@layout/afterlab_card_preference_bottom" />
-
-     </PreferenceCategory>
-
-     <!-- Weather -->
-      <PreferenceCategory
-          android:title="@string/weather_cat">
-
-            <Preference
-                android:key="omnijaws_settings"
-                android:title="@string/qs_weather_settings_title"
-                android:summary="@string/qs_weather_settings_summary"
-                android:fragment="com.afterlife.afterlab.fragments.OmniJawsSettings"
-                settings:layout="@layout/afterlab_card_preference_single" />
-
-      </PreferenceCategory>
-     
-     <!-- Misc -->
-     <PreferenceCategory
-         android:title="@string/misc_cat">
-
-           <com.afterlife.support.preference.GlobalSettingSwitchPreference
-              android:key="pie_animation_style"
-              android:title="@string/pie_animation_style_title"
-              android:summary="@string/pie_animation_style_summary"
-              android:defaultValue="false"
-              settings:layout="@layout/afterlab_card_preference_top" />
-
-           <!-- Window Ignore Secure -->
-           <com.afterlife.support.preference.SecureSettingSwitchPreference
-              android:key="window_ignore_secure"
-              android:title="@string/laboratory_ignore_window_secure_title"
-              android:summary="@string/laboratory_ignore_window_secure_summary"
-              android:defaultValue="false"
-              settings:layout="@layout/afterlab_card_preference_bottom"/>
-      
-      </PreferenceCategory>
-
-      <PreferenceCategory
-          android:key="incall_vib_options"
-          android:title="@string/incall_vibration_category" >
-
-            <com.afterlife.support.preference.SystemSettingSwitchPreference
-               android:key="vibrate_on_connect"
-               android:title="@string/incall_vibrate_connect_title"
-               android:defaultValue="false"
-               settings:layout="@layout/afterlab_card_preference_top" />
-
-            <com.afterlife.support.preference.SystemSettingSwitchPreference
-               android:key="vibrate_on_callwaiting"
-               android:title="@string/incall_vibrate_call_wait_title"
-               android:defaultValue="false"
-               settings:layout="@layout/afterlab_card_preference_middle" />
-
-            <com.afterlife.support.preference.SystemSettingSwitchPreference
-               android:key="vibrate_on_disconnect"
-               android:title="@string/incall_vibrate_disconnect_title"
-               android:defaultValue="false"
-               settings:layout="@layout/afterlab_card_preference_bottom" />
-
-      </PreferenceCategory>
 
 </PreferenceScreen>

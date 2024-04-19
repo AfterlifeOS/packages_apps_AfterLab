@@ -2,6 +2,7 @@
 <!--
      Copyright (C) 2020 Project-Awaken
      Copyright (C) 2021 CrystalOS-Project
+     Copyright (C) 2023-2024 AfterLife Project
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
      You may obtain a copy of the License at
@@ -17,50 +18,4 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/category_gestures_title" >
 
-    <PreferenceCategory
-        android:title="@string/general_category">
-
-    <Preference
-        android:key="gesture_settings"
-        android:title="@string/aosp_gesture_preference"
-        android:summary="@string/aosp_gesture_summary"
-        android:fragment="com.android.settings.gestures.GestureSettings"
-        settings:layout="@layout/afterlab_card_preference_top"
-        settings:controller="com.android.settings.gestures.GesturesSettingPreferenceController"/>
-
-    <com.afterlife.support.preference.SystemSettingSwitchPreference
-        android:key="volume_rocker_wake"
-        android:title="@string/volume_rocker_wake_title"
-        android:summary="@string/volume_rocker_wake_summary"
-        android:defaultValue="false"
-        settings:layout="@layout/afterlab_card_preference_middle" />
-
-    <com.afterlife.support.preference.SystemSettingSwitchPreference
-        android:key="click_partial_screenshot"
-        android:title="@string/click_partial_screenshot_title"
-        android:summary="@string/click_partial_screenshot_summary"
-        android:defaultValue="false"
-        settings:layout="@layout/afterlab_card_preference_bottom" />
-
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:title="@string/navbar_layout_category_title">
-
-    <com.afterlife.support.preference.SecureSettingListPreference
-        android:key="navbar_layout_views"
-        android:title="@string/navbar_layout_title"
-        android:summary="%s"
-        android:entries="@array/navbar_layout_entries"
-        android:entryValues="@array/navbar_layout_values"
-        android:defaultValue="default" 
-        settings:layout="@layout/afterlab_card_preference_top"/>
-
-    <com.afterlife.support.preference.SecureSettingSwitchPreference
-        android:key="navbar_inverse_layout"
-        android:title="@string/navbar_invert_layout_title"
-        android:summary="@string/navbar_invert_layout_summary"
-        android:defaultValue="false" 
-        settings:layout="@layout/afterlab_card_preference_bottom"/>
-    </PreferenceCategory>
 </PreferenceScreen>
