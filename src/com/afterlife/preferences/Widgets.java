@@ -163,6 +163,18 @@ public class Widgets extends RelativeLayout {
             case "weather":
                 setUpWidgetResources(widgetView, R.drawable.ic_weather, R.string.weather);
                 break;
+            case "wifi":
+                setUpWidgetResources(widgetView, R.drawable.ic_wifi, R.string.wifi);
+                break;
+            case "data":
+                setUpWidgetResources(widgetView, R.drawable.ic_data, R.string.data);
+                break;
+            case "ringer":
+                setUpWidgetResources(widgetView, R.drawable.ic_vibrate, R.string.ringer);
+                break;
+            case "bt":
+                setUpWidgetResources(widgetView, R.drawable.ic_bt, R.string.bt);
+                break;
             default:
                 break;
         }
