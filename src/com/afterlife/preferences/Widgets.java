@@ -174,6 +174,8 @@ public class Widgets extends RelativeLayout {
                 break;
             case "bt":
                 setUpWidgetResources(widgetView, R.drawable.ic_bt, R.string.bt);
+            case "sound_engine":
+                setUpWidgetResources(widgetView, R.drawable.ic_settings_sound, R.string.sound_engine_title);
                 break;
             default:
                 break;
