@@ -482,6 +482,8 @@ s that internet users can use wisely.</string>
     <string name="custom_clock_style">Custom Clock Style</string>
 
     <!-- Lockscreen widgets  -->
+    <string name="lockscreen_display_widgets_title">Device info Widget</string>
+    <string name="lockscreen_display_widgets_summary">Show device info widget on lockscreen</string>
     <string name="lockscreen_widgets_title">Lockscreen Widgets</string>
     <string name="lockscreen_widgets_enabled_title">Enable Lockscreen Widgets</string>
     <string name="lockscreen_widgets_enabled_summary">Add widgets to lockscreen</string>
