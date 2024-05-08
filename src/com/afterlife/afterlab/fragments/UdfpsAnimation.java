@@ -1,5 +1,6 @@
 /*
- * Copyright (C) 2022 crDroid Android Project
+ * Copyright (C) 2021 AospExtended ROM Project
+ *               2024 The EverestOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -59,7 +60,8 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.widget.SettingsMainSwitchBar;
 import com.android.settingslib.search.Indexable;
-import com.android.settingslib.widget.OnMainSwitchChangeListener;
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -68,8 +70,7 @@ import java.util.List;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class UdfpsAnimation extends SettingsPreferenceFragment implements
-        OnMainSwitchChangeListener {
+public class UdfpsAnimation extends SettingsPreferenceFragment {
 
     private Switch mSwitch;
 
@@ -83,12 +84,11 @@ public class UdfpsAnimation extends SettingsPreferenceFragment implements
     private String[] mAnimPreviews;
     private String[] mTitles;
 
-    private boolean mEnabled;
     private UdfpsAnimAdapter mUdfpsAnimAdapter;
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public void onCreate(Bundle icicle) {
+        super.onCreate(icicle);
         getActivity().setTitle(R.string.udfps_recog_animation_effect_title);
 
         loadResources();
@@ -112,7 +112,7 @@ public class UdfpsAnimation extends SettingsPreferenceFragment implements
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
-            @Nullable Bundle savedInstanceState) {
+            @Nullable Bundle icicle) {
         View view = inflater.inflate(
                 R.layout.item_view, container, false);
 
@@ -125,34 +125,10 @@ public class UdfpsAnimation extends SettingsPreferenceFragment implements
     }
 
     @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
+    public void onActivityCreated(Bundle icicle) {
+        super.onActivityCreated(icicle);
         final SettingsActivity activity = (SettingsActivity) getActivity();
-        final SettingsMainSwitchBar switchBar = activity.getSwitchBar();
-        mSwitch = switchBar.getSwitch();
-        mEnabled = Settings.System.getInt(getActivity().getContentResolver(),
-                       Settings.System.UDFPS_ANIM, 0) == 1;
-        mSwitch.setChecked(mEnabled);
-        setEnabled(mEnabled);
-        switchBar.setTitle(getActivity().getString(R.string.enable));
-        switchBar.addOnSwitchChangeListener(this);
-        switchBar.show();
-    }
-
-    @Override
-    public void onSwitchChanged(Switch switchView, boolean isChecked) {
-        Settings.System.putInt(getActivity().getContentResolver(),
-                Settings.System.UDFPS_ANIM, isChecked ? 1 : 0);
-        mSwitch.setChecked(isChecked);
-        setEnabled(isChecked);
-    }
-
-    public void setEnabled(boolean enabled) {
-        if (enabled) {
-            mRecyclerView.setAdapter(mUdfpsAnimAdapter);
-        } else {
-            mRecyclerView.setAdapter(null);
-        }
+        mRecyclerView.setAdapter(mUdfpsAnimAdapter);
     }
 
     @Override

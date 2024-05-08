@@ -42,31 +42,48 @@ import com.android.internal.util.afterlife.AfterlifeUtils;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+import com.android.settings.search.BaseSearchIndexProvider;
+import com.android.settingslib.search.SearchIndexable;
 
-public class UdfpsSettings extends SettingsPreferenceFragment {
+@SearchIndexable(forTarget = SearchIndexable.ALL & ~SearchIndexable.ARC)
+public class UdfpsSettings extends SettingsPreferenceFragment implements
+        Preference.OnPreferenceChangeListener {
 
-    private static final String UDFPS_ANIM_PREVIEW = "udfps_recognizing_animation_preview";
+    private static final String UDFPS_CUSTOMIZATION = "udfps_customization";
 
-    private Preference mUdfpsAnimPreview;
+    private PreferenceCategory mUdfpsCustomization;
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public void onCreate(Bundle icicle) {
+        super.onCreate(icicle);
         addPreferencesFromResource(R.xml.udfps_settings);
 
         final PreferenceScreen prefSet = getPreferenceScreen();
         Resources resources = getResources();
 
-        final boolean udfpsResPkgInstalled = AfterlifeUtils.isPackageInstalled(getActivity(),
+        final boolean udfpsResPkgInstalled = AfterlifeUtils.isPackageInstalled(getContext(),
                 "com.afterlife.udfps.resources");
-        mUdfpsAnimPreview = findPreference(UDFPS_ANIM_PREVIEW);
+        mUdfpsCustomization = (PreferenceCategory) findPreference(UDFPS_CUSTOMIZATION);
         if (!udfpsResPkgInstalled) {
-            prefSet.removePreference(mUdfpsAnimPreview);
+            prefSet.removePreference(mUdfpsCustomization);
         }
+
+    }
+
+    @Override
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        ContentResolver resolver = getActivity().getContentResolver();
+        return false;
     }
 
     @Override
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.AFTERLIFE;
     }
+
+    /**
+     * For Search.
+     */
+    public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+            new BaseSearchIndexProvider(R.xml.udfps_settings);
 }
