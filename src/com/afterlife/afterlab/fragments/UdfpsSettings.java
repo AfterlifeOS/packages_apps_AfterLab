@@ -50,8 +50,10 @@ public class UdfpsSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
     private static final String UDFPS_CUSTOMIZATION = "udfps_customization";
+    private static final String KEY_UDFPS_ICONS = "udfps_icon_picker";
 
     private PreferenceCategory mUdfpsCustomization;
+    private Preference mUdfpsIcons;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -64,8 +66,10 @@ public class UdfpsSettings extends SettingsPreferenceFragment implements
         final boolean udfpsResPkgInstalled = AfterlifeUtils.isPackageInstalled(getContext(),
                 "com.afterlife.udfps.resources");
         mUdfpsCustomization = (PreferenceCategory) findPreference(UDFPS_CUSTOMIZATION);
+	mUdfpsIcons = (Preference) findPreference(KEY_UDFPS_ICONS);
         if (!udfpsResPkgInstalled) {
             prefSet.removePreference(mUdfpsCustomization);
+	    prefSet.removePreference(mUdfpsIcons);
         }
 
     }
