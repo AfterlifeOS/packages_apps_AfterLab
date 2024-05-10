@@ -28,6 +28,7 @@ import android.os.Bundle;
 import android.provider.SearchIndexableResource;
 import android.provider.Settings;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -95,19 +96,26 @@ public class UdfpsAnimation extends SettingsPreferenceFragment {
     }
 
     private void loadResources() {
-        try {
-            PackageManager pm = getActivity().getPackageManager();
-            udfpsRes = pm.getResourcesForApplication(mPkg);
-        } catch (PackageManager.NameNotFoundException e) {
-            e.printStackTrace();
-        }
+    	try {
+             PackageManager pm = getActivity().getPackageManager();
+             udfpsRes = pm.getResourcesForApplication(mPkg);
 
-        mAnims = udfpsRes.getStringArray(udfpsRes.getIdentifier("udfps_animation_styles",
-                "array", mPkg));
-        mAnimPreviews = udfpsRes.getStringArray(udfpsRes.getIdentifier("udfps_animation_previews",
-                "array", mPkg));
-        mTitles = udfpsRes.getStringArray(udfpsRes.getIdentifier("udfps_animation_titles",
-                "array", mPkg));
+             // Ensure udfpsRes is not null
+             if (udfpsRes != null) {
+            	 mAnims = udfpsRes.getStringArray(udfpsRes.getIdentifier("udfps_animation_styles",
+                    	 "array", mPkg));
+            	 mAnimPreviews = udfpsRes.getStringArray(udfpsRes.getIdentifier("udfps_animation_previews",
+                    	 "array", mPkg));
+            	 mTitles = udfpsRes.getStringArray(udfpsRes.getIdentifier("udfps_animation_titles",
+                    	 "array", mPkg));
+             } else {
+            	// Handle the case where udfpsRes is null
+            	Log.e("UdfpsAnimation", "Failed to get resources for package: " + mPkg);
+             }
+    	 } catch (PackageManager.NameNotFoundException e) {
+             e.printStackTrace();
+             Log.e("UdfpsAnimation", "Package not found: " + mPkg, e);
+    	 }
     }
 
     @Override
@@ -195,7 +203,7 @@ public class UdfpsAnimation extends SettingsPreferenceFragment {
 
         @Override
         public int getItemCount() {
-            return mAnims.length;
+            return mAnims != null ? mAnims.length : 0;
         }
 
         public class UdfpsAnimViewHolder extends RecyclerView.ViewHolder {

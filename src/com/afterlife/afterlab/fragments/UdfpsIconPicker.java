@@ -87,12 +87,23 @@ public class UdfpsIconPicker extends SettingsPreferenceFragment {
         try {
             PackageManager pm = getActivity().getPackageManager();
             udfpsRes = pm.getResourcesForApplication(mPkg);
-        } catch (PackageManager.NameNotFoundException e) {
+
+            if (udfpsRes == null) {
+            	throw new NullPointerException("udfpsRes is null");
+            }
+
+            int identifier = udfpsRes.getIdentifier("udfps_icons", "array", mPkg);
+            if (identifier == 0) {
+            	throw new Resources.NotFoundException("Resource not found: udfps_icons");
+            }
+
+            mIcons = udfpsRes.getStringArray(identifier);
+    	} catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+    	} catch (NullPointerException | Resources.NotFoundException e) {
+            // Handle the exception accordingly, e.g., log it or show a user-friendly message
             e.printStackTrace();
         }
-
-        mIcons = udfpsRes.getStringArray(udfpsRes.getIdentifier("udfps_icons",
-                "array", mPkg));
     }
 
     @Override
@@ -177,7 +188,7 @@ public class UdfpsIconPicker extends SettingsPreferenceFragment {
 
         @Override
         public int getItemCount() {
-            return mIcons.length;
+            return mIcons != null ? mIcons.length : 0;
         }
 
         public class UdfpsIconViewHolder extends RecyclerView.ViewHolder {
