@@ -158,8 +158,8 @@ public class LockScreenClock extends SettingsPreferenceFragment
         List<String> mainWidgetsList = Arrays.asList(widgetKeysMap.get(mMainWidget1), widgetKeysMap.get(mMainWidget2));
         List<String> extraWidgetsList = Arrays.asList(widgetKeysMap.get(mExtraWidget1), widgetKeysMap.get(mExtraWidget2), widgetKeysMap.get(mExtraWidget3), widgetKeysMap.get(mExtraWidget4));
 
-        mainWidgetsList = filterEmptyStrings(mainWidgetsList);
-        extraWidgetsList = filterEmptyStrings(extraWidgetsList);
+        mainWidgetsList = replaceEmptyWithNone(mainWidgetsList);
+        extraWidgetsList = replaceEmptyWithNone(extraWidgetsList);
 
         String mainWidgets = TextUtils.join(",", mainWidgetsList);
         String extraWidgets = TextUtils.join(",", extraWidgetsList);
@@ -168,8 +168,10 @@ public class LockScreenClock extends SettingsPreferenceFragment
         Settings.System.putString(getActivity().getContentResolver(), "lockscreen_widgets_extras", extraWidgets);
     }
 
-    private List<String> filterEmptyStrings(List<String> inputList) {
-        return inputList.stream().filter(s -> !TextUtils.isEmpty(s)).collect(Collectors.toList());
+    private List<String> replaceEmptyWithNone(List<String> inputList) {
+        return inputList.stream()
+                .map(s -> TextUtils.isEmpty(s) ? "none" : s)
+                .collect(Collectors.toList());
     }
 
     @Override
