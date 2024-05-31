@@ -44,20 +44,56 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import com.afterlife.support.preference.SystemSettingSwitchPreference;
+import com.afterlife.support.preference.SystemSettingMainSwitchPreference;
+
 @SearchIndexable
 public class StatusBar extends SettingsPreferenceFragment 
             implements Preference.OnPreferenceChangeListener {
+
+    private SystemSettingSwitchPreference mThreshold;
+    private SystemSettingSwitchPreference mNetMonitor;
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         addPreferencesFromResource(R.xml.category_statusbar);
+        final ContentResolver resolver = getActivity().getContentResolver();
         PreferenceScreen prefSet = getPreferenceScreen();
+        final Resources res = getResources();
+        final PreferenceScreen prefScreen = getPreferenceScreen();
 
+        // Network traffic 
+        boolean isNetMonitorEnabled = Settings.System.getIntForUser(resolver,
+                Settings.System.NETWORK_TRAFFIC_STATE, 1, UserHandle.USER_CURRENT) == 1;
+        mNetMonitor = (SystemSettingSwitchPreference) findPreference("network_traffic_state");
+        mNetMonitor.setChecked(isNetMonitorEnabled);
+        mNetMonitor.setOnPreferenceChangeListener(this);
+
+        boolean isThresholdEnabled = Settings.System.getIntForUser(resolver,
+                Settings.System.NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD, 0, UserHandle.USER_CURRENT) == 1;
+        mThreshold = (SystemSettingSwitchPreference) findPreference("network_traffic_autohide_threshold");
+        mThreshold.setChecked(isThresholdEnabled);
+        mThreshold.setOnPreferenceChangeListener(this);
     }
 
     @Override
-    public boolean onPreferenceChange(Preference preference, Object newValue) {
+    public boolean onPreferenceChange(Preference preference, Object objValue) {
+        if (preference == mNetMonitor) {
+            boolean value = (Boolean) objValue;
+            Settings.System.putIntForUser(getActivity().getContentResolver(),
+                    Settings.System.NETWORK_TRAFFIC_STATE, value ? 1 : 0,
+                    UserHandle.USER_CURRENT);
+            mNetMonitor.setChecked(value);
+            mThreshold.setChecked(value);
+            return true;
+        } else if (preference == mThreshold) {
+            boolean value = (Boolean) objValue;
+            Settings.System.putIntForUser(getContentResolver(),
+                    Settings.System.NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD, value ? 1 : 0,
+                    UserHandle.USER_CURRENT);
+            return true;
+        }
         return false;
     }  
     
