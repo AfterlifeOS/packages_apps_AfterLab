@@ -507,4 +507,7 @@ s that internet users can use wisely.</string>
     <string name="data">Data</string>
     <string name="ringer">Ringer</string>
     <string name="bt">Bluetooth</string>
+
+    <!-- Apply Button --> 
+    <string name="apply_change_button_title">Apply</string>
 </resources>

@@ -89,5 +89,8 @@
             android:entryValues="@array/widget_values" 
             android:summary="%s" />
 
+        <com.android.settingslib.widget.LayoutPreference
+            android:key="apply_change_button"
+            android:layout="@layout/apply_change_button" />
     </PreferenceCategory>
 </PreferenceScreen>
