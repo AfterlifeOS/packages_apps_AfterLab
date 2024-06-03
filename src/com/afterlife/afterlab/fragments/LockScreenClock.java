@@ -23,6 +23,8 @@ import android.os.UserHandle;
 import android.provider.SearchIndexableResource;
 import android.provider.Settings;
 import android.text.TextUtils;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
@@ -37,6 +39,7 @@ import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
+import com.android.settingslib.widget.LayoutPreference;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -45,8 +48,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 @SearchIndexable
-public class LockScreenClock extends SettingsPreferenceFragment
-            implements Preference.OnPreferenceChangeListener  {
+public class LockScreenClock extends SettingsPreferenceFragment implements Preference.OnPreferenceChangeListener {
 
     public static final String TAG = "LockScreenClock";
 
@@ -56,6 +58,7 @@ public class LockScreenClock extends SettingsPreferenceFragment
     private static final String EXTRA_WIDGET_2_KEY = "custom_widgets2";
     private static final String EXTRA_WIDGET_3_KEY = "custom_widgets3";
     private static final String EXTRA_WIDGET_4_KEY = "custom_widgets4";
+    private static final String KEY_APPLY_CHANGE_BUTTON = "apply_change_button";
 
     private Preference mMainWidget1;
     private Preference mMainWidget2;
@@ -63,12 +66,14 @@ public class LockScreenClock extends SettingsPreferenceFragment
     private Preference mExtraWidget2;
     private Preference mExtraWidget3;
     private Preference mExtraWidget4;
-    
+    private Button mApplyChange;
+
     private Map<Preference, String> widgetKeysMap = new HashMap<>();
-    
+    private Map<Preference, String> initialWidgetKeysMap = new HashMap<>();
+
     private SwitchPreferenceCompat mLockScreenWidgetsEnabledPref;
     private List<Preference> mWidgetPreferences;
-    
+
     private Preference mClockStyle;
     private Preference mClockFontPref;
     private Preference mDeviceInfoWidgetPref;
@@ -88,9 +93,9 @@ public class LockScreenClock extends SettingsPreferenceFragment
         mDeviceInfoWidgetPref = (Preference) findPreference("lockscreen_display_widgets");
 
         mWidgetPreferences = Arrays.asList(mMainWidget1, mMainWidget2, mExtraWidget1, mExtraWidget2, mExtraWidget3, mExtraWidget4, mDeviceInfoWidgetPref);
-        
+
         final boolean mClockStyleEnabled = Settings.System.getIntForUser(getActivity().getContentResolver(), "clock_style", 0, UserHandle.USER_CURRENT) != 0;
-        
+
         mClockFontPref = (Preference) findPreference("android.theme.customization.lockscreen_clock_font");
 
         mClockStyle = (Preference) findPreference("clock_style");
@@ -116,13 +121,44 @@ public class LockScreenClock extends SettingsPreferenceFragment
         mLockScreenWidgetsEnabledPref = (SwitchPreferenceCompat) findPreference("lockscreen_widgets_enabled");
         mLockScreenWidgetsEnabledPref.setChecked(isLsWidgetsEnabled);
         mLockScreenWidgetsEnabledPref.setOnPreferenceChangeListener(this);
+
+        LayoutPreference preference = findPreference(KEY_APPLY_CHANGE_BUTTON);
+        mApplyChange = (Button) preference.findViewById(R.id.apply_change);
+        mApplyChange.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                updateWidgetPreferences();
+                saveInitialPreferences();
+                mApplyChange.setEnabled(false);
+            }
+        });
+        saveInitialPreferences();
+        mApplyChange.setEnabled(false);
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        restoreInitialPreferences();
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        restoreInitialPreferences();
+    }
+    
+    @Override
+    public void onResume() {
+        super.onResume();
+        restoreInitialPreferences();
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (widgetKeysMap.containsKey(preference)) {
             widgetKeysMap.put(preference, String.valueOf(newValue));
-            updateWidgetPreferences();
+            mApplyChange.setEnabled(hasChanges());
             return true;
         } else if (preference == mLockScreenWidgetsEnabledPref) {
             boolean isEnabled = (boolean) newValue;
@@ -172,6 +208,32 @@ public class LockScreenClock extends SettingsPreferenceFragment
         return inputList.stream()
                 .map(s -> TextUtils.isEmpty(s) ? "none" : s)
                 .collect(Collectors.toList());
+    }
+
+    private void saveInitialPreferences() {
+        for (Preference widgetPref : mWidgetPreferences) {
+            String value = widgetKeysMap.get(widgetPref);
+            initialWidgetKeysMap.put(widgetPref, value);
+        }
+    }
+
+    private void restoreInitialPreferences() {
+        for (Map.Entry<Preference, String> entry : initialWidgetKeysMap.entrySet()) {
+            widgetKeysMap.put(entry.getKey(), entry.getValue());
+        }
+        updateWidgetPreferences();
+    }
+
+    private boolean hasChanges() {
+        for (Map.Entry<Preference, String> entry : initialWidgetKeysMap.entrySet()) {
+            Preference pref = entry.getKey();
+            String initialValue = entry.getValue();
+            String currentValue = widgetKeysMap.get(pref);
+            if (!TextUtils.equals(initialValue, currentValue)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     @Override
