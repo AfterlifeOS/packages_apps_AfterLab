@@ -17,6 +17,13 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="Themes" >
 
+     <!-- Monet Engine -->
+      <PreferenceScreen
+        android:key="monet_engine"
+        android:title="@string/monet_title"
+        android:summary="@string/monet_summary"
+        android:fragment="com.afterlife.afterlab.fragments.MonetSettings" />
+
      <!-- Font Pack -->
           <Preference
              android:key="android.theme.customization.font"
