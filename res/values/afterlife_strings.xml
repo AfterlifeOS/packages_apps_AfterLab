@@ -236,4 +236,8 @@ s that internet users can use wisely.</string>
      <string name="dt_category_header">Double tap gesture</string>
      <string name="status_bar_double_tap_to_sleep_title">Tap to sleep</string>
      <string name="status_bar_double_tap_to_sleep_summary">Double-tap on the status bar or lockscreen to turn off the display</string>
+
+     <!-- Disable QS -->
+    <string name="disable_qs_title">Hide QS in secure lockscreen</string>
+    <string name="disable_qs_summary">Hides QS if device is locked. Does not disable notification shade</string>
 </resources>
