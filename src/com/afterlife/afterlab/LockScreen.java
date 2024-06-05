@@ -19,9 +19,13 @@ package com.afterlife.afterlab;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.res.Resources;
+import android.content.pm.PackageManager.NameNotFoundException;
 import android.graphics.Color;
+import android.hardware.fingerprint.FingerprintManager;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.RemoteException;
+import android.os.ServiceManager;
 import android.os.UserHandle;
 import android.provider.SearchIndexableResource;
 import android.provider.Settings;
@@ -31,6 +35,10 @@ import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
+import android.view.IWindowManager;
+import android.view.View;
+import android.view.WindowManagerGlobal;
 
 import com.android.internal.logging.nano.MetricsProto;
 
@@ -47,6 +55,9 @@ import java.util.List;
 @SearchIndexable
 public class LockScreen extends SettingsPreferenceFragment 
             implements Preference.OnPreferenceChangeListener {
+    private static final String FINGERPRINT_VIB = "fingerprint_success_vib";
+    private FingerprintManager mFingerprintManager;
+    private SwitchPreferenceCompat mFingerprintVib;
     
     @Override
     public void onCreate(Bundle icicle) {
@@ -55,10 +66,26 @@ public class LockScreen extends SettingsPreferenceFragment
         PreferenceScreen prefSet = getPreferenceScreen();
         final Resources res = getResources();
         final PreferenceScreen prefScreen = getPreferenceScreen();
+
+        mFingerprintManager = (FingerprintManager) getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
+        mFingerprintVib = (SwitchPreferenceCompat) findPreference(FINGERPRINT_VIB);
+        if (mFingerprintManager == null) {
+            prefScreen.removePreference(mFingerprintVib);
+        } else {
+            mFingerprintVib.setChecked((Settings.System.getInt(getContentResolver(),
+                Settings.System.FINGERPRINT_SUCCESS_VIB, 1) == 1));
+            mFingerprintVib.setOnPreferenceChangeListener(this);
+        }
     }
     
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+        if (preference == mFingerprintVib) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.FINGERPRINT_SUCCESS_VIB, value ? 1 : 0);
+            return true;
+        }
         return false;
     }  
 
