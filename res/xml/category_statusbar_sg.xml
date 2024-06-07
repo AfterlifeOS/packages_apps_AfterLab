@@ -15,5 +15,35 @@
     android:title="@string/category_statusbar_title"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+
+    <PreferenceCategory
+        android:title="@string/general_category">
+
+     <Preference
+         android:key="statusbar_battery"
+         android:title="@string/status_bar_battery_category_title"
+         android:summary="@string/status_bar_battery_category_summary"
+         settings:layout="@layout/afterlab_card_preference_middle"
+         android:fragment="com.afterlife.afterlab.Battery"/>
+
+   </PreferenceCategory>
+
+   <PreferenceCategory
+      android:title="@string/network_traffic_state_title">
+
+     <com.afterlife.support.preference.SystemSettingSwitchPreference
+        android:key="network_traffic_state"
+        android:title="@string/network_traffic_master_switch_title"
+        android:summary="@string/network_traffic_state_summary"
+        android:defaultValue="false" />
+
+     <com.afterlife.support.preference.SystemSettingSwitchPreference
+        android:key="network_traffic_autohide_threshold"
+        android:title="@string/network_traffic_autohide_title"
+        android:summary="@string/network_traffic_autohide_summary"
+        android:dependency="network_traffic_state"
+        android:defaultValue="false" />
+
+   </PreferenceCategory>
     
 </PreferenceScreen>

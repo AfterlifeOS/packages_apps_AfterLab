@@ -166,6 +166,7 @@ s that internet users can use wisely.</string>
 
     <!-- Status bar - Battery -->    
     <string name="status_bar_battery_category_title">StatusBar Battery customizations</string>
+    <string name="status_bar_battery_category_summary">Set Battery style on statusbar</string>
     <string name="status_bar_battery_style_title">Battery style</string>
     <string name="status_bar_battery_style_summary">Statusbar and QS Battery Styles</string>
     <string name="status_bar_battery_style_icon_portrait">Icon portrait</string>
