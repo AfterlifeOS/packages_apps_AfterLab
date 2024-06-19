@@ -359,4 +359,8 @@ s that internet users can use wisely.</string>
     <string name="monet_engine_style_fruit_salad">Fruit Salad</string>
     <string name="monet_engine_style_muted">Muted</string>
     <string name="monet_engine_style_content">Content</string>
+
+    <!-- Haptic feedback -->
+    <string name="back_gesture_haptic_title">Haptic feedback</string>
+    <string name="back_gesture_haptic_summary">Vibrate when performing a back gesture</string>
 </resources>
