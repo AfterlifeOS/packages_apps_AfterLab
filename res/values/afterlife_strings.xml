@@ -219,4 +219,12 @@ s that internet users can use wisely.</string>
     <string name="status_bar_am_pm_small">Small</string>
     <string name="status_bar_am_pm_title">Clock AM/PM style</string>
     <string name="status_bar_am_pm_unavailable">24-hour clock is enabled</string>
+
+    <string name="lockscreen_battery_info_title">Lockscreen charging info</string>
+    <string name="lockscreen_battery_info_summary">Show charging current, voltage, wattage and battery temperature on lockscreen while charging</string>
+
+    <!-- Fingerprint Ripple Effect -->
+    <string name="fingerprint_category">Fingerprint</string>
+    <string name="enable_fingerprint_ripple_effect_title">Ripple effect</string>
+    <string name="enable_fingerprint_ripple_effect_summary">Show ripple effect on unlock with fingerprint</string>
 </resources>
