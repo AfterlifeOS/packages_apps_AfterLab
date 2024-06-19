@@ -207,8 +207,16 @@ s that internet users can use wisely.</string>
     <string name="qs_auto_brightness_summary">Show toggle for adaptive brightness near the slider</string>
 
     <!-- Clock position -->
+    <string name="status_bar_clock_title"></string>
     <string name="status_bar_clock_position_center">Center</string>
     <string name="status_bar_clock_position_left">Left</string>
     <string name="status_bar_clock_position_right">Right</string>
     <string name="status_bar_clock_position_title">Clock position</string>
+
+    <!-- Clock AM/PM -->
+    <string name="status_bar_am_pm_hidden">Hidden</string>
+    <string name="status_bar_am_pm_normal">Normal</string>
+    <string name="status_bar_am_pm_small">Small</string>
+    <string name="status_bar_am_pm_title">Clock AM/PM style</string>
+    <string name="status_bar_am_pm_unavailable">24-hour clock is enabled</string>
 </resources>

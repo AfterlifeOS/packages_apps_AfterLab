@@ -19,14 +19,11 @@
     <PreferenceCategory
         android:title="@string/general_category">
 
-      <com.afterlife.support.preference.SecureSettingListPreference
-          android:key="status_bar_clock"
-          android:title="@string/status_bar_clock_position_title"
-          android:summary="%s"
-          android:dialogTitle="@string/status_bar_clock_position_title"
-          android:entries="@array/status_bar_clock_position_entries"
-          android:entryValues="@array/status_bar_clock_position_values"
-          android:defaultValue="0"/>
+      <Preference
+	    android:key="status_bar_clock"
+	    android:title="@string/status_bar_clock_position_title"
+	    android:summary="Clock settings"
+	    android:fragment="com.afterlife.afterlab.fragments.StatusBarClock"/>
 
      <Preference
         android:key="network_traffic_state"

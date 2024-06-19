@@ -47,6 +47,8 @@
 
  import com.android.settingslib.search.Indexable;
  import com.android.settingslib.search.SearchIndexable;
+ 
+ import com.afterlife.support.preference.SecureSettingListPreference;
 
  import java.util.ArrayList;
  import java.util.Date;
@@ -57,19 +59,27 @@
          implements Preference.OnPreferenceChangeListener, Indexable {
 
      private static final String TAG = "StatusBarClock";
+     private static final String KEY_STATUS_BAR_AM_PM = "status_bar_am_pm";
+
+     private SecureSettingListPreference mStatusBarAmPm;
 
      @Override
      public void onCreate(Bundle savedInstanceState) {
          super.onCreate(savedInstanceState);
-         addPreferencesFromResource(R.xml.category_statusbar);
+         addPreferencesFromResource(R.xml.clock_date);
 
          final ContentResolver resolver = getActivity().getContentResolver();
          final PreferenceScreen screen = getPreferenceScreen();
+         mStatusBarAmPm = findPreference(KEY_STATUS_BAR_AM_PM);
      }
 
      @Override
      public void onResume() {
          super.onResume();
+         if (DateFormat.is24HourFormat(requireContext())) {
+         mStatusBarAmPm.setEnabled(false);
+         mStatusBarAmPm.setSummary(R.string.status_bar_am_pm_unavailable);
+         }
      }
 
      @Override
@@ -89,7 +99,7 @@
                          boolean enabled) {
                      final ArrayList<SearchIndexableResource> result = new ArrayList<>();
                      final SearchIndexableResource sir = new SearchIndexableResource(context);
-                     sir.xmlResId = R.xml.category_statusbar;
+                     sir.xmlResId = R.xml.clock_date;
                      result.add(sir);
                      return result;
                  }
