@@ -21,6 +21,12 @@
     <PreferenceCategory
         android:title="@string/general_category">
 
+     <Preference
+          android:key="island_notification"
+          android:title="@string/island_notification_title"
+          android:summary="@string/island_notification_summary"
+          android:fragment="com.afterlife.afterlab.fragments.IslandSettings" />
+
 	<com.afterlife.support.preference.SystemSettingSwitchPreference
           android:key="notification_sound_vib_screen_on"
           android:title="@string/notification_sound_vib_screen_on_title"
