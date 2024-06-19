@@ -179,4 +179,15 @@ s that internet users can use wisely.</string>
     <!-- 4G icon -->
     <string name="show_fourg_icon_title">4G icon</string>
     <string name="show_fourg_icon_summary">Display 4G icon in signal icon instead LTE</string>
+
+    <!-- QS panel -->
+    <string name="qs_panel_options_title">Quick settings</string>
+    <string name="qs_panel_options_summary">Customize quick settings tiles</string>
+    <string name="category_name_qs_tiles">QS tiles</string>
+
+    <!-- QS tile shape -->
+    <string name="qs_tile_shape">QS tile shape</string>
+    <string name="qs_tile_round">Round</string>
+    <string name="qs_tile_rect">Rounded Rectangle</string>
+    <string name="qs_tile_mix">Round for active tiles and Rounded Rectangle for inactive tiles</string>
 </resources>
