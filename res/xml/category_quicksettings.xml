@@ -23,5 +23,25 @@
           android:title="@string/qs_panel_options_title"
           android:summary="@string/qs_panel_options_summary"
           android:fragment="com.afterlife.afterlab.fragments.QSPanelSettings" />
+
+     <com.afterlife.support.preference.SecureSettingListPreference
+            android:key="qs_show_brightness_slider"
+            android:title="@string/qs_brightness_slider_title"
+            android:entries="@array/qs_brightness_slider_entries"
+            android:entryValues="@array/qs_brightness_slider_values"
+            android:defaultValue="1" />
+
+        <com.afterlife.support.preference.SecureSettingListPreference
+            android:key="qs_brightness_slider_position"
+            android:title="@string/qs_brightness_slider_position_title"
+            android:entries="@array/qs_brightness_slider_position_entries"
+            android:entryValues="@array/qs_brightness_slider_position_values"
+            android:defaultValue="0" />
+
+        <com.afterlife.support.preference.SecureSettingSwitchPreference
+            android:key="qs_show_auto_brightness"
+            android:title="@string/qs_auto_brightness_title"
+            android:summary="@string/qs_auto_brightness_summary"
+            android:defaultValue="true" />
     
 </PreferenceScreen>
