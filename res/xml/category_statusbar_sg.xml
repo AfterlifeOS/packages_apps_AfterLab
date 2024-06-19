@@ -21,6 +21,13 @@
         android:title="@string/network_traffic_state_title"
         android:summary="@string/network_traffic_state_summary"
         android:fragment="com.afterlife.afterlab.fragments.NetworkTrafficSettings"
-        android:defaultValue="false" />  
+        android:defaultValue="false" />
+
+    <Preference
+        android:key="status_bar_icon_manager"
+        android:title="@string/status_bar_title"
+        android:summary="@string/status_bar_system_icons_summary">
+        <intent android:action="com.android.settings.action.STATUS_BAR_TUNER" /> 
+    </Preference>
     
 </PreferenceScreen>
