@@ -250,7 +250,6 @@ s that internet users can use wisely.</string>
     <string name="volume_button_music_control_summary">When the screen is off, long-pressing volume keys will skip music tracks</string>
 
     <!-- Screen off animation -->
-    <string name="default_string">Default</string>
     <string name="screen_off_animation_title">Screen off animation</string>
     <string name="screen_off_animation_crt" translatable="false">CRT</string>
     <string name="screen_off_animation_scale">Scale</string>
@@ -397,4 +396,17 @@ s that internet users can use wisely.</string>
     <!-- Fingerprint authentication vibration -->
     <string name="fprint_sucess_vib_title">Fingerprint authentication vibration</string>
     <string name="fprint_sucess_vib_summary">Vibrate on successful fingerprint authentication</string>
+
+    <!-- Incall options -->
+    <string name="incall_category">In-call options</string>
+    <string name="flashlight_on_call_title">Blink Flashlight for incoming call</string>
+    <string name="flashlight_on_call_disabled">Disabled</string>
+    <string name="flashlight_on_call_ringer">When ringing</string>
+    <string name="flashlight_on_call_no_ringer">When ringer is silent</string>
+    <string name="flashlight_on_call_silent">When entirely silent (no ringer or vibrator)</string>
+    <string name="flashlight_on_call_always">Always</string>
+    <string name="flashlight_on_call_ignore_dnd_title">Ignore DND</string>
+    <string name="flashlight_on_call_ignore_dnd_summary">Whether to flash when in Do Not Disturb mode</string>
+    <string name="flashlight_on_call_rate_title">Rate</string>
+    <string name="flashlight_on_call_rate_summary">Flashlight on call blink rate</string>
 </resources>
