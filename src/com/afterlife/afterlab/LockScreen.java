@@ -62,7 +62,7 @@ public class LockScreen extends SettingsPreferenceFragment
         private static final String FINGERPRINT_VIB = "fingerprint_success_vib";
 
         private FingerprintManager mFingerprintManager;
-        private SwitchPreferenceCompat mFingerprintVib;
+        private SwitchPreference mFingerprintVib;
     
     @Override
     public void onCreate(Bundle icicle) {
@@ -76,9 +76,10 @@ public class LockScreen extends SettingsPreferenceFragment
         if (mUdfpsCategory != null && !CustomUdfpsUtils.hasUdfpsSupport(getContext())) {
             prefScreen.removePreference(mUdfpsCategory);
         }
-
+        
+    // Change the casting to SwitchPreference
     mFingerprintManager = (FingerprintManager) getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
-        mFingerprintVib = (SwitchPreferenceCompat) findPreference(FINGERPRINT_VIB);
+        mFingerprintVib = (SwitchPreference) findPreference(FINGERPRINT_VIB);
         if (mFingerprintManager == null) {
             prefScreen.removePreference(mFingerprintVib);
         } else {
