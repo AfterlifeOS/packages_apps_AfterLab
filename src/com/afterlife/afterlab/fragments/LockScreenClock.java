@@ -74,9 +74,11 @@ public class LockScreenClock extends SettingsPreferenceFragment implements Prefe
     private SwitchPreferenceCompat mLockScreenWidgetsEnabledPref;
     private List<Preference> mWidgetPreferences;
 
-    private Preference mClockStyle;
+    private Preference mClockStylePref;
     private Preference mClockFontPref;
     private Preference mDeviceInfoWidgetPref;
+    
+    int[] themeableClocks = {0, 1, 2, 3, 4, 5, 6};
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -94,13 +96,13 @@ public class LockScreenClock extends SettingsPreferenceFragment implements Prefe
 
         mWidgetPreferences = Arrays.asList(mMainWidget1, mMainWidget2, mExtraWidget1, mExtraWidget2, mExtraWidget3, mExtraWidget4, mDeviceInfoWidgetPref);
 
-        final boolean mClockStyleEnabled = Settings.System.getIntForUser(getActivity().getContentResolver(), "clock_style", 0, UserHandle.USER_CURRENT) != 0;
+        final int mClockStyle = Settings.System.getIntForUser(getActivity().getContentResolver(), "clock_style", 0, UserHandle.USER_CURRENT);
 
         mClockFontPref = (Preference) findPreference("android.theme.customization.lockscreen_clock_font");
 
-        mClockStyle = (Preference) findPreference("clock_style");
-        mClockStyle.setOnPreferenceChangeListener(this);
-        mClockFontPref.setVisible(!mClockStyleEnabled);
+        mClockStylePref = (Preference) findPreference("clock_style");
+        mClockStylePref.setOnPreferenceChangeListener(this);
+        mClockFontPref.setVisible(isThemeableclock(mClockStyle));
 
         final boolean isLsWidgetsEnabled = Settings.System.getIntForUser(getActivity().getContentResolver(), "lockscreen_widgets_enabled", 0, UserHandle.USER_CURRENT) != 0;
 
@@ -135,6 +137,15 @@ public class LockScreenClock extends SettingsPreferenceFragment implements Prefe
         saveInitialPreferences();
         mApplyChange.setEnabled(false);
     }
+    
+    private boolean isThemeableclock(int clockStyle) {
+        for (int clock : themeableClocks) {
+            if (clock == clockStyle) {
+                return true;
+            }
+        }
+        return false;
+    }
 
     @Override
     public void onPause() {
@@ -165,10 +176,9 @@ public class LockScreenClock extends SettingsPreferenceFragment implements Prefe
             showWidgetPreferences(isEnabled);
             mLockScreenWidgetsEnabledPref.setChecked(isEnabled);
             return true;
-        } else if (preference == mClockStyle) {
+        } else if (preference == mClockStylePref) {
             int clockStyleValue = Integer.parseInt((String) newValue);
-            boolean clockStyleEnabled = clockStyleValue != 0;
-            mClockFontPref.setVisible(!clockStyleEnabled);
+            mClockFontPref.setVisible(isThemeableclock(clockStyleValue));
             return true;
         }
         return false;
