@@ -477,8 +477,8 @@ s that internet users can use wisely.</string>
     <string name="lockscreen_weather_text_summary">Display current weather condition summary</string>
 
     <!-- Custom Fonts -->
-    <string name="theme_customization_lock_clock_title">Lockscreen clock font</string>
-    <string name="theme_customization_lock_clock_summary">Set LS clock font style</string>
+    <string name="theme_customization_lock_clock_title">Clock face</string>
+    <string name="theme_customization_lock_clock_summary">Modify lockscreen clock appearance</string>
 
     <!-- Lockscreen widgets  -->
     <string name="lockscreen_widgets_title">Lockscreen Widgets</string>

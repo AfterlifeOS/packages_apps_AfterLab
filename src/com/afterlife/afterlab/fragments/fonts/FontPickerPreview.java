@@ -51,7 +51,7 @@ public class FontPickerPreview extends SettingsPreferenceFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        fontManager = new FontManager(getActivity());
+        fontManager = new FontManager(getActivity(), false);
         getActivity().setTitle(getActivity().getString(R.string.font_styles_title));
     }
 
