@@ -149,17 +149,24 @@ public class LockScreenClock extends SettingsPreferenceFragment implements Prefe
 
     private void loadInitialPreferences() {
         ContentResolver resolver = getActivity().getContentResolver();
-        setWidgetValues(Settings.System.getString(resolver, LOCKSCREEN_WIDGETS_KEY), mMainWidget1, mMainWidget2);
-        setWidgetValues(Settings.System.getString(resolver, LOCKSCREEN_WIDGETS_EXTRAS_KEY), mExtraWidget1, mExtraWidget2, mExtraWidget3, mExtraWidget4);
+        String mainWidgets = Settings.System.getString(resolver, LOCKSCREEN_WIDGETS_KEY);
+        setWidgetAndPreferenceValues(mainWidgets, mMainWidget1, mMainWidget2);
+        String extraWidgets = Settings.System.getString(resolver, LOCKSCREEN_WIDGETS_EXTRAS_KEY);
+        setWidgetAndPreferenceValues(extraWidgets, mExtraWidget1, mExtraWidget2, mExtraWidget3, mExtraWidget4);
     }
 
-    private void setWidgetValues(String widgets, Preference... preferences) {
+    private void setWidgetAndPreferenceValues(String widgets, Preference... preferences) {
         if (widgets == null) {
             return;
         }
         List<String> widgetList = Arrays.asList(widgets.split(","));
         for (int i = 0; i < preferences.length && i < widgetList.size(); i++) {
-            widgetKeysMap.put(preferences[i], widgetList.get(i).trim());
+            String value = widgetList.get(i).trim();
+            Preference pref = preferences[i];
+            widgetKeysMap.put(pref, value);
+            if (pref instanceof ListPreference) {
+                ((ListPreference) pref).setValue(value);
+            }
         }
     }
 
