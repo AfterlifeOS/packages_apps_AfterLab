@@ -29,6 +29,13 @@
             android:summary="%s"
             android:entryValues="@array/clock_style_values" />
 
+        <!-- Lockscreen Clock Font and styles -->
+        <Preference
+            android:key="android.theme.customization.lockscreen_clock_font"
+            android:title="@string/theme_customization_lock_clock_title"
+            android:summary="@string/theme_customization_lock_clock_summary"
+            android:fragment="com.afterlife.afterlab.fragments.LockClockFontsPickerPreview" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
