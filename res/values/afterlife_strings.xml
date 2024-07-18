@@ -540,4 +540,7 @@ s that internet users can use wisely.</string>
     <string name="font_styles_summary">Change system font style</string>
     <string name="font_preview_text">The quick brown\nfox jumps over the\nlazy dog\n\nABCDEFGHIJKLM\nNOPQRSTUVWXYZ\nabcdefghijkl\nmnopqrstuvwxyz\n1234567890</string>
     <string name="apply_button_text">Apply</string>
+
+    <!-- Lockscreen Clock Highlight Guide --> 
+    <string name="ls_clock_face_highlight_text">Swipe left or right to preview clock styles</string>
 </resources>
