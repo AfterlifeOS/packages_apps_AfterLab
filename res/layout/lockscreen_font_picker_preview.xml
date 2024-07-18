@@ -10,80 +10,96 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<androidx.coordinatorlayout.widget.CoordinatorLayout 
+<androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-        <androidx.cardview.widget.CardView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="350dp"
-            android:layout_marginHorizontal="28dp"
-            android:padding="24dp"
-            android:layout_gravity="center"
-            app:cardCornerRadius="16dp">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <FrameLayout
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="350dp"
+                android:layout_marginHorizontal="28dp"
+                android:padding="24dp"
+                android:layout_gravity="center"
+                app:cardCornerRadius="16dp">
 
-                <com.afterlife.preferences.WallpaperView
-                    android:id="@+id/wallpaper_view"
+                <FrameLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerCrop"/>
+                    android:layout_height="match_parent">
 
-                <androidx.viewpager.widget.ViewPager
-                    android:id="@+id/view_pager"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@android:color/transparent"/>
-                    
-            </FrameLayout>
-        </androidx.cardview.widget.CardView>
+                    <com.afterlife.preferences.WallpaperView
+                        android:id="@+id/wallpaper_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop" />
 
-        <!-- Font Message -->
-        <TextView
-            android:id="@+id/font_message"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="24dp"
-            android:layout_marginTop="24dp"
-            android:text="@string/ls_clock_custom_font_not_supported"
-            android:visibility="gone"/>
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/view_pager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent" />
 
-        <!-- Font Spinner -->
-        <Spinner
-            android:id="@+id/font_spinner"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:layout_marginHorizontal="24dp" />
+                </FrameLayout>
+            </androidx.cardview.widget.CardView>
 
-        <!-- Apply button -->
-        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-            android:id="@+id/apply_extended_fab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/apply_button_text"
-            android:textAllCaps="false"
-            android:textColor="@color/settingslib_btn_colored_text_material"
-            android:theme="@style/Theme.CollapsingToolbar.Settings"
-            android:layout_marginEnd="24dp"
-            android:layout_gravity="end"
-            android:layout_marginTop="24dp"
-            style="@style/op_control_text_style_h6"
-            app:backgroundTint="@color/settingslib_btn_colored_background_material"
-            app:iconTint="@color/settingslib_btn_colored_text_material"
-            app:fabSize="normal"
-            app:icon="@drawable/ic_check_24dp"/>
+            <!-- Font Message -->
+            <TextView
+                android:id="@+id/font_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/ls_clock_custom_font_not_supported"
+                android:visibility="gone" />
 
-    </LinearLayout>
+            <!-- Font Spinner -->
+            <Spinner
+                android:id="@+id/font_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginHorizontal="24dp" />
+
+            <!-- Apply button -->
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/apply_extended_fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/apply_button_text"
+                android:textAllCaps="false"
+                android:textColor="@color/settingslib_btn_colored_text_material"
+                android:theme="@style/Theme.CollapsingToolbar.Settings"
+                android:layout_marginEnd="24dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="24dp"
+                style="@style/op_control_text_style_h6"
+                app:backgroundTint="@color/settingslib_btn_colored_background_material"
+                app:iconTint="@color/settingslib_btn_colored_text_material"
+                app:fabSize="normal"
+                app:icon="@drawable/ic_check_24dp" />
+
+        </LinearLayout>
+
+        <!-- Highlight Guide -->
+        <FrameLayout
+            android:id="@+id/highlight_guide"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <include layout="@layout/highlight_guide" />
+        </FrameLayout>
+
+    </FrameLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

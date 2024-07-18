@@ -47,12 +47,14 @@ import java.util.List;
 public class LockClockFontsPickerPreview extends SettingsPreferenceFragment {
 
     private static final String TAG = "LockClockFontsPickerPreview";
+    private static final String PREF_FIRST_TIME = "first_time_clock_face_access";
 
     private ViewPager viewPager;
     private ClockPagerAdapter pagerAdapter;
     private Spinner fontSpinner;
     private FontManager fontManager;
     private ExtendedFloatingActionButton applyFab;
+    private View highlightGuide;
 
     private int mCurrentFontPosition = -1;
     private int mClockPosition = 0;
@@ -153,6 +155,20 @@ public class LockClockFontsPickerPreview extends SettingsPreferenceFragment {
             }
         });
 
+        highlightGuide = rootView.findViewById(R.id.highlight_guide);
+        if (isFirstTime()) {
+            highlightGuide.setVisibility(View.VISIBLE);
+            highlightGuide.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    highlightGuide.setVisibility(View.GONE);
+                    disableHighlight();
+                }
+            });
+        } else {
+            highlightGuide.setVisibility(View.GONE);
+        }
+
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrollStateChanged(int state) {}
@@ -183,6 +199,15 @@ public class LockClockFontsPickerPreview extends SettingsPreferenceFragment {
             }
         }
         return false;
+    }
+    
+    private boolean isFirstTime() {
+        return Settings.System.getIntForUser(
+            getContext().getContentResolver(), PREF_FIRST_TIME, 1, UserHandle.USER_CURRENT) != 0;
+    }
+
+    private void disableHighlight() {
+        Settings.System.putIntForUser(getContext().getContentResolver(), PREF_FIRST_TIME, 0, UserHandle.USER_CURRENT);
     }
 
     private class ClockPagerAdapter extends PagerAdapter {

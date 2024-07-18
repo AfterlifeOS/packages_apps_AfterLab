@@ -515,4 +515,7 @@ s that internet users can use wisely.</string>
     <string name="ls_clock_custom_font_not_supported">Selected clock does not support custom fonts</string>
     <string name="theme_customization_lock_clock_title">Clock face</string>
     <string name="theme_customization_lock_clock_summary">Modify lockscreen clock appearance</string>
+
+    <!-- Lockscreen Clock Highlight Guide --> 
+    <string name="ls_clock_face_highlight_text">Swipe left or right to preview clock styles</string>
 </resources>
