@@ -432,4 +432,8 @@ s that internet users can use wisely.</string>
     <!-- AOSP Gestures -->
     <string name="aosp_gesture_preference">System settings</string>
     <string name="aosp_gesture_summary">Stock gestures included with AOSP</string>
+
+    <!-- Afterlife logo -->
+    <string name="status_bar_logo_title">AfterLife Logo</string>
+    <string name="status_bar_logo_summary">Let everyone know that you\'re using AfterLife when they see your screen</string>
 </resources>
