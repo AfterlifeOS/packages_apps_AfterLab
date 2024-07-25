@@ -98,6 +98,10 @@ public class LockClockFontsPickerPreview extends SettingsPreferenceFragment {
         pagerAdapter = new ClockPagerAdapter();
         viewPager.setAdapter(pagerAdapter);
         mClockPosition = Settings.System.getIntForUser(getContext().getContentResolver(), "clock_style", 0, UserHandle.USER_CURRENT);
+        if (mClockPosition < 0 || mClockPosition >= CLOCK_LAYOUTS.length) {
+            mClockPosition = 0;
+            Settings.System.putIntForUser(getContext().getContentResolver(), "clock_style", 0, UserHandle.USER_CURRENT);
+        }
         viewPager.setCurrentItem(mClockPosition);
 
         TextView fontMessage = rootView.findViewById(R.id.font_message);
@@ -193,6 +197,9 @@ public class LockClockFontsPickerPreview extends SettingsPreferenceFragment {
     }
 
     private boolean isStaticClockStyle(int clockStyle) {
+        if (clockStyle < 0 || clockStyle >= CLOCK_LAYOUTS.length) {
+            return false;
+        }
         for (int layout : NON_CHANGEABLE_CLOCK_LAYOUTS) {
             if (CLOCK_LAYOUTS[clockStyle] == layout) {
                 return true;
