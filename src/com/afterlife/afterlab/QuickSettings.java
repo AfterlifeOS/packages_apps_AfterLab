@@ -32,6 +32,9 @@ import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.SwitchPreference;
 
+import com.afterlife.afterlab.fragments.QsHeaderImageSettings;
+import com.afterlife.support.preference.SystemSettingListPreference;
+
 import com.android.internal.logging.nano.MetricsProto;
 
 import com.android.settings.R;

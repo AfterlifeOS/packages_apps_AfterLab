@@ -20,6 +20,13 @@
     <PreferenceCategory
         android:title="@string/category_name_qs_tiles">
 
+        <!-- QS Header -->
+        <Preference
+            android:fragment="com.afterlife.afterlab.fragments.QsHeaderImageSettings"
+            android:key="qs_header_image"
+            android:summary="@string/qs_header_image_summary"
+            android:title="@string/qs_header_image_title" />
+
         <com.afterlife.support.preference.SecureSettingListPreference
             android:key="qs_panel_style"
             android:title="@string/qs_panel_style_title"
