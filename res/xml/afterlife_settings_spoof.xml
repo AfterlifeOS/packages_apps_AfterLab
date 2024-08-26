@@ -98,7 +98,8 @@
             android:key="wiki_link"
             android:title="@string/help_footer_title"
             android:summary="@string/help_footer_summary"
-            android:icon="@drawable/ic_custom_help"/>
+            settings:layout="@layout/afterlab_card_preference_single"
+            android:icon="@drawable/ic_help"/>
     </PreferenceCategory>
 
 </PreferenceScreen>
