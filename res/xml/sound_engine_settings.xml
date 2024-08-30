@@ -20,21 +20,29 @@
     android:title="@string/sound_engine_title">
 
     <com.afterlife.support.preference.SystemSettingSwitchPreference
-        android:key="audio_effect_mode_enabled"
+        android:key="sound_engine_enabled"
         android:title="@string/ad_sound_engine_title"
         android:summary="@string/ad_sound_engine_summary"
         android:defaultValue="false" />
 
-    <!-- Select Profiles -->
-    <PreferenceCategory
-        android:key="select_profiles"
-        android:title="@string/sound_engine_profile_title" >
+    <com.afterlife.support.preference.SystemSettingSeekBarPreference
+        android:dependency="sound_engine_enabled"
+        android:key="sound_engine_bass_boost"
+        android:title="@string/bass_boost_title"
+        android:defaultValue="0"
+        android:max="100"
+        settings:min="0"
+        settings:interval="1"
+        settings:units="%" />
 
-        <com.android.settingslib.widget.LayoutPreference
-            android:key="sound_engine_profile_menu"
-            android:layout="@layout/sound_engine_profile_layout"
-            android:selectable="false"/>
-
-    </PreferenceCategory>
+    <com.afterlife.support.preference.SystemSettingSeekBarPreference
+        android:dependency="sound_engine_enabled"
+        android:key="sound_engine_loudness_gain"
+        android:title="@string/loudness_gain_title"
+        android:defaultValue="0"
+        android:max="10" 
+        settings:min="0"
+        settings:interval="1"
+        settings:units="dB" />
 
 </PreferenceScreen>

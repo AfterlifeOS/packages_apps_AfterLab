@@ -514,8 +514,10 @@ s that internet users can use wisely.</string>
 
     <!-- Sound Engine -->
     <string name="sound_category">Sound</string>
-    <string name="ad_sound_engine_title">Adaptive Sound Engine&#8482;</string>
-    <string name="ad_sound_engine_summary">Experience immersive audio with ASE&#8482;\'s Dynamic Frequency Response algorithm.</string>
+    <string name="ad_sound_engine_title">Sound Engine&#8482;</string>
+    <string name="ad_sound_engine_summary">Tune loudness and bass boost settings.</string>
+    <string name="loudness_gain_title">Sound loudness gain</string>
+    <string name="bass_boost_title">Sound Bass Boost level</string>
     <string name="sound_engine_title">Sound Engine</string>
     <string name="sound_engine_summary">Optimize audio quality</string>
     <string name="sound_engine_profile_title">Select Sound Profile</string>
