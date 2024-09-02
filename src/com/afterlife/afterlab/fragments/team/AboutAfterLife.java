@@ -81,7 +81,7 @@ public class AboutAfterLife extends Activity {
                 public void onClick(View v) {
                     try {
                         Intent intent = new Intent(Intent.ACTION_VIEW,
-                                                   Uri.parse("https://github.com/AfterLifePrjkt13/"));
+                                                   Uri.parse("https://github.com/AfterlifeOS/"));
                         AboutAfterLife.this.startActivity(intent);
                     } catch (ActivityNotFoundException e) {
                         e.printStackTrace();
@@ -94,7 +94,7 @@ public class AboutAfterLife extends Activity {
                 public void onClick(View v) {
                     try {
                         Intent intent = new Intent(Intent.ACTION_VIEW,
-                                                   Uri.parse("https://t.me/AfterLifePrjkt"));
+                                                   Uri.parse("https://t.me/AfterLifeOS"));
                         AboutAfterLife.this.startActivity(intent);
                     } catch (ActivityNotFoundException e) {
                         e.printStackTrace();
@@ -159,7 +159,15 @@ public class AboutAfterLife extends Activity {
                        getString(R.string.afl_team3_fb), // fb
                        getString(R.string.afl_team3_ig), // ig
                        getString(R.string.afl_team3_tele), // tele
-                       R.drawable.ava_aditya); // img  
+                       R.drawable.ava_aditya); // img
+        setLeadsMember(getString(R.string.afl_team_4), //devName
+                       getString(R.string.sulid), //devTitle
+                       getString(R.string.afl_team4_description), // devDescribe
+                       getString(R.string.afl_team4_github), // github
+                       getString(R.string.afl_team4_fb), // fb
+                       getString(R.string.afl_team4_ig), // ig
+                       getString(R.string.afl_team4_tele), // tele
+                       R.drawable.ava_alvin); // img 
 
         // Designer Info
         setDesignerMember(getString(R.string.afl_designer_1), //nama
@@ -195,11 +203,6 @@ public class AboutAfterLife extends Activity {
                        getString(R.string.afl_contributors_github_2), //git uname
                        getString(R.string.afl_contributors_telegram_2), //tele uname
                        R.drawable.ava_contri_2); // avatar
-        setOtherMember(getString(R.string.afl_contributors_3), //nama
-                       getString(R.string.afl_contributors_description),//jabatan
-                       getString(R.string.afl_contributors_github_3), //git uname
-                       getString(R.string.afl_contributors_telegram_3), //tele uname
-                       R.drawable.ava_contri_3); // avatar
                        
 
         LeadsAdapter mAdapter = new LeadsAdapter(mList);
