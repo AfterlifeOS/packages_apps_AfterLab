@@ -42,6 +42,7 @@ import android.view.View;
 import android.view.WindowManagerGlobal;
 
 import com.android.internal.util.everest.udfps.CustomUdfpsUtils;
+import com.android.internal.util.afterlife.OmniJawsClient;
 import com.android.internal.logging.nano.MetricsProto;
 
 import com.android.settings.R;
@@ -60,9 +61,12 @@ public class LockScreen extends SettingsPreferenceFragment
         private static final String UDFPS_CATEGORY = "udfps_category";
         private PreferenceCategory mUdfpsCategory;
         private static final String FINGERPRINT_VIB = "fingerprint_success_vib";
+        private static final String KEY_WEATHER = "lockscreen_weather_enabled";
 
         private FingerprintManager mFingerprintManager;
         private SwitchPreference mFingerprintVib;
+        private Preference mWeather;
+        private OmniJawsClient mWeatherClient;
     
     @Override
     public void onCreate(Bundle icicle) {
@@ -79,6 +83,11 @@ public class LockScreen extends SettingsPreferenceFragment
         
     // Change the casting to SwitchPreference
     mFingerprintManager = (FingerprintManager) getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
+
+        mWeather = (Preference) findPreference(KEY_WEATHER);
+        mWeatherClient = new OmniJawsClient(getContext());
+        updateWeatherSettings();
+
         mFingerprintVib = (SwitchPreference) findPreference(FINGERPRINT_VIB);
         if (mFingerprintManager == null) {
             prefScreen.removePreference(mFingerprintVib);
@@ -99,6 +108,21 @@ public class LockScreen extends SettingsPreferenceFragment
         }
         return false;
     }  
+
+    private void updateWeatherSettings() {
+        if (mWeatherClient == null || mWeather == null) return;
+
+        boolean weatherEnabled = mWeatherClient.isOmniJawsEnabled();
+        mWeather.setEnabled(weatherEnabled);
+        mWeather.setSummary(weatherEnabled ? R.string.lockscreen_weather_summary :
+            R.string.lockscreen_weather_enabled_info);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        updateWeatherSettings();
+    }
 
     @Override
     public int getMetricsCategory() {
