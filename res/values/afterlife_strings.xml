@@ -62,21 +62,23 @@
 
     <!-- About Project -->
     <string name="about_afterlife_title">About Afterlife</string>
-    <string name="abouttitl">AfterLife Prjkt</string>
-    <string name="aboutsumm">AfterLifePrjkt is an operating system that runs on the Android system with the current API level at 13.0 - 14.0 (beta). This OS provides a comfortable experience to users both in terms of performance and appearance and also has open source propertie
-s that internet users can use wisely.</string>
+    <string name="abouttitl">Afterlife Project</string>
+    <string name="aboutsumm">Afterlife OS is an operating system project that runs on Android with current API levels 13.0 and 14.0. This Android system provides a comfortable experience to its users both in terms of performance and style. This project is also public and free. The developers of this project are also trying to provide opportunities for fans of custom Android systems to more freely enjoy the various features provided.
+
+#KeepAfterlife
+#WeWillNeverDie</string>
     <string name="github">Github</string>
-    <string name="github_description">View our source code</string>
+    <string name="github_description">View our source</string>
     <string name="telegram">Telegram</string>
     <string name="telegram_description">Subscribe to our Telegram channel</string>
-    <string name="leads">The Leads</string>
+    <string name="leads">Leads</string>
     <string name="designers">Design UI/UX</string>
     <string name="contributor">Contributors</string>
 
     <!-- Leads --> 
     <string name="afl_team_1">Romeo</string>
     <string name="founder">Founder</string>
-    <string name="afl_team1_description">Lead and Source Manager</string>
+    <string name="afl_team1_description">Leader and Source Manager</string>
     <string name="afl_team1_github">RdW-afk</string>
     <string name="afl_team1_tele">Romeo_Delta_Whiskey</string>
     <string name="afl_team1_ig">rdw_inst</string>
@@ -85,7 +87,7 @@ s that internet users can use wisely.</string>
     <string name="afl_team_2">Ari Lesmana</string>
     <string name="coli_1">Co-Lead</string>
     <string name="afl_team2_description">Idea and Source Manager</string>
-    <string name="afl_team2_github">arilsmn</string>
+    <string name="afl_team2_github">xarilsmn</string>
     <string name="afl_team2_tele">xarilsmn</string>
     <string name="afl_team2_ig">xarilsmn</string>
     <string name="afl_team2_fb">muhammad.saidillah.14</string>
@@ -97,6 +99,14 @@ s that internet users can use wisely.</string>
     <string name="afl_team3_tele">aepranata</string>
     <string name="afl_team3_ig">null</string>
     <string name="afl_team3_fb">aepranata.bwi</string>
+
+    <string name="afl_team_4">Alvin Alifi</string>
+    <string name="sulid">Support Lead</string>
+    <string name="afl_team4_description">Source Manager Support</string>
+    <string name="afl_team4_github">HinohArata</string>
+    <string name="afl_team4_tele">HinohArata</string>
+    <string name="afl_team4_ig">_myvinz</string>
+    <string name="afl_team4_fb">alfin.ashta</string>
 
     <!-- Designer -->
     <string name="afl_designer_1">ᄅ0ㄣ⇂XᴚƆ</string>
@@ -123,23 +133,19 @@ s that internet users can use wisely.</string>
     <string name="afl_designer_description">Core, Designer UI/UX</string>
 
     <!-- Contributors -->
-    <string name="afl_contributors_1">IverzAsterix</string>
+    <string name="afl_contributors_1">Irgo Yuri Saputra</string>
     <string name="afl_contributors_github_1">asterixiverz</string>
     <string name="afl_contributors_telegram_1">iverzasterix</string>
 
-    <string name="afl_contributors_2">Mlkyjuicee</string>
-    <string name="afl_contributors_github_2">affandilham</string>
-    <string name="afl_contributors_telegram_2">affandilham</string>
-
-    <string name="afl_contributors_3">Aernma</string>
-    <string name="afl_contributors_github_3">aaernma</string>
-    <string name="afl_contributors_telegram_3">aavadaakedavra</string>
+    <string name="afl_contributors_2">Ade Rian Maulana</string>
+    <string name="afl_contributors_github_2">aaernma</string>
+    <string name="afl_contributors_telegram_2">aavadaakedavra</string>
 
     <!-- Contributors Descript -->
-    <string name="afl_contributors_description">Helper</string>
+    <string name="afl_contributors_description">Supported Project</string>
 
     <!-- ETC -->
-    <string name="more">View more..</string>
+    <string name="more">See more...</string>
 
     <!-- [CHAR_LIMIT=NONE] Developer Settings: Title of the settings category for theme overlays. -->
     <string name="theme_customization_category">Theming</string>
