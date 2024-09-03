@@ -125,6 +125,10 @@
     <string name="afl_designer_github_4">703joko</string>
     <string name="afl_designer_telegram_4">jrinfected</string>
 
+    <string name="afl_designer_5">Farel Ardiansyah</string>
+    <string name="afl_designer_github_5">KaeruShi</string>
+    <string name="afl_designer_telegram_5">KaeruShi</string>
+
     <!-- Designer Summary -->
     <string name="afl_designer_description">Core, Designer UI/UX</string>
 
