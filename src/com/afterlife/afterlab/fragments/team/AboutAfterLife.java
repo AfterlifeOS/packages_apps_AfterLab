@@ -182,6 +182,11 @@ public class AboutAfterLife extends Activity {
                           getString(R.string.afl_designer_github_4), //git uname
                           getString(R.string.afl_designer_telegram_4), //tele uname
                           R.drawable.ava_designer4); // avatar
+        setDesignerMember(getString(R.string.afl_designer_5), //nama
+                          getString(R.string.afl_designer_description),//jabatan
+                          getString(R.string.afl_designer_github_5), //git uname
+                          getString(R.string.afl_designer_telegram_5), //tele uname
+                          R.drawable.ava_designer5); // avatar
         
 
         // Contributors
