@@ -49,6 +49,17 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        android:title="Depth Wallpaper">
+
+        <Preference
+            android:key="depth_wallpaper"
+            android:title="@string/dw_wallpaper_enabled_title"
+            android:summary="@string/dw_wallpaper_enabled_summary"
+            android:fragment="com.afterlife.afterlab.fragments.WallpaperDepth" />
+
+     </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="lockscreen_ui_finterprint_category"
         android:title="@string/fingerprint_category">
 
