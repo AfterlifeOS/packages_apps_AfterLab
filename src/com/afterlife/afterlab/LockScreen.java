@@ -64,8 +64,8 @@ public class LockScreen extends SettingsPreferenceFragment
         private static final String FINGERPRINT_VIB = "fingerprint_success_vib";
         private static final String KEY_WEATHER = "lockscreen_weather_enabled";
 
-        private PreferenceCategory mFingerprintCategory;
-        private SecureSettingSwitchPreference mScreenOffUdfps;
+        private FingerprintManager mFingerprintManager;
+        private SwitchPreference mFingerprintVib;
         private Preference mWeather;
         private OmniJawsClient mWeatherClient;
 
