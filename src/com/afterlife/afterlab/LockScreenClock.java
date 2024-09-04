@@ -232,7 +232,7 @@ public class LockScreenClock extends SettingsPreferenceFragment implements Prefe
     }
 
     public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
-            new BaseSearchIndexProvider(R.xml.basecamp_lockscreen_clock) {
+            new BaseSearchIndexProvider(R.xml.afterlife_lockscreen_clock) {
                 @Override
                 public List<String> getNonIndexableKeys(Context context) {
                     return super.getNonIndexableKeys(context);
