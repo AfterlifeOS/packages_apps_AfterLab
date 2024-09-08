@@ -562,4 +562,8 @@ s that internet users can use wisely.</string>
     <!-- Lockscreen Clock Revamp -->
 	<string name="lockscreen_title">Lock screen</string>
     <string name="ls_clock_custom_font_not_supported">Selected clock does not support custom fonts</string>
+
+    <!-- Cache cleaner -->
+    <string name="cache_cleaner_title">Cache Cleaner</string>
+    <string name="cache_cleaner_summary">Enable the cache cleaner service to automatically clear app caches.</string>
 </resources>
