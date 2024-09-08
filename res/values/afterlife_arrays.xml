@@ -340,7 +340,6 @@
         <item>@string/data</item>
         <item>@string/ringer</item>
         <item>@string/bt</item>
-        <item>@string/sound_engine_title</item>
     </string-array>
 
     <string-array name="widget_values">
@@ -354,6 +353,5 @@
         <item>data</item>
         <item>ringer</item>
         <item>bt</item>
-        <item>sound_engine</item>
     </string-array>
 </resources>
