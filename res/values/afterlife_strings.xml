@@ -566,4 +566,8 @@ s that internet users can use wisely.</string>
     <!-- Cache cleaner -->
     <string name="cache_cleaner_title">Cache Cleaner</string>
     <string name="cache_cleaner_summary">Enable the cache cleaner service to automatically clear app caches.</string>
+
+    <!-- QS Bluetooth auto on -->
+    <string name="qs_bt_auto_on_title">Automatic Bluetooth on</string>
+    <string name="qs_bt_auto_on_summary">Always turn on Bluetooth when pressing the Bluetooth QS tile</string>
 </resources>
