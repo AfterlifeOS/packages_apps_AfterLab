@@ -45,4 +45,14 @@
         settings:interval="1"
         settings:units="dB" />
 
+    <com.afterlife.support.preference.SystemSettingSeekBarPreference
+        android:dependency="sound_engine_enabled"
+        android:key="sound_engine_surround"
+        android:title="@string/sound_engine_surround_title"
+        android:defaultValue="0"
+        android:max="100"
+        settings:min="0"
+        settings:interval="1"
+        settings:units="%" />
+
 </PreferenceScreen>
