@@ -22,31 +22,36 @@
         android:title="@string/monet_engine_style_title"
         android:entries="@array/monet_engine_style_entries"
         android:entryValues="@array/monet_engine_style_values"
-        android:defaultValue="0" />
+        android:defaultValue="0"
+        settings:layout="@layout/afterlab_card_preference_top" />
 
     <com.afterlife.support.preference.SecureSettingSwitchPreference
         android:key="monet_engine_custom_color"
         android:title="@string/monet_engine_custom_color_title"
         android:summary="@string/monet_engine_custom_color_summary"
-        android:defaultValue="false" />
+        android:defaultValue="false"
+        settings:layout="@layout/afterlab_card_preference_middle" />
 
     <com.afterlife.support.colorpicker.SecureSettingColorPickerPreference
         android:key="monet_engine_color_override"
         android:title="@string/monet_engine_color_override_title"
         android:dependency="monet_engine_custom_color"
-        android:defaultValue="0xFF1b6ef3" />
+        android:defaultValue="0xFF1b6ef3"
+        settings:layout="@layout/afterlab_card_preference_middle" />
 
     <com.afterlife.support.preference.SecureSettingSwitchPreference
         android:key="monet_engine_custom_bgcolor"
         android:title="@string/monet_engine_custom_bgcolor_title"
         android:summary="@string/monet_engine_custom_bgcolor_summary"
-        android:defaultValue="false" />
+        android:defaultValue="false"
+        settings:layout="@layout/afterlab_card_preference_middle" />
 
     <com.afterlife.support.colorpicker.SecureSettingColorPickerPreference
         android:key="monet_engine_bgcolor_override"
         android:title="@string/monet_engine_color_override_title"
         android:dependency="monet_engine_custom_bgcolor"
-        android:defaultValue="0xFF1b6ef3" />
+        android:defaultValue="0xFF1b6ef3"
+        settings:layout="@layout/afterlab_card_preference_bottom" />
 
     <com.afterlife.support.preference.SecureSettingSeekBarPreference
         android:key="monet_engine_luminance_factor"
@@ -70,6 +75,7 @@
         android:key="monet_engine_tint_background"
         android:title="@string/monet_engine_tint_background_title"
         android:summary="@string/monet_engine_tint_background_summary"
-        android:defaultValue="false" />
+        android:defaultValue="false"
+        settings:layout="@layout/afterlab_card_preference_single" />
 
 </PreferenceScreen>

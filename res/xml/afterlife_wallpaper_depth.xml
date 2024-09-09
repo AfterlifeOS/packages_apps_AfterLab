@@ -21,6 +21,7 @@
         android:key="depth_wallpaper_enabled"
         android:title="@string/dw_wallpaper_enabled_title"
         android:summary="@string/dw_wallpaper_enabled_summary"
+        settings:layout="@layout/afterlab_card_preference_top"
         android:defaultValue="false" />
 
     <Preference
@@ -28,6 +29,7 @@
         android:dependency="depth_wallpaper_enabled"
         android:title="@string/dw_file_header_select_title"
         android:summary="@string/dw_file_header_select_summary"
+        settings:layout="@layout/afterlab_card_preference_bottom"
         android:persistent="false" />
 
     <com.afterlife.support.preference.SystemSettingSeekBarPreference

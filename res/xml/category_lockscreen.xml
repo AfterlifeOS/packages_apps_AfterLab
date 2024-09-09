@@ -28,6 +28,7 @@
         android:key="android.theme.customization.lockscreen_clock_font"
         android:title="@string/lockscreen_clock_category_title"
         android:summary="@string/lockscreen_clock_category_summary"
+        settings:layout="@layout/afterlab_card_preference_top"
         android:fragment="com.afterlife.afterlab.fragments.LockScreenClock" />
 
 	<com.afterlife.support.preference.SystemSettingListPreference
@@ -36,18 +37,21 @@
           android:entries="@array/screen_off_animation_entries"
           android:entryValues="@array/screen_off_animation_values"
           android:summary="%s"
+          settings:layout="@layout/afterlab_card_preference_middle"
           android:defaultValue="0" />
 
      <com.afterlife.support.preference.SecureSettingSwitchPreference
           android:key="secure_lockscreen_qs_disabled"
           android:title="@string/disable_qs_title"
           android:summary="@string/disable_qs_summary"
+          settings:layout="@layout/afterlab_card_preference_middle"
           android:defaultValue="false" />
 
      <com.afterlife.support.preference.GlobalSettingSwitchPreference
           android:key="wake_when_plugged_or_unplugged"
           android:title="@string/wakeup_when_plugged_unplugged_title"
           android:summary="@string/wakeup_when_plugged_unplugged_summary"
+          settings:layout="@layout/afterlab_card_preference_bottom"
           android:defaultValue="true" /> 
 
     </PreferenceCategory>
@@ -59,6 +63,7 @@
             android:key="depth_wallpaper"
             android:title="@string/dw_wallpaper_enabled_title"
             android:summary="@string/dw_wallpaper_enabled_summary"
+            settings:layout="@layout/afterlab_card_preference_single"
             android:fragment="com.afterlife.afterlab.fragments.WallpaperDepth" />
 
      </PreferenceCategory>
@@ -71,6 +76,7 @@
             android:key="enable_ripple_effect"
             android:title="@string/enable_fingerprint_ripple_effect_title"
             android:summary="@string/enable_fingerprint_ripple_effect_summary"
+            settings:layout="@layout/afterlab_card_preference_top"
             android:defaultValue="true" />
 
           <SwitchPreference
@@ -78,6 +84,7 @@
             android:title="@string/fprint_sucess_vib_title"
             android:summary="@string/fprint_sucess_vib_summary"
             android:persistent="false"
+            settings:layout="@layout/afterlab_card_preference_bottom"
             android:defaultValue="true" />
 
      </PreferenceCategory>
@@ -91,6 +98,7 @@
             android:key="udfps_settings"
             android:title="@string/udfps_settings_title"
             android:summary="@string/udfps_settings_summary"
+            settings:layout="@layout/afterlab_card_preference_single"
             android:fragment="com.afterlife.afterlab.fragments.UdfpsSettings" />
 
     </PreferenceCategory>
@@ -102,6 +110,7 @@
             android:key="lockscreen_weather_enabled"
             android:defaultValue="false"
             android:title="@string/lockscreen_weather_title"
+            settings:layout="@layout/afterlab_card_preference_top"
             android:summary="@string/lockscreen_weather_summary" />
 
         <com.afterlife.support.preference.SystemSettingSwitchPreference
@@ -109,6 +118,7 @@
             android:title="@string/lockscreen_weather_location_title"
             android:summary="@string/lockscreen_weather_location_summary"
             android:defaultValue="false"
+            settings:layout="@layout/afterlab_card_preference_middle"
             android:dependency="lockscreen_weather_enabled" />
 
         <com.afterlife.support.preference.SystemSettingSwitchPreference
@@ -116,11 +126,13 @@
             android:title="@string/lockscreen_weather_text_title"
             android:summary="@string/lockscreen_weather_text_summary"
             android:defaultValue="true"
+            settings:layout="@layout/afterlab_card_preference_middle"
             android:dependency="lockscreen_weather_enabled" />
 
         <Preference
             android:title="@string/weather_settings_title"
-            android:summary="@string/weather_settings_summary">
+            android:summary="@string/weather_settings_summary"
+            settings:layout="@layout/afterlab_card_preference_bottom">
             <intent
                  android:action="android.intent.action.MAIN"
                  android:targetPackage="org.omnirom.omnijaws"

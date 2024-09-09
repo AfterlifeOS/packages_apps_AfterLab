@@ -22,12 +22,14 @@
         android:key="udfps_icon_picker"
         android:title="@string/udfps_icon_picker_title"
         android:summary="@string/udfps_icon_picker_summary"
-        android:fragment="com.afterlife.afterlab.fragments.UdfpsIconPicker" />
+        android:fragment="com.afterlife.afterlab.fragments.UdfpsIconPicker"
+        settings:layout="@layout/afterlab_card_preference_top" />
 
     <Preference
         android:key="udfps_recognizing_animation_preview"
         android:title="@string/udfps_recog_animation_effect_title"
         android:summary="@string/udfps_recog_animation_effect_summary"
-        android:fragment="com.afterlife.afterlab.fragments.UdfpsAnimation" />
+        android:fragment="com.afterlife.afterlab.fragments.UdfpsAnimation"
+        settings:layout="@layout/afterlab_card_preference_bottom" />
 
 </PreferenceScreen>

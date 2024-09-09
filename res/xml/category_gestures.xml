@@ -26,6 +26,7 @@
         android:title="@string/aosp_gesture_preference"
         android:summary="@string/aosp_gesture_summary"
         android:fragment="com.android.settings.gestures.GestureSettings"
+        settings:layout="@layout/afterlab_card_preference_single"
         settings:controller="com.android.settings.gestures.GesturesSettingPreferenceController"/>
 
     </PreferenceCategory>
