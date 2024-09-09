@@ -21,14 +21,6 @@
         android:key="lockscreen_clock_category"
         android:title="@string/lockscreen_clock_category_title">
 
-        <com.afterlife.support.preference.SystemSettingListPreference
-            android:entries="@array/clock_style_entries"
-            android:title="@string/custom_clock_style"
-            android:key="clock_style"
-            android:defaultValue="0"
-            android:summary="%s"
-            android:entryValues="@array/clock_style_values" />
-
         <!-- Lockscreen Clock Font and styles -->
         <Preference
             android:key="android.theme.customization.lockscreen_clock_font"
