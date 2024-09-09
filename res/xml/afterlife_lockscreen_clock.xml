@@ -26,6 +26,7 @@
             android:key="android.theme.customization.lockscreen_clock_font"
             android:title="@string/theme_customization_lock_clock_title"
             android:summary="@string/theme_customization_lock_clock_summary"
+            settings:layout="@layout/afterlab_card_preference_single"
             android:fragment="com.afterlife.afterlab.fragments.LockClockFontsPickerPreview" />
 
     </PreferenceCategory>
@@ -38,6 +39,7 @@
             android:key="lockscreen_widgets_enabled"
             android:title="@string/lockscreen_widgets_enabled_title"
             android:summary="@string/lockscreen_widgets_enabled_summary"
+            settings:layout="@layout/afterlab_card_preference_top"
             android:defaultValue="false" />
 
 
@@ -45,6 +47,7 @@
             android:key="lockscreen_display_widgets"
             android:title="@string/lockscreen_display_widgets_title"
             android:summary="@string/lockscreen_display_widgets_summary"
+            settings:layout="@layout/afterlab_card_preference_middle"
             android:defaultValue="false" />
 
         <com.afterlife.support.preference.SystemSettingListPreference
@@ -52,6 +55,7 @@
             android:title="@string/main_custom_widgets1"
             android:key="main_custom_widgets1"
             android:entryValues="@array/widget_values" 
+            settings:layout="@layout/afterlab_card_preference_middle"
             android:summary="%s" />
 
         <com.afterlife.support.preference.SystemSettingListPreference
@@ -59,6 +63,7 @@
             android:title="@string/main_custom_widgets2"
             android:key="main_custom_widgets2"
             android:entryValues="@array/widget_values"
+            settings:layout="@layout/afterlab_card_preference_middle"
             android:summary="%s" />
 
         <com.afterlife.support.preference.SystemSettingListPreference
@@ -66,6 +71,7 @@
             android:title="@string/custom_widgets1"
             android:key="custom_widgets1"
             android:entryValues="@array/widget_values" 
+            settings:layout="@layout/afterlab_card_preference_middle"
             android:summary="%s" />
 
         <com.afterlife.support.preference.SystemSettingListPreference
@@ -73,6 +79,7 @@
             android:title="@string/custom_widgets2"
             android:key="custom_widgets2"
             android:entryValues="@array/widget_values"
+            settings:layout="@layout/afterlab_card_preference_middle"
             android:summary="%s" />
 
         <com.afterlife.support.preference.SystemSettingListPreference
@@ -80,6 +87,7 @@
             android:title="@string/custom_widgets3"
             android:key="custom_widgets3"
             android:entryValues="@array/widget_values" 
+            settings:layout="@layout/afterlab_card_preference_middle"
             android:summary="%s" />
 
         <com.afterlife.support.preference.SystemSettingListPreference
@@ -87,6 +95,7 @@
             android:title="@string/custom_widgets4"
             android:key="custom_widgets4"
             android:entryValues="@array/widget_values" 
+            settings:layout="@layout/afterlab_card_preference_bottom"
             android:summary="%s" />
 
         <com.android.settingslib.widget.LayoutPreference

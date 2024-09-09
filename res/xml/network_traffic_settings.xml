@@ -17,7 +17,8 @@
             android:title="@string/network_traffic_autohide_title"
             android:summary="@string/network_traffic_autohide_summary"
             android:dependency="network_traffic_state"
-            android:defaultValue="false" />
+            android:defaultValue="false"
+            settings:layout="@layout/afterlab_card_preference_single" />
 
     </PreferenceCategory>
 

@@ -25,28 +25,24 @@
             android:fragment="com.afterlife.afterlab.fragments.QsHeaderImageSettings"
             android:key="qs_header_image"
             android:summary="@string/qs_header_image_summary"
-            android:title="@string/qs_header_image_title" />
-
-        <com.afterlife.support.preference.SecureSettingListPreference
-            android:key="qs_panel_style"
-            android:title="@string/qs_panel_style_title"
-            android:entries="@array/qs_panel_style_entries"
-            android:entryValues="@array/qs_panel_style_values"
-            android:defaultValue="0" />
+            android:title="@string/qs_header_image_title"
+            settings:layout="@layout/afterlab_card_preference_top" />
 
         <com.afterlife.support.preference.SecureSettingListPreference
             android:key="qs_style_round"
             android:title="@string/qs_style_title"
             android:entries="@array/qs_style_entries"
             android:entryValues="@array/qs_style_values"
-            android:defaultValue="1" />
+            android:defaultValue="1"
+            settings:layout="@layout/afterlab_card_preference_middle" />
 
         <com.afterlife.support.preference.SecureSettingListPreference
             android:key="qs_tile_shape"
             android:title="@string/qs_tile_shape"
             android:entries="@array/qs_tile_shape_entries"
             android:entryValues="@array/qs_tile_shape_values"
-            android:defaultValue="2" />
+            android:defaultValue="2"
+            settings:layout="@layout/afterlab_card_preference_bottom" />
 
         <com.afterlife.support.preference.SystemSettingSeekBarPreference
             android:key="qs_transparency"

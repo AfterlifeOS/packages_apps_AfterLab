@@ -19,7 +19,8 @@
     <com.afterlife.support.preference.SystemSettingSwitchPreference
         android:key="status_bar_custom_header"
         android:title="@string/enable"
-        android:defaultValue="false" />
+        android:defaultValue="false"
+        settings:layout="@layout/afterlab_card_preference_top" />
 
     <ListPreference
         android:key="qs_header_provider"
@@ -27,20 +28,23 @@
         android:persistent="false"
         android:entries="@array/qs_header_provider_entries"
         android:entryValues="@array/qs_header_provider_values"
-        android:dependency="status_bar_custom_header" />
+        android:dependency="status_bar_custom_header"
+        settings:layout="@layout/afterlab_card_preference_middle" />
 
     <ListPreference
         android:key="daylight_header_pack"
         android:title="@string/qs_header_daylight_pack_title"
         android:persistent="false"
-        android:dependency="status_bar_custom_header" />
+        android:dependency="status_bar_custom_header"
+        settings:layout="@layout/afterlab_card_preference_middle" />
 
     <Preference
         android:key="custom_header_browse"
         android:title="@string/qs_header_browse_title"
         android:summary="@string/qs_header_browse_summary"
         android:persistent="false"
-        android:dependency="status_bar_custom_header" >
+        android:dependency="status_bar_custom_header"
+        settings:layout="@layout/afterlab_card_preference_middle" >
         <intent android:action="android.intent.action.MAIN"
                 android:targetPackage="org.omnirom.omnistyle"
                 android:targetClass="org.omnirom.omnistyle.PickHeaderActivity" />
@@ -51,7 +55,8 @@
         android:title="@string/qs_header_file_select_title"
         android:summary="@string/qs_header_file_select_summary"
         android:persistent="false"
-        android:dependency="status_bar_custom_header" >
+        android:dependency="status_bar_custom_header"
+        settings:layout="@layout/afterlab_card_preference_bottom" >
     </Preference>
 
     <com.afterlife.support.preference.SystemSettingSeekBarPreference

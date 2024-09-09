@@ -23,7 +23,8 @@
         android:key="sound_engine_enabled"
         android:title="@string/ad_sound_engine_title"
         android:summary="@string/ad_sound_engine_summary"
-        android:defaultValue="false" />
+        android:defaultValue="false"
+        settings:layout="@layout/afterlab_card_preference_single" />
 
     <com.afterlife.support.preference.SystemSettingSeekBarPreference
         android:dependency="sound_engine_enabled"
