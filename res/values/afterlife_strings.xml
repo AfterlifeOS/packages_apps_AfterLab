@@ -191,8 +191,8 @@
     <string name="show_fourg_icon_summary">Display 4G icon in signal icon instead LTE</string>
 
     <!-- QS panel -->
-    <string name="qs_panel_options_title">Quick settings</string>
-    <string name="qs_panel_options_summary">Customize quick settings tiles</string>
+    <string name="cat_brightness">Brightness Control</string>
+    <string name="cat_other">Other</string>
     <string name="category_name_qs_tiles">QS Area</string>
 
     <!-- QS tile shape -->
@@ -424,12 +424,6 @@
     <string name="qs_style_title">QS Tile style</string>
     <string name="qs_style_default">Android 14</string>
     <string name="qs_style_round">Android 11</string>
-
-    <!-- Qs Panel styles -->
-    <string name="qs_panel_style_title">Qs Panel style</string>
-    <string name="qs_panel_style_default">Default</string>
-    <string name="qs_panel_style_twotone">Two Tone Accent</string>
-    <string name="qs_panel_style_twotone_outline">TwoTone Outline Accent</string>
 
     <!-- QS columns customization -->
     <string name="qs_columns">QS columns in portrait</string>
