@@ -42,7 +42,7 @@
             android:entries="@array/qs_tile_shape_entries"
             android:entryValues="@array/qs_tile_shape_values"
             android:defaultValue="2"
-            settings:layout="@layout/afterlab_card_preference_bottom" /
+            settings:layout="@layout/afterlab_card_preference_bottom" />
 
         <com.afterlife.support.preference.SystemSettingSeekBarPreference
             android:key="qs_transparency"
