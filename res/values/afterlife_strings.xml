@@ -195,12 +195,6 @@
     <string name="cat_other">Other</string>
     <string name="category_name_qs_tiles">QS Area</string>
 
-    <!-- QS tile shape -->
-    <string name="qs_tile_shape">QS tile shape</string>
-    <string name="qs_tile_round">Round</string>
-    <string name="qs_tile_rect">Rounded Rectangle</string>
-    <string name="qs_tile_mix">Round for active tiles and Rounded Rectangle for inactive tiles</string>
-
     <!-- QS brightness slider -->
     <string name="category_name_qs_brightness_slider">Brightness slider</string>
     <string name="qs_brightness_slider_title">Brightness slider</string>

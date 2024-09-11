@@ -14,19 +14,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- QS tile shape -->
-    <string-array name="qs_tile_shape_entries">
-        <item>@string/qs_tile_round</item>
-        <item>@string/qs_tile_rect</item>
-        <item>@string/qs_tile_mix</item>
-    </string-array>
-
-    <string-array name="qs_tile_shape_values">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-    </string-array>
-
     <!-- QS brightness slider -->
     <string-array name="qs_brightness_slider_entries" translatable="false">
         <item>@string/qs_brightness_slider_never</item>
@@ -270,19 +257,6 @@
     <string-array name="qs_style_values">
         <item>0</item>
         <item>1</item>
-    </string-array>
-
-    <!-- Qs panel styles -->
-    <string-array name="qs_panel_style_entries" translatable="false">
-        <item>@string/qs_panel_style_default</item>
-        <item>@string/qs_panel_style_twotone</item>
-        <item>@string/qs_panel_style_twotone_outline</item>
-    </string-array>
-
-    <string-array name="qs_panel_style_values">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
     </string-array>
 
     <!-- QS Header -->
