@@ -36,7 +36,6 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
 import androidx.preference.SwitchPreferenceCompat;
 import android.view.IWindowManager;
 import android.view.View;
@@ -65,7 +64,7 @@ public class LockScreen extends SettingsPreferenceFragment
         private static final String KEY_WEATHER = "lockscreen_weather_enabled";
 
         private FingerprintManager mFingerprintManager;
-        private SwitchPreference mFingerprintVib;
+        private SwitchPreferenceCompat mFingerprintVib;
         private Preference mWeather;
         private OmniJawsClient mWeatherClient;
 
@@ -82,14 +81,13 @@ public class LockScreen extends SettingsPreferenceFragment
             prefScreen.removePreference(mUdfpsCategory);
         }
         
-    // Change the casting to SwitchPreference
     mFingerprintManager = (FingerprintManager) getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
 
         mWeather = (Preference) findPreference(KEY_WEATHER);
         mWeatherClient = new OmniJawsClient(getContext());
         updateWeatherSettings();
 
-        mFingerprintVib = (SwitchPreference) findPreference(FINGERPRINT_VIB);
+        mFingerprintVib = (SwitchPreferenceCompat) findPreference(FINGERPRINT_VIB);
         if (mFingerprintManager == null) {
             prefScreen.removePreference(mFingerprintVib);
         } else {

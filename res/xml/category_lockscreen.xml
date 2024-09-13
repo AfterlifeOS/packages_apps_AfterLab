@@ -79,7 +79,7 @@
             settings:layout="@layout/afterlab_card_preference_top"
             android:defaultValue="true" />
 
-          <SwitchPreference
+          <SwitchPreferenceCompat
             android:key="fingerprint_success_vib"
             android:title="@string/fprint_sucess_vib_title"
             android:summary="@string/fprint_sucess_vib_summary"
