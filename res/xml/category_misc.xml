@@ -60,8 +60,21 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        android:key="miscellaneous_spoofing_category"
+        android:title="@string/miscellaneous_spoofing_category">
+
+        <Preference
+            android:key="spoofing"
+            android:title="@string/spoofing_title"
+            android:summary="@string/spoofing_title_summary"
+            settings:layout="@layout/afterlab_card_preference_single"
+            android:fragment="com.afterlife.afterlab.fragments.Spoof" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="volume_category"
-	android:title="@string/volume_category" >
+	    android:title="@string/volume_category" >
 
 	<com.afterlife.support.preference.SystemSettingSwitchPreference
           android:key="volbtn_music_controls"
