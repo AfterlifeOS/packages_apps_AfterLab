@@ -80,9 +80,16 @@
         android:title="@string/cat_other">
 
      <com.afterlife.support.preference.SystemSettingSwitchPreference
+            android:key="qs_footer_data_usage"
+            android:title="@string/qs_show_data_usage_title"
+            android:summary="@string/qs_show_data_usage_summary"
+            settings:layout="@layout/afterlab_card_preference_top"
+            android:defaultValue="true" />
+
+     <com.afterlife.support.preference.SystemSettingSwitchPreference
             android:key="notification_material_dismiss"
             android:title="@string/notification_material_dismiss_title"
-            settings:layout="@layout/afterlab_card_preference_single"
+            settings:layout="@layout/afterlab_card_preference_bottom"
             android:summary="@string/notification_material_dismiss_summary" />
 
      </PreferenceCategory>
