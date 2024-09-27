@@ -74,14 +74,6 @@
             android:dependency="persist.sys.pixelprops.gms"
             settings:layout="@layout/afterlab_card_preference_middle"/>
 
-        <!-- Netflix -->
-        <com.afterlife.support.preference.SystemPropertySwitchPreference
-            android:key="persist.sys.pixelprops.netflix"
-            android:title="@string/netflix_spoof_title"
-            android:summary="@string/netflix_spoof_summary"
-            android:defaultValue="false"
-            settings:layout="@layout/afterlab_card_preference_middle" />
-
         <!-- Unlimited google photos storage -->
         <com.afterlife.support.preference.SystemPropertySwitchPreference
             android:key="persist.sys.pixelprops.gphotos"

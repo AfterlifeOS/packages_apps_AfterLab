@@ -56,7 +56,6 @@ public class Spoof extends SettingsPreferenceFragment implements Preference.OnPr
     private static final String SYS_GOOGLE_SPOOF = "persist.sys.pixelprops.google";
     private static final String SYS_PROP_OPTIONS = "persist.sys.pixelprops.all";
     private static final String SYS_GAMEPROP_ENABLED = "persist.sys.gameprops.enabled";
-    private static final String SYS_NETFLIX_SPOOF = "persist.sys.pixelprops.netflix";
     private static final String SYS_GPHOTOS_SPOOF = "persist.sys.pixelprops.gphotos";
     private static final String KEY_PIF_JSON_FILE_PREFERENCE = "pif_json_file_preference";
     private static final String KEY_GAME_PROPS_JSON_FILE_PREFERENCE = "game_props_json_file_preference";
@@ -67,7 +66,6 @@ public class Spoof extends SettingsPreferenceFragment implements Preference.OnPr
     private Preference mGmsSpoof;
     private Preference mGoogleSpoof;
     private Preference mGphotosSpoof;
-    private Preference mNetflixSpoof;
     private Preference mPropOptions;
     private Preference mPifJsonFilePreference;
     private Preference mGamePropsJsonFilePreference;
@@ -83,7 +81,6 @@ public class Spoof extends SettingsPreferenceFragment implements Preference.OnPr
         mHandler = new Handler();
         addPreferencesFromResource(R.xml.afterlife_settings_spoof);
 
-        mNetflixSpoof = findPreference(SYS_NETFLIX_SPOOF);
         mGamePropsSpoof = findPreference(SYS_GAMEPROP_ENABLED);
         mGphotosSpoof = findPreference(SYS_GPHOTOS_SPOOF);
         mGmsSpoof = findPreference(SYS_GMS_SPOOF);
@@ -98,8 +95,7 @@ public class Spoof extends SettingsPreferenceFragment implements Preference.OnPr
 
         mGmsSpoof.setDependency(SYS_PROP_OPTIONS);
         mGphotosSpoof.setDependency(SYS_PROP_OPTIONS);
-        mNetflixSpoof.setDependency(SYS_PROP_OPTIONS);
-        
+
         if (isPixelDevice) {
             mGoogleSpoof.setDefaultValue(false);
             if (isMainlineTensorModel(model)) {
