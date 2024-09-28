@@ -619,4 +619,9 @@
     <!-- Netflix Spoof -->
     <string name="netflix_spoof_title">Netflix spoof</string>
     <string name="netflix_spoof_summary">Spoof your device as different model for Netflix</string>
+    
+    <!-- QS Weather -->
+    <string name="qs_weather_enabled_title">QS Weather</string>
+    <string name="qs_weather_enabled_summary">switch for disable qs weather</string>
+    
 </resources>
