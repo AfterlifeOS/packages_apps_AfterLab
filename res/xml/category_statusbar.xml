@@ -103,6 +103,26 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        android:key="statusbar_padding"
+        android:title="@string/statusbar_padding">
+      <com.afterlife.support.preference.SystemSettingSeekBarPreference
+         android:key="statusbar_top_padding"
+         android:max="10"
+         android:title="@string/statusbar_top_padding"
+         settings:min="-35" />
+      <com.afterlife.support.preference.SystemSettingSeekBarPreference
+         android:key="statusbar_left_padding"
+         android:title="@string/statusbar_left_padding"
+         android:max="100"
+         android:min="0" />
+      <com.afterlife.support.preference.SystemSettingSeekBarPreference
+         android:key="statusbar_right_padding"
+         android:title="@string/statusbar_right_padding"
+         android:max="100"
+         android:min="0" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:title="@string/privacy_category">
 
 	<com.afterlife.support.preference.SecureSettingSwitchPreference
