@@ -51,8 +51,15 @@
           android:key="wake_when_plugged_or_unplugged"
           android:title="@string/wakeup_when_plugged_unplugged_title"
           android:summary="@string/wakeup_when_plugged_unplugged_summary"
+          settings:layout="@layout/afterlab_card_preference_middle"
+          android:defaultValue="true" />
+
+     <com.afterlife.support.preference.SystemSettingSwitchPreference
+          android:key="double_tap_sleep_lockscreen"
+          android:title="@string/lockscreen_double_tap_to_sleep_title"
+          android:summary="@string/lockscreen_double_tap_to_sleep_summary"
           settings:layout="@layout/afterlab_card_preference_bottom"
-          android:defaultValue="true" /> 
+          android:defaultValue="false" />
 
     </PreferenceCategory>
 
