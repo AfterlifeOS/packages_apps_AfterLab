@@ -171,7 +171,7 @@ public class AboutAfterLife extends Activity {
 
         // Designer Info
         setDesignerMember(getString(R.string.afl_designer_1), //nama
-                          getString(R.string.afl_designer_description),//jabatan
+                          getString(R.string.afl_designer_description_lead),//jabatan
                           getString(R.string.afl_designer_github_1), //git uname
                           getString(R.string.afl_designer_telegram_1), //tele uname
                           R.drawable.ava_designer1); // avatar
@@ -181,12 +181,12 @@ public class AboutAfterLife extends Activity {
                           getString(R.string.afl_designer_telegram_2), //tele uname
                           R.drawable.ava_designer2); // avatar
         setDesignerMember(getString(R.string.afl_designer_3), //nama
-                          getString(R.string.afl_designer_description),//jabatan
+                          getString(R.string.afl_designer_description_code),//jabatan
                           getString(R.string.afl_designer_github_3), //git uname
                           getString(R.string.afl_designer_telegram_3), //tele uname
                           R.drawable.ava_designer3); // avatar
         setDesignerMember(getString(R.string.afl_designer_4), //nama
-                          getString(R.string.afl_designer_description),//jabatan
+                          getString(R.string.afl_designer_description_code),//jabatan
                           getString(R.string.afl_designer_github_4), //git uname
                           getString(R.string.afl_designer_telegram_4), //tele uname
                           R.drawable.ava_designer4); // avatar
@@ -195,6 +195,11 @@ public class AboutAfterLife extends Activity {
                           getString(R.string.afl_designer_github_5), //git uname
                           getString(R.string.afl_designer_telegram_5), //tele uname
                           R.drawable.ava_designer5); // avatar
+        setDesignerMember(getString(R.string.afl_designer_6), //nama
+                          getString(R.string.afl_designer_description_code),//jabatan
+                          getString(R.string.afl_designer_github_6), //git uname
+                          getString(R.string.afl_designer_telegram_6), //tele uname
+                          R.drawable.ava_designer6); // avatar
         
 
         // Contributors
