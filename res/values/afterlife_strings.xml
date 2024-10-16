@@ -615,4 +615,11 @@
     <!-- Unlimited google photos storage -->
     <string name="use_photos_spoof_title">Unlimited Photos storage</string>
     <string name="use_photos_spoof_summary">Spoof your device as Pixel XL for Google Photos app only to provide unlimited storage for backup</string>
+
+    <!-- Afterlife QS Custom -->
+    <string name="cat_qs_custom_header">Afterlife Qs Custom</string>
+    <string name="qs_custom_style_anim">Animation Style</string>
+    <string name="qs_custom_style_title">Select Your Style</string>
+    <string name="qs_custom_summary">switch for enable Afterlife qs custom</string>
+    <string name="qs_custom_title">Custom Qs Style</string>
 </resources>
