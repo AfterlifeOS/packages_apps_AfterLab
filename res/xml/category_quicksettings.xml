@@ -110,6 +110,13 @@
             android:defaultValue="false" />
 
      <com.afterlife.support.preference.SystemSettingSwitchPreference
+            android:key="qs_show_data_usage"
+            android:title="@string/qs_show_data_usage_title"
+            settings:layout="@layout/afterlab_card_preference_middle"
+            android:summary="@string/qs_show_data_usage_summary"
+            android:defaultValue="false" />
+
+     <com.afterlife.support.preference.SystemSettingSwitchPreference
             android:key="notification_material_dismiss"
             android:title="@string/notification_material_dismiss_title"
             android:summary="@string/notification_material_dismiss_summary" 

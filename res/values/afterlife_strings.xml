@@ -627,6 +627,10 @@
     <string name="qs_weather_enabled_title">QS Weather</string>
     <string name="qs_weather_enabled_summary">Enable or disable weather on Qs header</string>
 
+    <!-- QS Data Usage -->
+    <string name="qs_show_data_usage_title">Show data usage</string>
+    <string name="qs_show_data_usage_summary">Show daily cellular/Wi-Fi data usage in QS header</string>
+
     <!-- Status bar padding -->
     <string name="statusbar_padding">Status bar padding</string>
     <string name="statusbar_top_padding">Top padding</string>
