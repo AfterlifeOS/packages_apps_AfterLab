@@ -622,4 +622,8 @@
     <string name="qs_custom_style_title">Select Your Style</string>
     <string name="qs_custom_summary">switch for enable Afterlife qs custom</string>
     <string name="qs_custom_title">Custom Qs Style</string>
+
+    <!-- QS Weather -->
+    <string name="qs_weather_enabled_title">QS Weather</string>
+    <string name="qs_weather_enabled_summary">Enable or disable weather on Qs header</string>
 </resources>
