@@ -199,7 +199,7 @@
     <!-- QS panel -->
     <string name="cat_brightness">Brightness Control</string>
     <string name="cat_other">Other</string>
-    <string name="category_name_qs_tiles">QS Area</string>
+    <string name="category_name_qs_tiles">QuickSettings Area</string>
 
     <!-- QS brightness slider -->
     <string name="category_name_qs_brightness_slider">Brightness slider</string>
@@ -667,4 +667,10 @@
     <!-- Afterlife Echo -->
     <string name="afterlife_echo_title">AfterEcho</string>
     <string name="afterlife_echo_summary">Tune and optimize your audio quality</string>
+
+    <!-- QS tile shape -->
+    <string name="qs_tile_shape">QS tile shape</string>
+    <string name="qs_tile_round">Round</string>
+    <string name="qs_tile_rect">Rounded Rectangle</string>
+    <string name="qs_tile_mix">Round for active tiles and Rounded Rectangle for inactive tiles</string>
 </resources>
